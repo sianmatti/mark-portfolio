@@ -3,13 +3,69 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mark Andrew S. Matti | Paid Media Specialist</title>
+
+    <title>Mark Andrew S. Matti | Paid Media Specialist for Google Ads &amp; Meta Ads</title>
     <meta
       name="description"
-      content="Paid Media Specialist for Google & Meta Ads. Performance-focused portfolio covering campaign strategy, tracking, retargeting, and case studies."
+      content="Paid Media Specialist focused on Google Ads, Meta Ads, GA4, GTM, retargeting, and conversion-focused campaign optimization for leads, bookings, and growth."
     />
+    <link rel="canonical" href="https://yourdomain.com/" />
+    <link rel="icon" href="/favicon.ico" />
+
+    <meta
+      property="og:title"
+      content="Mark Andrew S. Matti | Paid Media Specialist for Google Ads &amp; Meta Ads"
+    />
+    <meta
+      property="og:description"
+      content="Portfolio of a Paid Media Specialist focused on Google Ads, Meta Ads, GA4, GTM, retargeting, and measurable campaign growth."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourdomain.com/" />
+    <meta property="og:image" content="https://yourdomain.com/og-image.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Mark Andrew S. Matti | Paid Media Specialist for Google Ads &amp; Meta Ads"
+    />
+    <meta
+      name="twitter:description"
+      content="Portfolio of a Paid Media Specialist focused on Google Ads, Meta Ads, GA4, GTM, retargeting, and measurable campaign growth."
+    />
+    <meta name="twitter:image" content="https://yourdomain.com/og-image.jpg" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mark Andrew S. Matti",
+        "jobTitle": "Paid Media Specialist",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bacolod City",
+          "addressCountry": "PH"
+        },
+        "email": "mailto:sianmatti11@gmail.com",
+        "url": "https://yourdomain.com/",
+        "sameAs": [
+          "https://www.linkedin.com/in/markandrewmatti/"
+        ],
+        "knowsAbout": [
+          "Google Ads",
+          "Meta Ads",
+          "GA4",
+          "Google Tag Manager",
+          "Retargeting",
+          "Lead Generation",
+          "Conversion Optimization"
+        ]
+      }
+    </script>
+
     <style>
       :root {
+        color-scheme: dark;
         --bg: #090b10;
         --bg-soft: #0f131b;
         --panel: rgba(255, 255, 255, 0.05);
@@ -29,9 +85,10 @@
 
       * { box-sizing: border-box; }
       html { scroll-behavior: smooth; }
+
       body {
         margin: 0;
-        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         background:
           radial-gradient(circle at top left, rgba(139, 124, 255, 0.22), transparent 32%),
           radial-gradient(circle at top right, rgba(62, 208, 255, 0.16), transparent 28%),
@@ -41,6 +98,29 @@
 
       a { color: inherit; text-decoration: none; }
       img { max-width: 100%; display: block; }
+
+      a:focus-visible,
+      button:focus-visible,
+      .btn:focus-visible {
+        outline: 2px solid var(--accent-2);
+        outline-offset: 3px;
+      }
+
+      .skip-link {
+        position: absolute;
+        left: 16px;
+        top: -48px;
+        background: #fff;
+        color: #000;
+        padding: 10px 14px;
+        border-radius: 10px;
+        z-index: 1000;
+        transition: top 0.2s ease;
+      }
+
+      .skip-link:focus {
+        top: 16px;
+      }
 
       .container {
         width: var(--container);
@@ -661,7 +741,20 @@
           padding: 16px 0;
         }
 
-        .nav-links,
+        .nav-links {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          width: 100%;
+          gap: 12px;
+        }
+
+        .nav-links a {
+          padding: 10px 12px;
+          border: 1px solid rgba(255,255,255,0.08);
+          border-radius: 12px;
+          background: rgba(255,255,255,0.03);
+        }
+
         .kpi-grid,
         .results-grid,
         .process-grid,
@@ -682,17 +775,64 @@
         .hero h1 {
           max-width: none;
         }
+
+        .lead,
+        .section-subtitle {
+          font-size: 16px;
+          line-height: 1.65;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .nav-links {
+          grid-template-columns: 1fr;
+        }
+
+        .hero {
+          padding: 48px 0 24px;
+        }
+
+        .section {
+          padding: 64px 0;
+        }
+
+        .btn {
+          width: 100%;
+        }
+
+        .hero-actions {
+          flex-direction: column;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        .reveal {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+
+        .btn,
+        .skip-link {
+          transition: none;
+        }
       }
     </style>
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <header class="nav">
       <div class="container nav-inner">
-        <a href="#top" class="brand">
+        <a href="#main-content" class="brand">
           <span class="brand-kicker">Paid Media Portfolio</span>
           <span class="brand-name">MARK ANDREW S. MATTI</span>
         </a>
-        <nav class="nav-links">
+        <nav class="nav-links" aria-label="Primary navigation">
           <a href="#about">About</a>
           <a href="#services">Services</a>
           <a href="#results">Results</a>
@@ -704,46 +844,46 @@
       </div>
     </header>
 
-    <main id="top">
+    <main id="main-content">
       <section class="hero">
         <div class="container">
           <div class="hero-grid">
             <div class="hero-main reveal">
               <div class="badge">Paid Media • Lead Gen • Conversion Efficiency</div>
               <h1>Mark Andrew S. Matti</h1>
-              <h2>Paid Media Specialist for Google &amp; Meta Ads</h2>
+              <h2>Paid Media Specialist helping businesses grow leads, bookings, and ROAS through Google Ads and Meta Ads</h2>
               <p class="lead">
-                I help businesses improve leads, bookings, and paid campaign performance through structured testing, audience segmentation, retargeting systems, and clean tracking with GA4 and Google Tag Manager. My work focuses on measurable outcomes such as lower acquisition costs, improved lead or booking performance, and more efficient campaign structure.
+                I build and optimize paid media systems using campaign structure, audience strategy, retargeting, GA4, and Google Tag Manager to improve measurable outcomes like lead quality, booking volume, CPA, and conversion efficiency.
               </p>
               <div class="hero-actions">
-                <a class="btn btn-primary" href="#case-studies">View Case Studies</a>
-                <a class="btn btn-secondary" href="#contact">Let’s Work Together</a>
+                <a class="btn btn-primary" href="#case-studies" data-cta="view_results">View Results</a>
+                <a class="btn btn-secondary" href="#contact" data-cta="contact_interest">Request a Campaign Audit</a>
               </div>
-              <div class="availability">Available for Full-Time &amp; Freelance Opportunities</div>
+              <div class="availability">Available for Full-Time and Freelance Opportunities</div>
             </div>
 
             <aside class="hero-side reveal">
-              <p class="hero-side-title">Why this portfolio works</p>
+              <p class="hero-side-title">What I bring</p>
               <div class="hero-points">
                 <div class="hero-point">
                   <div class="dot"></div>
                   <div>
-                    <b>Structured campaign thinking</b>
-                    <span>Audience segmentation, retargeting systems, and funnel logic built to improve efficiency.</span>
+                    <b>Structured campaign strategy</b>
+                    <span>Campaigns built around audience stages, funnel logic, and budget efficiency.</span>
                   </div>
                 </div>
                 <div class="hero-point">
                   <div class="dot"></div>
                   <div>
-                    <b>Clean tracking and reporting</b>
-                    <span>GA4, Google Tag Manager, and dashboards that turn campaign performance into usable decisions.</span>
+                    <b>Reliable tracking and reporting</b>
+                    <span>GA4, GTM, and reporting systems that make optimization decisions clearer.</span>
                   </div>
                 </div>
                 <div class="hero-point">
                   <div class="dot"></div>
                   <div>
-                    <b>Business-focused outcomes</b>
-                    <span>Leads, bookings, CPA, CPC, and conversion performance are tied directly to account improvements.</span>
+                    <b>Business-focused optimization</b>
+                    <span>Focused on leads, bookings, CPA, CPC, and conversion performance that matter to growth.</span>
                   </div>
                 </div>
               </div>
@@ -775,42 +915,42 @@
           <div class="card reveal">
             <div class="section-header">
               <div class="eyebrow">About</div>
-              <h2 class="section-title">Performance-driven paid media built around structure, tracking, and optimization.</h2>
+              <h2 class="section-title">Paid media built around stronger structure, cleaner tracking, and measurable outcomes.</h2>
               <p class="section-subtitle">
-                I’m a paid media specialist focused on Google Ads, Meta Ads, tracking, and funnel optimization. I plan, build, and improve paid campaigns designed to support lead generation, booking growth, and more efficient conversion performance.
+                I’m a Paid Media Specialist focused on Google Ads, Meta Ads, GA4, and Google Tag Manager. I help businesses improve lead generation, direct bookings, and campaign efficiency through stronger account structure, cleaner tracking, and ongoing optimization.
               </p>
               <p class="section-subtitle">
-                My experience includes campaign restructuring, retargeting systems, audience segmentation, creative testing, landing page support, and reporting through GA4, Google Tag Manager, and Looker Studio. I’ve worked across hospitality, attractions, and lead generation campaigns, with a strong focus on tying media performance to clear business outcomes.
+                My experience includes campaign restructuring, retargeting systems, audience segmentation, creative testing, landing page support, and reporting. I’ve worked across hospitality, attractions, and lead generation campaigns with a clear focus on measurable business outcomes.
               </p>
             </div>
-            <div class="support-line">Performance-driven paid media built around structure, tracking, and optimization.</div>
+            <div class="support-line">Best fit for brands and teams that want stronger lead generation, cleaner tracking, and better conversion efficiency.</div>
           </div>
 
           <div class="card reveal" id="services">
             <div class="section-header">
               <div class="eyebrow">Core Services</div>
-              <h2 class="section-title">Built to improve efficiency, visibility, and conversion performance.</h2>
+              <h2 class="section-title">Google Ads, Meta Ads, tracking, and optimization support built for performance.</h2>
             </div>
             <div class="service-grid">
               <div class="service-card">
                 <h3>Google Ads Management</h3>
-                <p>Campaign setup, restructuring, search intent alignment, keyword refinement, negative keyword strategy, and budget optimization.</p>
+                <p>Search campaign setup, restructuring, keyword refinement, negative keyword strategy, and budget optimization built around intent and conversion efficiency.</p>
               </div>
               <div class="service-card">
                 <h3>Meta Ads Management</h3>
-                <p>Prospecting, retargeting, audience segmentation, and creative testing across Facebook and Instagram.</p>
+                <p>Prospecting, retargeting, audience segmentation, and creative testing across Facebook and Instagram campaigns.</p>
               </div>
               <div class="service-card">
                 <h3>Tracking Setup &amp; Reporting</h3>
-                <p>GA4 event setup, Google Tag Manager implementation, conversion tracking, and dashboard reporting.</p>
+                <p>GA4 event tracking, Google Tag Manager implementation, conversion setup, and reporting dashboards for clearer optimization decisions.</p>
               </div>
               <div class="service-card">
                 <h3>Retargeting &amp; Funnel Optimization</h3>
-                <p>Audience window segmentation, remarketing flows, landing page alignment, and conversion-focused campaign support.</p>
+                <p>Audience window segmentation, remarketing flows, landing page alignment, and funnel support to improve conversion performance.</p>
               </div>
               <div class="service-card" style="grid-column: 1 / -1;">
                 <h3>Campaign Audit &amp; Optimization</h3>
-                <p>Account review, performance analysis, and actionable recommendations to improve efficiency.</p>
+                <p>Account reviews with clear, actionable recommendations to reduce wasted spend and improve efficiency.</p>
               </div>
             </div>
             <div class="tools-inline" style="margin-top: 18px;">Google Ads • Meta Ads Manager • GA4 • Google Tag Manager • Looker Studio • HubSpot • Mailchimp</div>
@@ -823,7 +963,7 @@
           <div class="section-header reveal">
             <div class="eyebrow">Selected Results</div>
             <h2 class="section-title">Performance outcomes across attractions, hospitality, and lead generation campaigns.</h2>
-            <p class="section-subtitle">Results supported by campaign structure, testing, tracking, and measurable optimization.</p>
+            <p class="section-subtitle">Selected outcomes from paid media, retargeting, tracking, and campaign optimization work.</p>
           </div>
 
           <div class="results-grid">
@@ -847,7 +987,7 @@
 
           <div class="proof-strip reveal">
             <strong>3,000+ Qualified Leads | $120K+ Revenue | +30% Conversion Performance | $5K → $20K Monthly Budgets</strong>
-            <div class="bottom-caption">Results supported by campaign structure, testing, tracking, and measurable optimization.</div>
+            <div class="bottom-caption">Case study details and workflow walkthroughs available upon request.</div>
           </div>
         </div>
       </section>
@@ -856,7 +996,8 @@
         <div class="container">
           <div class="section-header reveal">
             <div class="eyebrow">Case Studies</div>
-            <h2 class="section-title">Scroll-based case studies built to feel like proof, not just paragraphs.</h2>
+            <h2 class="section-title">Selected case studies across attractions, hospitality, and lead generation.</h2>
+            <p class="section-subtitle">A closer look at the strategy, execution, and measurable outcomes behind recent campaign work.</p>
           </div>
 
           <div class="case-stack">
@@ -1112,13 +1253,20 @@
             <div class="section-header">
               <div class="eyebrow">Let’s Work Together</div>
               <h2 class="section-title">Open to full-time roles, freelance projects, and performance marketing support across Google and Meta.</h2>
-              <p class="section-subtitle">If you’re looking for support with Google Ads, Meta Ads, retargeting, tracking, or campaign optimization, feel free to reach out.</p>
+              <p class="section-subtitle">Need help improving lead generation, bookings, tracking, or campaign efficiency? I’m available for full-time roles, freelance projects, and paid media support.</p>
             </div>
-            <div class="availability">Available for Full-Time &amp; Freelance Opportunities</div>
-            <div class="trust-line" style="margin-top: 12px;">Case study walkthroughs available upon request</div>
+            <div class="availability">Available for Full-Time and Freelance Opportunities</div>
+            <div class="trust-line" style="margin-top: 12px;">Open to in-house roles, freelance support, and campaign audit opportunities</div>
             <div class="hero-actions" style="margin-top: 24px;">
-              <a class="btn btn-primary" href="mailto:sianmatti11@gmail.com?subject=Work%20Inquiry%20%7C%20Mark%20Andrew%20Matti">Email Me</a>
-              <a class="btn btn-secondary" href="https://www.linkedin.com/in/markandrewmatti/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a class="btn btn-primary" href="mailto:sianmatti11@gmail.com?subject=Work%20Inquiry%20%7C%20Mark%20Andrew%20Matti" data-cta="email_click">Email for Opportunities</a>
+              <a
+                class="btn btn-secondary"
+                href="https://www.linkedin.com/in/markandrewmatti/"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-cta="linkedin_click"
+                aria-label="Open LinkedIn profile in a new tab"
+              >View LinkedIn</a>
             </div>
           </div>
 
@@ -1147,23 +1295,29 @@
     <footer class="footer">
       <div class="container footer-inner">
         <div>© <span id="year"></span> Mark Andrew S. Matti. All rights reserved.</div>
-        <a href="#top">Back to top</a>
+        <a href="#main-content">Back to top</a>
       </div>
     </footer>
 
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
 
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.12 });
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-      document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+      if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+      } else {
+        document.querySelectorAll('.reveal').forEach((el) => el.classList.add('visible'));
+      }
 
       const sections = document.querySelectorAll('section[id]');
       const navLinks = document.querySelectorAll('.nav-links a');
@@ -1174,13 +1328,32 @@
           const top = section.offsetTop - 120;
           if (window.scrollY >= top) current = section.getAttribute('id');
         });
+
         navLinks.forEach((link) => {
-          link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
+          const isActive = link.getAttribute('href') === `#${current}`;
+          link.classList.toggle('active', isActive);
+
+          if (isActive) {
+            link.setAttribute('aria-current', 'page');
+          } else {
+            link.removeAttribute('aria-current');
+          }
         });
       };
 
-      window.addEventListener('scroll', setActiveLink);
+      window.addEventListener('scroll', setActiveLink, { passive: true });
       setActiveLink();
+
+      document.querySelectorAll('[data-cta]').forEach((el) => {
+        el.addEventListener('click', () => {
+          if (typeof gtag === 'function') {
+            gtag('event', 'cta_click', {
+              cta_name: el.dataset.cta,
+              cta_text: el.textContent.trim()
+            });
+          }
+        });
+      });
     </script>
   </body>
 </html>
