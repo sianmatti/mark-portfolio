@@ -171,15 +171,15 @@
         flex-wrap: wrap;
       }
 
-      .nav-links a, .mobile-menu a {
+      .nav-links a {
         color: var(--muted);
         font-size: 14px;
         font-weight: 600;
         transition: color 0.2s ease;
       }
 
-      .nav-links a, .mobile-menu a:hover,
-      .nav-links a, .mobile-menu a.active {
+      .nav-links a:hover,
+      .nav-links a.active {
         color: var(--text);
       }
 
@@ -286,6 +286,7 @@
         border-radius: 999px;
         font-weight: 700;
         font-size: 14px;
+        border: 1 1 1 1 transparent;
         border: 1px solid transparent;
         transition: transform 0.18s ease, filter 0.18s ease, border-color 0.18s ease;
       }
@@ -388,6 +389,7 @@
 
       .kpi-context {
         color: var(--muted);
+        line-line-height: 1.55;
         line-height: 1.55;
         font-size: 14px;
       }
@@ -723,6 +725,24 @@
         transform: translateY(0);
       }
 
+      /* base styles for mobile nav */
+      .menu-toggle {
+        display: none;
+        min-height: 42px;
+        padding: 0 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(255,255,255,0.1);
+        background: rgba(255,255,255,0.04);
+        color: var(--text);
+        font: inherit;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      .mobile-menu {
+        display: none;
+      }
+
       @media (max-width: 1080px) {
         .hero-grid,
         .about-services,
@@ -740,23 +760,64 @@
 
       @media (max-width: 820px) {
         .nav-inner {
-          flex-direction: column;
-          align-items: flex-start;
-          padding: 16px 0;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          padding: 14px 0;
+          min-height: auto;
         }
 
         .nav-links {
-          display: grid;
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-          width: 100%;
-          gap: 12px;
+          display: none;
         }
 
-        .nav-links a, .mobile-menu a {
+        .menu-toggle {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .mobile-menu {
+          display: none;
+          width: 100%;
+          margin-top: 12px;
+          padding-top: 12px;
+          border-top: 1px solid rgba(255,255,255,0.08);
+          grid-template-columns: 1fr 1fr;
+          gap: 10px;
+        }
+
+        .mobile-menu.open {
+          display: grid;
+        }
+
+        .mobile-menu a {
           padding: 10px 12px;
           border: 1px solid rgba(255,255,255,0.08);
           border-radius: 12px;
           background: rgba(255,255,255,0.03);
+          color: var(--muted);
+          font-size: 14px;
+          font-weight: 600;
+          text-align: center;
+        }
+
+        .mobile-menu a:hover,
+        .mobile-menu a.active {
+          color: var(--text);
+        }
+
+        .hero-grid,
+        .about-services,
+        .case-shell,
+        .tools-layout,
+        .contact-shell {
+          grid-template-columns: 1fr;
+        }
+
+        .case-main {
+          border-right: 0;
+          border-bottom: 1px solid rgba(255,255,255,0.08);
         }
 
         .kpi-grid,
@@ -778,42 +839,282 @@
 
         .hero h1 {
           max-width: none;
+          font-size: clamp(34px, 8vw, 52px);
+        }
+
+        .hero h2 {
+          font-size: clamp(20px, 4vw, 28px);
         }
 
         .lead,
         .section-subtitle {
           font-size: 16px;
-          line-height: 1.65;
+          line-height: 1.62;
+        }
+
+        .hero-actions {
+          gap: 12px;
+        }
+
+        .hero-side {
+          gap: 10px;
+        }
+
+        .hero-points {
+          gap: 10px;
+        }
+
+        .hero-point {
+          padding: 12px;
+        }
+
+        .kpi-grid {
+          margin-top: 18px;
+        }
+
+        .proof-strip strong {
+          font-size: 16px;
+        }
+
+        .case-meta {
+          gap: 14px;
+        }
+
+        .meta-item {
+          padding: 16px;
+        }
+
+        .visual-card {
+          padding: 16px;
         }
       }
 
       @media (max-width: 560px) {
-        .nav-links {
-          grid-template-columns: 1fr;
-        }
-
         .hero {
-          padding: 48px 0 24px;
+          padding: 36px 0 20px;
         }
 
         .section {
-          padding: 64px 0;
+          padding: 56px 0;
         }
 
-        .btn {
-          width: 100%;
+        .section-tight {
+          padding-top: 18px;
         }
 
-        .hero-actions {
-          flex-direction: column;
+        .container {
+          width: min(100% - 24px, 1180px);
         }
 
         .hero-main {
           padding: 18px;
         }
 
+        .hero-side,
+        .card,
+        .case-main,
+        .case-side,
+        .contact-card,
+        .result-card,
+        .process-card,
+        .tool-card,
+        .service-card,
+        .kpi-card {
+          padding: 18px;
+        }
+
+        .badge {
+          font-size: 11px;
+          padding: 8px 12px;
+        }
+
+        .hero h1 {
+          margin: 14px 0 8px;
+          font-size: 34px;
+        }
+
         .hero h2 {
           font-size: 20px;
+          line-height: 1.18;
+        }
+
+        .lead {
+          font-size: 15px;
+          line-height: 1.58;
+          margin-top: 14px;
+        }
+
+        .hero-actions {
+          flex-direction: column;
+          margin-top: 20px;
+        }
+
+        .btn {
+          width: 100%;
+          min-height: 46px;
+        }
+
+        .availability {
+          margin-top: 14px;
+          font-size: 13px;
+        }
+
+        .hero-side {
+          padding-top: 16px;
+        }
+
+        .hero-side-title {
+          font-size: 12px;
+        }
+
+        .hero-point b {
+          font-size: 14px;
+        }
+
+        .hero-point span {
+          font-size: 13px;
+          line-height: 1.5;
+        }
+
+        .kpi-number {
+          font-size: 30px;
+        }
+
+        .kpi-label {
+          font-size: 14px;
+        }
+
+        .kpi-context,
+        .support-line,
+        .tools-inline,
+        .bottom-caption,
+        .trust-line,
+        .case-text,
+        .meta-item p,
+        .service-card p,
+        .result-card p,
+        .process-card p,
+        .tool-card p,
+        .contact-card p {
+          font-size: 14px;
+          line-height: 1.58;
+        }
+
+        .section-title {
+          font-size: 28px;
+          line-height: 1.08;
+        }
+
+        .section-subtitle {
+          font-size: 15px;
+          line-height: 1.58;
+        }
+
+        .proof-strip {
+          padding: 16px;
+        }
+
+        .proof-strip strong {
+          font-size: 15px;
+          line-height: 1.4;
+        }
+
+        .case-label {
+          font-size: 11px;
+          padding: 7px 10px;
+        }
+
+        .case-name {
+          font-size: 26px;
+        }
+
+        .case-descriptor {
+          margin: 6px 0 16px;
+          font-size: 14px;
+        }
+
+        .bullet-list {
+          line-height: 1.65;
+          padding-left: 18px;
+        }
+
+        .diagram-row,
+        .tag-row,
+        .mini-kpis {
+          gap: 8px;
+        }
+
+        .diagram-box,
+        .tag,
+        .mini-kpi {
+          padding: 10px 12px;
+          font-size: 13px;
+        }
+
+        .process-step {
+          width: 36px;
+          height: 36px;
+          margin-bottom: 12px;
+        }
+
+        .contact-name {
+          font-size: 22px;
+        }
+
+        .contact-list {
+          gap: 10px;
+          margin-top: 14px;
+        }
+
+        .contact-item {
+          padding: 12px 14px;
+        }
+
+        .hero-actions .btn:nth-child(3) {
+          display: none;
+        }
+
+        .case-meta .meta-item:nth-child(5),
+        .case-meta .meta-item:nth-child(6) {
+          padding-top: 12px;
+          padding-bottom: 12px;
+        }
+
+        .case-meta .meta-item:nth-child(5) p,
+        .case-meta .meta-item:nth-child(6) p {
+          font-size: 13px;
+        }
+
+        .case-meta .meta-item:nth-child(3) .bullet-list li:nth-child(n+5) {
+          display: none;
+        }
+
+        .contact-shell {
+          gap: 14px;
+        }
+
+        .contact-card .hero-actions {
+          margin-top: 18px !important;
+        }
+
+        .contact-card .trust-line {
+          font-size: 13px;
+        }
+
+        .contact-list {
+          margin-top: 10px;
+        }
+
+        .footer {
+          padding: 22px 0 36px;
+        }
+
+        .footer-inner {
+          padding-top: 18px;
+        }
+
+        .mobile-menu {
+          grid-template-columns: 1fr;
         }
       }
 
@@ -835,31 +1136,6 @@
           transition: none;
         }
       }
-.menu-toggle{display:none;min-height:42px;padding:0 14px;border-radius:999px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.04);color:var(--text);font:inherit;font-weight:700;cursor:pointer;}
-.menu-toggle{display:none;min-height:42px;padding:0 14px;border-radius:999px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.04);color:var(--text);font:inherit;font-weight:700;cursor:pointer;}
-.mobile-menu{display:none;}
-@media (max-width: 820px){
-  .menu-toggle{display:inline-flex;align-items:center;justify-content:center;}
-  .nav-inner{flex-direction:row;align-items:center;justify-content:space-between;padding:14px 0;min-height:auto;}
-  .nav-links{display:none;}
-  .mobile-menu{display:none;width:100%;margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.08);grid-template-columns:1fr 1fr;gap:10px;}
-  .mobile-menu.open{display:grid;}
-  .mobile-menu a{padding:10px 12px;border:1px solid rgba(255,255,255,0.08);border-radius:12px;background:rgba(255,255,255,0.03);color:var(--muted);font-size:14px;font-weight:600;text-align:center;}
-  .mobile-menu a:hover,.mobile-menu a.active{color:var(--text);}
-}
-@media (max-width: 560px){
-  .mobile-menu{grid-template-columns:1fr;}
-  .hero-actions .btn:nth-child(3){display:none;}
-  .case-meta .meta-item:nth-child(5),
-  .case-meta .meta-item:nth-child(6){padding-top:12px;padding-bottom:12px;}
-  .case-meta .meta-item:nth-child(5) p,
-  .case-meta .meta-item:nth-child(6) p{font-size:13px;}
-  .case-meta .meta-item:nth-child(3) .bullet-list li:nth-child(n+5){display:none;}
-  .contact-shell{gap:14px;}
-  .contact-card .hero-actions{margin-top:18px !important;}
-  .contact-card .trust-line{font-size:13px;}
-  .contact-list{margin-top:10px;}
-}
     </style>
   </head>
   <body>
@@ -871,10 +1147,12 @@
           <span class="brand-kicker">Paid Media Portfolio</span>
           <span class="brand-name">MARK ANDREW S. MATTI</span>
         </a>
-         <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation menu">
-            Menu
-          </button>
-<nav class="nav-links" aria-label="Primary navigation">
+
+        <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation menu">
+          Menu
+        </button>
+
+        <nav class="nav-links" aria-label="Primary navigation">
           <a href="#about">About</a>
           <a href="#services">Services</a>
           <a href="#results">Results</a>
@@ -882,18 +1160,17 @@
           <a href="#process">Process</a>
           <a href="#tools">Tools</a>
           <a href="#contact">Contact</a>
-  </nav>
+        </nav>
 
-  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
-  <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#results">Results</a>
-  <a href="#case-studies">Case Studies</a>
-  <a href="#process">Process</a>
-  <a href="#tools">Tools</a>
-  <a href="#contact">Contact</a>
-</nav>
-
+        <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#results">Results</a>
+          <a href="#case-studies">Case Studies</a>
+          <a href="#process">Process</a>
+          <a href="#tools">Tools</a>
+          <a href="#contact">Contact</a>
+        </nav>
       </div>
     </header>
 
@@ -905,15 +1182,18 @@
               <div class="badge">Paid Media • Lead Gen • Conversion Efficiency</div>
               <h1>Mark Andrew S. Matti</h1>
               <h2>Paid Media Specialist for lead generation, booking growth, and conversion efficiency</h2>
+
               <p class="lead">
-                I build and optimize Google Ads and Meta Ads systems backed by GA4 and Google Tag Manager to improve lead quality, reduce wasted spend, and drive measurable business outcomes.
+                I build and optimize Google Ads + Meta Ads systems backed by GA4 and GTM to improve lead quality, reduce wasted spend, and make performance decisions based on reliable measurement.
               </p>
+
               <p class="lead" style="margin-top: 10px;">
-                Best suited for hospitality, attractions, and lead generation brands that want stronger tracking and more efficient campaign performance.
+                Best fit for hospitality, attractions, and lead-gen brands with budgets scaling from ~$5K to $20K/month.
               </p>
+
               <div class="hero-actions">
                 <a class="btn btn-primary" href="#case-studies" data-cta="view_case_studies">See Case Studies</a>
-                <a class="btn btn-secondary" href="#contact" data-cta="request_audit">Request a Paid Media Audit</a>
+                <a class="btn btn-secondary" href="#contact" data-cta="request_audit">Request a Google Ads + Meta Ads audit</a>
                 <a class="btn btn-secondary" href="#process" data-cta="view_process">See My Approach</a>
               </div>
               <div class="availability">Available for full-time and freelance paid media roles</div>
@@ -941,6 +1221,13 @@
                   <div>
                     <b>Performance-driven optimization</b>
                     <span>Focused on CPA, lead quality, bookings, and conversion outcomes, not vanity metrics.</span>
+                  </div>
+                </div>
+                <div class="hero-point">
+                  <div class="dot"></div>
+                  <div>
+                    <b>Conversion-focused landing page alignment</b>
+                    <span>Work with landing pages/offer messaging to reduce friction, improve relevance, and convert paid clicks into leads and bookings more efficiently.</span>
                   </div>
                 </div>
               </div>
@@ -1030,19 +1317,19 @@
           <div class="results-grid">
             <div class="result-card reveal">
               <h3>+35% Event Turnout</h3>
-              <p>Improved turnout through structured audience segmentation and promo testing for Splash Park Bacolod, while reducing CPA by 25%.</p>
+              <p>+35% event turnout &amp; -25% CPA via structured audience segmentation + promo testing</p>
             </div>
             <div class="result-card reveal">
               <h3>+20% Direct Bookings</h3>
-              <p>Improved booking performance through campaign restructuring and intent-based targeting for SixtyFifth Hotel, while reducing CPC by 30%.</p>
+              <p>+20% direct bookings &amp; -30% CPC via cleaner campaign architecture + intent targeting</p>
             </div>
             <div class="result-card reveal">
               <h3>3,000+ Qualified Leads</h3>
-              <p>Delivered 3,000+ qualified leads and $120K+ revenue at Gotham Books Inc., improving conversion performance by 30%.</p>
+              <p>3,000+ qualified leads / $120K+ revenue / +30% conversion performance via funnel alignment + disciplined optimization</p>
             </div>
             <div class="result-card reveal">
               <h3>$5K → $20K Monthly Budgets</h3>
-              <p>Managed Google and Meta lead generation campaigns at higher spend levels while maintaining efficiency through structured testing, funnel optimization, and clean tracking.</p>
+              <p>Managed $5K → $20K monthly budgets while maintaining efficiency through structured testing, funnel optimization, and clean tracking</p>
             </div>
           </div>
 
@@ -1137,7 +1424,7 @@
                       <span class="meta-kicker">Goal</span>
                       <p>Increase direct bookings and improve the quality of paid traffic.</p>
                     </div>
-                    <div class="meta-item">
+                    <div class="meta-item>
                       <span class="meta-kicker">Challenge</span>
                       <p>The account needed better campaign structure, more relevant targeting, and stronger alignment between paid traffic and booking intent.</p>
                     </div>
@@ -1350,7 +1637,7 @@
         <div class="container contact-shell">
           <div class="contact-card reveal">
             <div class="section-header">
-              <div class="eyebrow">Let’s Work Together</div>
+              <div the="eyebrow">Let’s Work Together</div>
               <h2 class="section-title" id="contact-heading">Let’s improve your paid media performance.</h2>
               <p class="section-subtitle">Looking to improve lead generation, booking performance, or campaign efficiency? I’m open to full-time roles, freelance work, and paid media audits.</p>
             </div>
@@ -1442,25 +1729,25 @@
 
       window.addEventListener('scroll', setActiveLink, { passive: true });
       setActiveLink();
+
       const menuToggle = document.querySelector('.menu-toggle');
-const mobileMenu = document.querySelector('.mobile-menu');
+      const mobileMenu = document.querySelector('.mobile-menu');
 
-if (menuToggle && mobileMenu) {
-  menuToggle.addEventListener('click', () => {
-    const isOpen = mobileMenu.classList.toggle('open');
-    menuToggle.setAttribute('aria-expanded', String(isOpen));
-    menuToggle.textContent = isOpen ? 'Close' : 'Menu';
-  });
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', () => {
+          const isOpen = mobileMenu.classList.toggle('open');
+          menuToggle.setAttribute('aria-expanded', String(isOpen));
+          menuToggle.textContent = isOpen ? 'Close' : 'Menu';
+        });
 
-  mobileMenu.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.remove('open');
-      menuToggle.setAttribute('aria-expanded', 'false');
-      menuToggle.textContent = 'Menu';
-    });
-  });
-}
-
+        mobileMenu.querySelectorAll('a').forEach((link) => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            menuToggle.textContent = 'Menu';
+          });
+        });
+      }
 
       document.querySelectorAll('[data-cta]').forEach((el) => {
         el.addEventListener('click', () => {
