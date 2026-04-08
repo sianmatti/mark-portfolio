@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Paid Media Specialist Portfolio | Google Ads, Meta Ads, GA4 & GTM | Mark Andrew S. Matti</title>
+  <meta
+    name="description"
+    content="Paid Media Specialist portfolio of Mark Andrew S. Matti. Google Ads, Meta Ads, GA4, and GTM support for lead generation, direct bookings, tracking, and campaign optimization."
+  />
+  <meta
+    name="keywords"
+    content="Paid Media Specialist, Google Ads Specialist, Meta Ads Specialist, PPC Specialist, Performance Marketing Specialist, GA4, Google Tag Manager, Paid Search, Paid Social"
+  />
+  <meta name="author" content="Mark Andrew S. Matti" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://sianmatti.github.io/mark-portfolio/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Paid Media Specialist Portfolio | Mark Andrew S. Matti" />
+  <meta
+    property="og:description"
+    content="Google Ads, Meta Ads, GA4, and GTM support for lead generation, direct bookings, tracking, and campaign optimization."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sianmatti.github.io/mark-portfolio/" />
+  <meta property="og:site_name" content="Mark Andrew S. Matti Portfolio" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Paid Media Specialist Portfolio | Mark Andrew S. Matti" />
+  <meta
+    name="twitter:description"
+    content="Google Ads, Meta Ads, GA4, and GTM support for lead generation, direct bookings, tracking, and campaign optimization."
+  />
+
+  <style>
+    :root {
+      --bg: #0b0d12;
+      --panel: #121722;
+      --panel-2: #171d2a;
+      --text: #f3f6fb;
+      --muted: #a7b2c5;
+      --line: #273044;
+      --line-soft: #1d2534;
+      --accent: #7cc4ff;
+      --accent-2: #b5e1ff;
+      --success: #9be7b0;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+      --radius: 18px;
+      --radius-sm: 12px;
+      --max: 1180px;
+      --gap: 24px;
+      --section-space: 84px;
+      --container-pad: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(180deg, #0b0d12 0%, #101521 100%);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -48px;
+      left: 16px;
+      background: #fff;
+      color: #000;
+      padding: 10px 14px;
+      border-radius: 10px;
+      z-index: 9999;
+      transition: top 0.2s ease;
+    }
+
+    .skip-link:focus {
+      top: 16px;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - (var(--container-pad) * 2)));
+      margin-inline: auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(14px);
+      background: rgba(11, 13, 18, 0.78);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 76px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .brand-kicker {
+      font-size: 0.77rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-2);
+    }
+
+    .brand-name {
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.01em;
+    }
+
+    .nav-toggle {
+      display: none;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--text);
+      padding: 10px 14px;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+
+    .nav-toggle:hover,
+    .nav-toggle:focus-visible {
+      border-color: var(--accent);
+      outline: none;
+    }
+
+    .site-nav ul {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+
+    .site-nav a {
+      color: var(--muted);
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
+
+    .site-nav a:hover,
+    .site-nav a:focus-visible {
+      color: var(--text);
+      outline: none;
+    }
+
+    .hero {
+      padding: 88px 0 56px;
+    }
+
+    .hero-wrap {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .hero-card,
+    .panel {
+      background: linear-gradient(180deg, rgba(23, 29, 42, 0.9), rgba(18, 23, 34, 0.96));
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card {
+      padding: 36px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-2);
+      margin-bottom: 18px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 1px;
+      background: var(--accent);
+      display: inline-block;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      font-size: clamp(2rem, 4vw, 4.1rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+      color: var(--text);
+      max-width: 62ch;
+      margin-bottom: 16px;
+    }
+
+    .hero-copy {
+      color: var(--muted);
+      max-width: 64ch;
+      margin-bottom: 24px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 18px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: transparent;
+      color: var(--text);
+      font-weight: 600;
+      transition: 0.2s ease;
+      cursor: pointer;
+    }
+
+    .button-primary {
+      background: linear-gradient(180deg, #89d1ff, #69bbff);
+      color: #05121d;
+      border-color: transparent;
+    }
+
+    .button-primary:hover,
+    .button-primary:focus-visible {
+      transform: translateY(-1px);
+      filter: brightness(1.03);
+      outline: none;
+    }
+
+    .button-secondary:hover,
+    .button-secondary:focus-visible {
+      border-color: var(--accent);
+      color: var(--text);
+      outline: none;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 38px;
+      padding: 0 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .proof-card {
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .proof-card h2 {
+      margin: 0;
+      font-size: 1.05rem;
+      line-height: 1.3;
+    }
+
+    .proof-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .proof-item {
+      padding: 16px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--line-soft);
+    }
+
+    .proof-item strong {
+      display: block;
+      font-size: 1.35rem;
+      line-height: 1;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .proof-item span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .section {
+      padding: var(--section-space) 0;
+    }
+
+    .section-header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: end;
+      margin-bottom: 28px;
+    }
+
+    .section-kicker {
+      margin: 0 0 8px;
+      color: var(--accent-2);
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      margin: 0 0 10px;
+      font-size: clamp(1.6rem, 2vw, 2.4rem);
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+
+    .section-lead {
+      margin: 0;
+      color: var(--muted);
+      max-width: 68ch;
+    }
+
+    .grid {
+      display: grid;
+      gap: var(--gap);
+    }
+
+    .grid-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(23, 29, 42, 0.9), rgba(18, 23, 34, 0.96));
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      min-height: 100%;
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 1.08rem;
+      line-height: 1.3;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .results-grid .card {
+      padding: 22px;
+    }
+
+    .result-number {
+      font-size: clamp(1.9rem, 2.8vw, 2.8rem);
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 10px;
+      letter-spacing: -0.04em;
+    }
+
+    .result-label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+
+    .result-copy {
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .about-wrap {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 24px;
+    }
+
+    .stack-list,
+    .fit-list,
+    .tools-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .fit-list .pill,
+    .stack-list .pill,
+    .tools-list .pill {
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .service-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 14px;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .case-study {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 24px;
+      align-items: stretch;
+      padding: 28px;
+    }
+
+    .case-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 14px 0 18px;
+    }
+
+    .case-study h3 {
+      margin: 0 0 10px;
+      font-size: 1.5rem;
+      line-height: 1.15;
+    }
+
+    .case-study p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .case-columns {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .mini-block {
+      padding: 16px;
+      border: 1px solid var(--line-soft);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.025);
+    }
+
+    .mini-block h4 {
+      margin: 0 0 8px;
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+
+    .mini-block p,
+    .mini-block ul {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .mini-block ul {
+      padding-left: 18px;
+    }
+
+    .visual-box {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      justify-content: space-between;
+    }
+
+    .flow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .flow .pill {
+      background: rgba(124, 196, 255, 0.07);
+      color: var(--text);
+      border-color: rgba(124, 196, 255, 0.18);
+    }
+
+    .kpi-box {
+      display: grid;
+      gap: 12px;
+    }
+
+    .kpi-box .mini-block strong {
+      display: block;
+      font-size: 1.35rem;
+      line-height: 1;
+      margin-bottom: 6px;
+      color: var(--success);
+    }
+
+    .process-grid .card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .process-step {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: rgba(124, 196, 255, 0.12);
+      color: var(--accent-2);
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .audit-cta {
+      padding: 32px;
+      display: grid;
+      grid-template-columns: 1.2fr auto;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .audit-cta p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 62ch;
+    }
+
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      gap: 24px;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .contact-item {
+      padding: 16px;
+      border-radius: 14px;
+      border: 1px solid var(--line-soft);
+      background: rgba(255, 255, 255, 0.025);
+    }
+
+    .contact-item span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.88rem;
+      margin-bottom: 6px;
+    }
+
+    .contact-item strong,
+    .contact-item a {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .site-footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 28px 0 44px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    [data-animate] {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity 0.45s ease, transform 0.45s ease;
+    }
+
+    [data-animate].is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid rgba(124, 196, 255, 0.45);
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 1080px) {
+      .hero-wrap,
+      .about-wrap,
+      .contact-wrap,
+      .case-study,
+      .audit-cta,
+      .section-header {
+        grid-template-columns: 1fr;
+      }
+
+      .grid-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .grid-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 760px) {
+      :root {
+        --section-space: 64px;
+        --container-pad: 16px;
+      }
+
+      .header-inner {
+        min-height: 70px;
+      }
+
+      .nav-toggle {
+        display: inline-flex;
+      }
+
+      .site-nav {
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 16px;
+        right: 16px;
+        background: rgba(18, 23, 34, 0.98);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        box-shadow: var(--shadow);
+        padding: 12px;
+        display: none;
+      }
+
+      .site-nav.is-open {
+        display: block;
+      }
+
+      .site-nav ul {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6px;
+      }
+
+      .site-nav a {
+        display: block;
+        padding: 12px;
+        border-radius: 10px;
+      }
+
+      .site-nav a:hover,
+      .site-nav a:focus-visible {
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .hero {
+        padding-top: 68px;
+      }
+
+      .hero-card,
+      .proof-card,
+      .card,
+      .case-study,
+      .audit-cta {
+        padding: 22px;
+      }
+
+      .hero-ctas {
+        flex-direction: column;
+      }
+
+      .hero-ctas .button {
+        width: 100%;
+      }
+
+      .proof-grid,
+      .grid-4,
+      .grid-3,
+      .grid-2,
+      .case-columns {
+        grid-template-columns: 1fr;
+      }
+
+      .section-header {
+        margin-bottom: 22px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+
+      [data-animate] {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mark Andrew S. Matti",
+    "jobTitle": "Paid Media Specialist",
+    "url": "https://sianmatti.github.io/mark-portfolio/",
+    "email": "mailto:sianmatti11@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bacolod City",
+      "addressCountry": "PH"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/markandrewmatti/"
+    ],
+    "knowsAbout": [
+      "Google Ads",
+      "Meta Ads",
+      "GA4",
+      "Google Tag Manager",
+      "Looker Studio",
+      "Paid Search",
+      "Paid Social",
+      "Lead Generation",
+      "Conversion Tracking",
+      "Performance Marketing"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Go to top of page">
+        <span class="brand-kicker">Paid Media Portfolio</span>
+        <span class="brand-name">Mark Andrew S. Matti</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+        aria-label="Open navigation menu"
+      >
+        Menu
+      </button>
+
+      <nav class="site-nav" id="primary-navigation" aria-label="Primary">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#results">Results</a></li>
+          <li><a href="#case-studies">Case Studies</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#tools">Tools</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="top">
+      <div class="container hero-wrap">
+        <div class="hero-card" data-animate>
+          <p class="eyebrow">Paid Media • Lead Gen • Conversion Efficiency</p>
+          <h1>Mark Andrew S. Matti</h1>
+          <p class="hero-subtitle">
+            Paid Media Specialist for higher-quality leads, more direct bookings, and more efficient ad spend
+          </p>
+          <p class="hero-copy">
+            I build and optimize Google Ads and Meta Ads systems backed by GA4 and GTM to improve lead quality,
+            reduce wasted spend, and support better performance decisions through reliable tracking.
+          </p>
+          <p class="hero-copy">
+            Best fit for hospitality, attractions, and lead generation brands managing roughly $5K to $20K in monthly ad spend.
+          </p>
+
+          <div class="hero-ctas">
+            <a
+              class="button button-primary"
+              href="mailto:sianmatti11@gmail.com?subject=Paid%20Media%20Audit%20Inquiry"
+              data-cta="audit"
+            >
+              Request a Paid Media Audit
+            </a>
+            <a class="button button-secondary" href="#case-studies" data-cta="case-studies">
+              View Case Studies
+            </a>
+          </div>
+
+          <div class="hero-meta">
+            <span class="pill">Google Ads</span>
+            <span class="pill">Meta Ads</span>
+            <span class="pill">GA4 + GTM</span>
+            <span class="pill">Full-time & freelance</span>
+          </div>
+        </div>
+
+        <aside class="proof-card panel" aria-label="Key proof points" data-animate>
+          <h2>Performance highlights</h2>
+          <div class="proof-grid">
+            <div class="proof-item">
+              <strong>+35%</strong>
+              <span>Event turnout</span>
+            </div>
+            <div class="proof-item">
+              <strong>+20%</strong>
+              <span>Direct bookings</span>
+            </div>
+            <div class="proof-item">
+              <strong>3,000+</strong>
+              <span>Qualified leads</span>
+            </div>
+            <div class="proof-item">
+              <strong>$5K–$20K</strong>
+              <span>Monthly budgets managed</span>
+            </div>
+          </div>
+          <p class="hero-copy" style="margin:0;">
+            Experience across hospitality, attractions, and lead generation campaigns with measurable performance
+            improvements tied to cleaner structure, stronger tracking, and disciplined optimization.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="strengths-title">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <div>
+            <p class="section-kicker">Core strengths</p>
+            <h2 class="section-title" id="strengths-title">Built for scalable acquisition and cleaner performance decisions</h2>
+            <p class="section-lead">
+              The focus is not just launching campaigns. It is building paid media systems that reduce wasted spend,
+              improve measurement, and turn traffic into better business outcomes.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-4">
+          <article class="card" data-animate>
+            <h3>Account architecture</h3>
+            <p>Campaign structures built around funnel stages, search intent, audience behavior, and budget efficiency.</p>
+          </article>
+
+          <article class="card" data-animate>
+            <h3>Reliable attribution</h3>
+            <p>GA4 and GTM setups that make conversion data trustworthy, actionable, and easier to optimize against.</p>
+          </article>
+
+          <article class="card" data-animate>
+            <h3>Performance-driven optimization</h3>
+            <p>Focused on CPA, lead quality, bookings, and conversion outcomes instead of vanity metrics.</p>
+          </article>
+
+          <article class="card" data-animate>
+            <h3>Budget control &amp; waste reduction</h3>
+            <p>Cleaner targeting, audience exclusions, search term control, and smarter budget allocation to improve efficiency.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="results" aria-labelledby="results-title">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <div>
+            <p class="section-kicker">Selected results</p>
+            <h2 class="section-title" id="results-title">Business outcomes across attractions, hospitality, and lead generation</h2>
+            <p class="section-lead">
+              Selected examples of performance gains achieved through campaign restructuring, tighter targeting,
+              cleaner tracking, and stronger alignment between paid traffic and conversion flow.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-4 results-grid">
+          <article class="card" data-animate>
+            <div class="result-number">+35%</div>
+            <span class="result-label">Event turnout</span>
+            <p class="result-copy">Reduced CPA by 25% through audience segmentation, remarketing structure, and promo testing.</p>
+          </article>
+
+          <article class="card" data-animate>
+            <div class="result-number">+20%</div>
+            <span class="result-label">Direct bookings</span>
+            <p class="result-copy">Lowered CPC by 30% with cleaner campaign architecture, intent targeting, and booking-path support.</p>
+          </article>
+
+          <article class="card" data-animate>
+            <div class="result-number">3,000+</div>
+            <span class="result-label">Qualified leads</span>
+            <p class="result-copy">Generated alongside stronger landing page alignment, clearer messaging, and CRM follow-up support.</p>
+          </article>
+
+          <article class="card" data-animate>
+            <div class="result-number">$120K+</div>
+            <span class="result-label">Revenue contribution</span>
+            <p class="result-copy">Supported by disciplined optimization, funnel alignment, and cleaner conversion tracking.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container about-wrap">
+        <div class="card" data-animate>
+          <p class="section-kicker">About</p>
+          <h2 class="section-title" id="about-title">Paid media systems built for scalable acquisition, reliable tracking, and conversion efficiency</h2>
+          <p class="section-lead" style="margin-bottom:16px;">
+            I specialize in Google Ads and Meta Ads supported by GA4 and Google Tag Manager. My work focuses on
+            improving lead generation, booking performance, and campaign efficiency through structured account architecture,
+            cleaner attribution, and actionable reporting.
+          </p>
+          <p class="section-lead">
+            I’ve worked across hospitality, attractions, and lead generation campaigns, supporting campaign restructuring,
+            retargeting systems, audience segmentation, creative testing, landing page alignment, and performance reporting.
+          </p>
+        </div>
+
+        <div class="card" data-animate>
+          <p class="section-kicker">Best fit</p>
+          <h2 class="section-title" style="font-size:1.5rem;">Who I’m best for</h2>
+          <div class="fit-list" style="margin-bottom:18px;">
+            <span class="pill">Hotels & resorts</span>
+            <span class="pill">Attractions & leisure brands</span>
+            <span class="pill">Lead generation campaigns</span>
+            <span class="pill">Teams scaling $5K–$20K/month</span>
+          </div>
+
+          <p class="section-kicker" style="margin-top:20px;">Platforms & stack</p>
+          <div class="stack-list">
+            <span class="pill">Google Ads</span>
+            <span class="pill">Meta Ads Manager</span>
+            <span class="pill">GA4</span>
+            <span class="pill">Google Tag Manager</span>
+            <span class="pill">Looker Studio</span>
+            <span class="pill">HubSpot</span>
+            <span class="pill">Mailchimp</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <div>
+            <p class="section-kicker">Core services</p>
+            <h2 class="section-title" id="services-title">Paid media, tracking, and optimization support built around measurable outcomes</h2>
+            <p class="section-lead">
+              The goal is not just execution. It is improving efficiency, reducing wasted spend, and building a clearer path
+              from paid traffic to qualified leads or bookings.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card" data-animate>
+            <h3>Google Ads Management</h3>
+            <p>Search campaign setup, restructuring, keyword refinement, negative keyword cleanup, and budget optimization built around intent and conversion efficiency.</p>
+            <ul class="service-list">
+              <li>Campaign build and restructure</li>
+              <li>Search term cleanup and negative keyword strategy</li>
+              <li>Budget pacing and efficiency improvements</li>
+            </ul>
+          </article>
+
+          <article class="card" data-animate>
+            <h3>Meta Ads Management</h3>
+            <p>Prospecting, retargeting, audience segmentation, and creative testing across Facebook and Instagram campaigns.</p>
+            <ul class="service-list">
+              <li>Prospecting vs retargeting setup</li>
+              <li>Audience window segmentation</li>
+              <li>Creative iteration and performance testing</li>
+            </ul>
+          </article>
+
+          <article class="card" data-animate>
+            <h3>Tracking Setup &amp; Reporting</h3>
+            <p>GA4 event tracking, Google Tag Manager implementation, conversion setup, and reporting dashboards for clearer optimization decisions.</p>
+            <ul class="service-list">
+              <li>GA4 conversion tracking</li>
+              <li>GTM event implementation</li>
+              <li>Looker Studio reporting support</li>
+            </ul>
+          </article>
+
+          <article class="card" data-animate>
+            <h3>Retargeting &amp; Funnel Optimization</h3>
+            <p>Audience window segmentation, remarketing flows, landing page alignment, and funnel support to improve conversion performance.</p>
+            <ul class="service-list">
+              <li>7-day, 14-day, and 30-day remarketing windows</li>
+              <li>Offer and landing page alignment</li>
+              <li>Support for conversion flow improvements</li>
+            </ul>
+          </article>
+
+          <article class="card" data-animate>
+            <h3>Campaign Audit &amp; Optimization</h3>
+            <p>Account reviews with clear, actionable recommendations to reduce wasted spend and improve campaign efficiency.</p>
+            <ul class="service-list">
+              <li>Structure audit</li>
+              <li>Tracking gap review</li>
+              <li>Action plan for faster optimization</li>
+            </ul>
+          </article>
+
+          <article class="card" data-animate>
+            <h3>Landing Page &amp; Conversion Alignment</h3>
+            <p>Support for messaging, offer clarity, and conversion flow alignment so paid clicks have a stronger chance of turning into leads or bookings.</p>
+            <ul class="service-list">
+              <li>Message-to-offer relevance review</li>
+              <li>Friction reduction recommendations</li>
+              <li>Paid traffic conversion support</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="case-studies" aria-labelledby="case-studies-title">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <div>
+            <p class="section-kicker">Case studies</p>
+            <h2 class="section-title" id="case-studies-title">A closer look at recent paid media work</h2>
+            <p class="section-lead">
+              These examples show the mix of campaign structure, remarketing, tracking, and performance optimization used to
+              improve acquisition efficiency and business outcomes.
+            </p>
+          </div>
+        </div>
+
+        <article class="card case-study" data-animate>
+          <div>
+            <h3>Splash Park Bacolod</h3>
+            <div class="case-meta">
+              <span class="pill">Attraction / Event Promotion</span>
+              <span class="pill">Engagement Type: Paid Media Optimization</span>
+              <span class="pill">Services: Meta Ads, Retargeting, GA4 Reporting</span>
+            </div>
+
+            <div class="case-columns">
+              <div class="mini-block">
+                <h4>Goal</h4>
+                <p>Increase event turnout while improving acquisition efficiency.</p>
+              </div>
+              <div class="mini-block">
+                <h4>Challenge</h4>
+                <p>The campaign needed stronger audience structure, better promo testing, and better tracking visibility.</p>
+              </div>
+              <div class="mini-block">
+                <h4>What I did</h4>
+                <ul>
+                  <li>Structured audience segmentation</li>
+                  <li>Built prospecting vs retargeting setup</li>
+                  <li>Created 7-day, 14-day, and 30-day remarketing windows</li>
+                  <li>Implemented GA4 event tracking and dashboard reporting</li>
+                </ul>
+              </div>
+              <div class="mini-block">
+                <h4>Result</h4>
+                <p>Increased event turnout by 35% while reducing CPA by 25%.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="visual-box">
+            <div class="mini-block">
+              <h4>Audience structure</h4>
+              <div class="flow">
+                <span class="pill">Prospecting</span>
+                <span class="pill">7D RTG</span>
+                <span class="pill">14D RTG</span>
+                <span class="pill">30D RTG</span>
+              </div>
+            </div>
+            <div class="kpi-box">
+              <div class="mini-block">
+                <strong>+35%</strong>
+                <span class="result-label">Turnout</span>
+              </div>
+              <div class="mini-block">
+                <strong>-25%</strong>
+                <span class="result-label">CPA</span>
+              </div>
+            </div>
+            <div class="mini-block">
+              <h4>Impact</h4>
+              <p>Demonstrates the ability to scale performance while improving efficiency through structured targeting, remarketing logic, and cleaner tracking.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card case-study" data-animate>
+          <div>
+            <h3>SixtyFifth Hotel</h3>
+            <div class="case-meta">
+              <span class="pill">Hospitality / Booking Growth</span>
+              <span class="pill">Engagement Type: Search + Remarketing Support</span>
+              <span class="pill">Services: Google Ads, GA4, Booking Path Support</span>
+            </div>
+
+            <div class="case-columns">
+              <div class="mini-block">
+                <h4>Goal</h4>
+                <p>Increase direct bookings and improve the quality of paid traffic.</p>
+              </div>
+              <div class="mini-block">
+                <h4>Challenge</h4>
+                <p>The account needed better campaign structure, more relevant targeting, and stronger booking-intent alignment.</p>
+              </div>
+              <div class="mini-block">
+                <h4>What I did</h4>
+                <ul>
+                  <li>Restructured campaigns into Brand and Non-Brand</li>
+                  <li>Tightened targeting and negative keyword strategy</li>
+                  <li>Built remarketing journeys from website visit to booking engine</li>
+                  <li>Implemented GA4 tracking and dashboard reporting</li>
+                </ul>
+              </div>
+              <div class="mini-block">
+                <h4>Result</h4>
+                <p>Increased direct bookings by 20% while reducing CPC by 30%.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="visual-box">
+            <div class="mini-block">
+              <h4>Campaign structure</h4>
+              <div class="flow">
+                <span class="pill">Brand Search</span>
+                <span class="pill">Non-Brand Search</span>
+                <span class="pill">Remarketing</span>
+                <span class="pill">Booking Support</span>
+              </div>
+            </div>
+            <div class="kpi-box">
+              <div class="mini-block">
+                <strong>+20%</strong>
+                <span class="result-label">Bookings</span>
+              </div>
+              <div class="mini-block">
+                <strong>-30%</strong>
+                <span class="result-label">CPC</span>
+              </div>
+            </div>
+            <div class="mini-block">
+              <h4>Impact</h4>
+              <p>Shows strength in campaign restructuring, search efficiency, and remarketing strategy tied to booking-focused outcomes.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card case-study" data-animate>
+          <div>
+            <h3>Gotham Books Inc.</h3>
+            <div class="case-meta">
+              <span class="pill">Lead Generation / Full-Funnel Support</span>
+              <span class="pill">Engagement Type: Acquisition + Funnel Support</span>
+              <span class="pill">Services: Google Ads, Meta Ads, Landing Pages, CRM</span>
+            </div>
+
+            <div class="case-columns">
+              <div class="mini-block">
+                <h4>Goal</h4>
+                <p>Drive qualified leads and revenue through integrated digital marketing efforts.</p>
+              </div>
+              <div class="mini-block">
+                <h4>Challenge</h4>
+                <p>The business needed stronger conversion performance from traffic acquisition to follow-up.</p>
+              </div>
+              <div class="mini-block">
+                <h4>What I did</h4>
+                <ul>
+                  <li>Managed paid campaigns for lead generation</li>
+                  <li>Improved messaging and landing page alignment</li>
+                  <li>Owned targeting, creative iteration, and budget pacing</li>
+                  <li>Supported CRM nurture and reporting workflows</li>
+                </ul>
+              </div>
+              <div class="mini-block">
+                <h4>Result</h4>
+                <p>Delivered 3,000+ qualified leads and $120K+ revenue while improving conversion performance by 30%.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="visual-box">
+            <div class="mini-block">
+              <h4>Lead funnel</h4>
+              <div class="flow">
+                <span class="pill">Paid Traffic</span>
+                <span class="pill">Landing Page</span>
+                <span class="pill">Lead Capture</span>
+                <span class="pill">CRM Nurture</span>
+              </div>
+            </div>
+            <div class="kpi-box">
+              <div class="mini-block">
+                <strong>3,000+</strong>
+                <span class="result-label">Qualified leads</span>
+              </div>
+              <div class="mini-block">
+                <strong>$120K+</strong>
+                <span class="result-label">Revenue</span>
+              </div>
+            </div>
+            <div class="mini-block">
+              <h4>Impact</h4>
+              <p>Shows the ability to support performance across acquisition, landing page alignment, and lead follow-up instead of campaign setup alone.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <div>
+            <p class="section-kicker">How I work</p>
+            <h2 class="section-title" id="process-title">A structured approach to improving campaign efficiency and business outcomes</h2>
+            <p class="section-lead">
+              The workflow is built to identify waste, improve measurement, tighten account structure, and create a repeatable optimization loop.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-3 process-grid">
+          <article class="card" data-animate>
+            <div class="process-step">01</div>
+            <h3>Audit &amp; diagnosis</h3>
+            <p>Review campaign structure, targeting, tracking, landing page alignment, and funnel performance to identify inefficiencies.</p>
+          </article>
+
+          <article class="card" data-animate>
+            <div class="process-step">02</div>
+            <h3>Tracking &amp; attribution</h3>
+            <p>Implement or clean up GA4 and GTM so conversion data becomes usable for optimization and reporting.</p>
+          </article>
+
+          <article class="card" data-animate>
+            <div class="process-step">03</div>
+            <h3>Account architecture</h3>
+            <p>Rebuild campaigns around funnel stage, search intent, audience behavior, and budget efficiency.</p>
+          </article>
+
+          <article class="card" data-animate>
+            <div class="process-step">04</div>
+            <h3>Testing framework</h3>
+            <p>Run structured tests across audiences, creatives, offers, and campaign segments to identify stronger-performing combinations.</p>
+          </article>
+
+          <article class="card" data-animate>
+            <div class="process-step">05</div>
+            <h3>Performance optimization</h3>
+            <p>Shift spend toward stronger segments while reducing wasted spend, overlap, and lower-quality traffic.</p>
+          </article>
+
+          <article class="card" data-animate>
+            <div class="process-step">06</div>
+            <h3>Reporting &amp; insights</h3>
+            <p>Translate data into clear insights tied to business outcomes such as leads, bookings, CPA, CPC, and conversion rate.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="tools" aria-labelledby="tools-title">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <div>
+            <p class="section-kicker">Tools</p>
+            <h2 class="section-title" id="tools-title">Execution, tracking, and reporting systems built to work together</h2>
+            <p class="section-lead">
+              Paid media works best when campaign execution, measurement, and reporting are connected as one system.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-2">
+          <article class="card" data-animate>
+            <h3>Paid media &amp; analytics</h3>
+            <div class="tools-list" style="margin-top:14px;">
+              <span class="pill">Google Ads</span>
+              <span class="pill">Meta Ads Manager</span>
+              <span class="pill">GA4</span>
+              <span class="pill">Google Tag Manager</span>
+              <span class="pill">Looker Studio</span>
+            </div>
+          </article>
+
+          <article class="card" data-animate>
+            <h3>CRM, reporting &amp; support tools</h3>
+            <div class="tools-list" style="margin-top:14px;">
+              <span class="pill">HubSpot</span>
+              <span class="pill">Mailchimp</span>
+              <span class="pill">Ahrefs</span>
+              <span class="pill">SEMrush</span>
+              <span class="pill">Canva</span>
+              <span class="pill">Photoshop</span>
+              <span class="pill">Trello</span>
+              <span class="pill">ClickUp</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="audit-cta-title">
+      <div class="container">
+        <div class="panel audit-cta" data-animate>
+          <div>
+            <p class="section-kicker">Audit offer</p>
+            <h2 class="section-title" id="audit-cta-title" style="margin-bottom:10px;">Need a second opinion on your ad account?</h2>
+            <p>
+              I review campaign structure, wasted spend, targeting gaps, tracking issues, and conversion opportunities to identify where performance can improve faster.
+            </p>
+          </div>
+          <div>
+            <a
+              class="button button-primary"
+              href="mailto:sianmatti11@gmail.com?subject=Paid%20Media%20Audit%20Inquiry"
+              data-cta="audit-mid"
+            >
+              Request an Audit
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-wrap">
+        <div class="card" data-animate>
+          <p class="section-kicker">Contact</p>
+          <h2 class="section-title" id="contact-title">Let’s improve your paid media performance</h2>
+          <p class="section-lead">
+            Open to full-time roles, freelance support, and paid media audits focused on lead generation, booking performance, and campaign efficiency.
+          </p>
+
+          <div class="hero-ctas" style="margin-top:22px; margin-bottom:0;">
+            <a
+              class="button button-primary"
+              href="mailto:sianmatti11@gmail.com?subject=Paid%20Media%20Inquiry"
+              data-cta="email"
+            >
+              Start a Conversation
+            </a>
+            <a
+              class="button button-secondary"
+              href="https://www.linkedin.com/in/markandrewmatti/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View LinkedIn profile (opens in a new tab)"
+              data-cta="linkedin"
+            >
+              View LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <aside class="card" data-animate>
+          <p class="section-kicker">Details</p>
+          <h2 class="section-title" style="font-size:1.5rem;">Contact details</h2>
+
+          <div class="contact-list">
+            <div class="contact-item">
+              <span>Name</span>
+              <strong>Mark Andrew S. Matti</strong>
+            </div>
+
+            <div class="contact-item">
+              <span>Location</span>
+              <strong>Bacolod City, Philippines</strong>
+            </div>
+
+            <div class="contact-item">
+              <span>Email</span>
+              <a href="mailto:sianmatti11@gmail.com">sianmatti11@gmail.com</a>
+            </div>
+
+            <div class="contact-item">
+              <span>LinkedIn</span>
+              <a
+                href="https://www.linkedin.com/in/markandrewmatti/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open LinkedIn profile in a new tab"
+              >
+                linkedin.com/in/markandrewmatti
+              </a>
+            </div>
+
+            <div class="contact-item">
+              <span>Typical response time</span>
+              <strong>Within 24 hours</strong>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2026 Mark Andrew S. Matti. All rights reserved.</span>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const navToggle = document.querySelector(".nav-toggle");
+      const nav = document.querySelector(".site-nav");
+
+      if (navToggle && nav) {
+        navToggle.addEventListener("click", () => {
+          const isOpen = nav.classList.toggle("is-open");
+          navToggle.setAttribute("aria-expanded", String(isOpen));
+        });
+
+        nav.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            nav.classList.remove("is-open");
+            navToggle.setAttribute("aria-expanded", "false");
+          });
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") {
+            nav.classList.remove("is-open");
+            navToggle.setAttribute("aria-expanded", "false");
+          }
+        });
+      }
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12 }
+      );
+
+      document.querySelectorAll("[data-animate]").forEach((el) => observer.observe(el));
+
+      function trackCTA(name, href) {
+        if (typeof window.gtag === "function") {
+          window.gtag("event", "cta_click", {
+            cta_name: name,
+            cta_destination: href
+          });
+        } else {
+          console.log("CTA tracked:", name, href);
+        }
+      }
+
+      document.querySelectorAll("[data-cta]").forEach((cta) => {
+        cta.addEventListener("click", () => {
+          trackCTA(cta.getAttribute("data-cta"), cta.getAttribute("href"));
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
