@@ -6,756 +6,1422 @@
   <title>Paid Media Specialist | Google Ads, Meta Ads, GA4 & GTM | Mark Andrew S. Matti</title>
   <meta
     name="description"
-    content="Paid Media Specialist helping brands improve lead quality, reduce wasted ad spend, and build reliable Google Ads, Meta Ads, GA4, and GTM systems for lead generation and booking growth."
+    content="Paid Media Specialist helping hospitality, attractions, and lead generation brands improve Google Ads, Meta Ads, GA4, and GTM for better leads, lower wasted spend, and clearer tracking."
   />
   <meta
     name="keywords"
-    content="Paid Media Specialist, Google Ads Specialist, Meta Ads Specialist, GA4, GTM, Lead Generation, Conversion Tracking, Performance Marketing, Booking Growth"
+    content="Paid Media Specialist, Google Ads Specialist, Meta Ads Specialist, GA4, GTM, conversion tracking, hospitality marketing, lead generation, booking campaigns"
   />
   <meta name="author" content="Mark Andrew S. Matti" />
-  <meta property="og:title" content="Paid Media Specialist | Mark Andrew S. Matti" />
+
+  <meta property="og:title" content="Paid Media Specialist | Google Ads, Meta Ads, GA4 & GTM | Mark Andrew S. Matti" />
   <meta
     property="og:description"
-    content="Google Ads, Meta Ads, GA4 & GTM systems for better leads, lower wasted spend, and cleaner tracking."
+    content="Google Ads, Meta Ads, GA4, and GTM for better leads, lower wasted spend, and clearer tracking."
   />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://sianmatti.github.io/mark-portfolio/" />
-  <meta name="theme-color" content="#2F5BFF" />
+  <meta property="og:image" content="https://sianmatti.github.io/mark-portfolio/assets/hero-bg.png" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Paid Media Specialist | Google Ads, Meta Ads, GA4 & GTM | Mark Andrew S. Matti" />
+  <meta
+    name="twitter:description"
+    content="Google Ads, Meta Ads, GA4, and GTM for better leads, lower wasted spend, and clearer tracking."
   />
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'sans-serif']
-          },
-          colors: {
-            brand: {
-              50: '#EEF4FF',
-              100: '#DCE7FF',
-              200: '#BDD0FF',
-              300: '#8EB0FF',
-              400: '#5A7CFF',
-              500: '#2F5BFF',
-              600: '#2348D8',
-              700: '#1C3D8F',
-              800: '#153AA8',
-              900: '#081120'
-            }
-          },
-          boxShadow: {
-            soft: '0 16px 40px rgba(15, 23, 42, 0.05)',
-            premium: '0 24px 60px rgba(15, 23, 42, 0.08)',
-            glow: '0 32px 90px rgba(47, 91, 255, 0.28)'
-          }
-        }
-      }
-    };
-  </script>
+  <meta name="twitter:image" content="https://sianmatti.github.io/mark-portfolio/assets/hero-bg.png" />
 
   <style>
+    :root {
+      --bg: #05070c;
+      --bg-2: #0a0f18;
+      --text: #f7f9ff;
+      --text-soft: rgba(214, 223, 243, 0.76);
+      --text-muted: rgba(170, 182, 208, 0.68);
+      --line: rgba(255, 255, 255, 0.08);
+      --line-strong: rgba(255, 255, 255, 0.14);
+      --panel-top: rgba(255, 255, 255, 0.06);
+      --panel-bottom: rgba(255, 255, 255, 0.03);
+      --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.28);
+      --shadow-md: 0 12px 30px rgba(0, 0, 0, 0.18);
+      --radius-xl: 24px;
+      --radius-lg: 18px;
+      --container: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     html {
       scroll-behavior: smooth;
     }
 
     body {
-      font-family: 'Inter', sans-serif;
-      background: #f5f7fb;
-      color: #0f172a;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
-    .glass {
-      background: rgba(255, 255, 255, 0.78);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+    img {
+      max-width: 100%;
+      display: block;
     }
 
-    .hero-bg {
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(100% - 40px, var(--container));
+      margin: 0 auto;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: auto;
+    }
+
+    .skip-link:focus {
+      left: 16px;
+      top: 16px;
+      background: #fff;
+      color: #000;
+      padding: 10px 14px;
+      border-radius: 10px;
+      z-index: 9999;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid #ffffff;
+      outline-offset: 3px;
+    }
+
+    .section-premium {
+      position: relative;
+      padding: 110px 0;
+    }
+
+    .section-premium::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
       background:
-        radial-gradient(circle at 15% 20%, rgba(47, 91, 255, 0.18), transparent 28%),
-        radial-gradient(circle at 85% 15%, rgba(18, 33, 74, 0.14), transparent 24%),
-        radial-gradient(circle at 50% 100%, rgba(47, 91, 255, 0.08), transparent 40%),
-        linear-gradient(180deg, #f8fbff 0%, #eef4ff 100%);
+        linear-gradient(
+          to bottom,
+          rgba(255,255,255,0.015) 0%,
+          rgba(255,255,255,0) 18%,
+          rgba(255,255,255,0) 82%,
+          rgba(255,255,255,0.015) 100%
+        );
     }
 
-    .dark-panel {
-      background: linear-gradient(135deg, #0f172a 0%, #16213d 55%, #1c3d8f 100%);
+    .section-header {
+      max-width: 760px;
+      margin-bottom: 36px;
+      position: relative;
+      z-index: 1;
     }
 
-    .case-bg {
+    .section-kicker,
+    .hero-eyebrow {
+      display: inline-block;
+      margin: 0 0 14px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.04);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      color: rgba(226, 234, 255, 0.76);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      margin: 0 0 14px;
+      font-size: clamp(30px, 4vw, 52px);
+      line-height: 1.02;
+      letter-spacing: -0.045em;
+      color: var(--text);
+    }
+
+    .section-text {
+      margin: 0;
+      color: var(--text-soft);
+      font-size: 16px;
+      line-height: 1.75;
+      max-width: 64ch;
+    }
+
+    .premium-grid-2,
+    .premium-grid-3,
+    .premium-grid-4 {
+      display: grid;
+      gap: 18px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .premium-grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .premium-grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .premium-grid-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .premium-card {
+      position: relative;
+      padding: 24px;
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,0.08);
       background:
-        radial-gradient(circle at top left, rgba(47, 91, 255, 0.14), transparent 30%),
-        radial-gradient(circle at bottom right, rgba(96, 165, 250, 0.08), transparent 26%),
-        linear-gradient(180deg, #081120 0%, #0c1730 100%);
-    }
-
-    .cta-bg {
-      background: linear-gradient(135deg, #153aa8 0%, #2f5bff 55%, #5a7cff 100%);
-    }
-
-    .focus-ring:focus-visible {
-      outline: 3px solid rgba(47, 91, 255, 0.35);
-      outline-offset: 2px;
-    }
-
-    .mobile-panel {
-      transition: max-height 0.25s ease, opacity 0.25s ease, transform 0.25s ease;
-      max-height: 0;
-      opacity: 0;
+        linear-gradient(
+          180deg,
+          rgba(255,255,255,0.06) 0%,
+          rgba(255,255,255,0.03) 100%
+        );
+      box-shadow:
+        0 24px 60px rgba(0,0,0,0.28),
+        inset 0 1px 0 rgba(255,255,255,0.04);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
       overflow: hidden;
-      transform: translateY(-8px);
     }
 
-    .mobile-panel.open {
-      max-height: 420px;
-      opacity: 1;
-      transform: translateY(0);
+    .premium-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255,255,255,0.06) 0%,
+          rgba(255,255,255,0) 34%
+        );
+    }
+
+    .premium-card h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      color: #f7f9ff;
+      position: relative;
+      z-index: 1;
+    }
+
+    .premium-card p,
+    .premium-card li {
+      position: relative;
+      z-index: 1;
+    }
+
+    .premium-card p {
+      margin: 0;
+      color: rgba(214, 223, 243, 0.72);
+      line-height: 1.72;
+    }
+
+    .card-kicker {
+      margin: 0 0 12px;
+      color: rgba(172, 187, 217, 0.66);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 20px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      text-decoration: none;
+      transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        color 0.2s ease;
+    }
+
+    .btn-primary:hover,
+    .btn-secondary:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      color: #07101b;
+      background: linear-gradient(180deg, #ffffff 0%, #dfe8ff 100%);
+      box-shadow:
+        0 12px 30px rgba(120, 153, 255, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    }
+
+    .btn-primary:hover {
+      box-shadow:
+        0 16px 36px rgba(120, 153, 255, 0.24),
+        inset 0 1px 0 rgba(255, 255, 255, 0.85);
+    }
+
+    .btn-secondary {
+      color: #f4f7ff;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: rgba(255, 255, 255, 0.045);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.22);
+    }
+
+    /* Header */
+    .premium-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 16px 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(4, 6, 10, 0.72),
+        rgba(4, 6, 10, 0.34)
+      );
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      position: relative;
+    }
+
+    .brand-wrap {
+      display: inline-flex;
+      flex-direction: column;
+      text-decoration: none;
+      min-width: max-content;
+    }
+
+    .brand-label {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(200, 212, 238, 0.58);
+      font-weight: 700;
+    }
+
+    .brand-name {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #f5f8ff;
+    }
+
+    .site-nav {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.045);
+      box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .site-nav a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 14px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      color: rgba(230, 237, 255, 0.76);
+      transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .site-nav a:hover {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.06);
+      transform: translateY(-1px);
+    }
+
+    .site-nav .nav-cta {
+      color: #07101b;
+      background: linear-gradient(180deg, #ffffff 0%, #dfe8ff 100%);
+      box-shadow:
+        0 10px 24px rgba(120, 153, 255, 0.14),
+        inset 0 1px 0 rgba(255, 255, 255, 0.82);
+    }
+
+    .site-nav .nav-cta:hover {
+      background: linear-gradient(180deg, #ffffff 0%, #e8efff 100%);
+      color: #07101b;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 52px;
+      height: 52px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.045);
+      box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      cursor: pointer;
+      position: relative;
+    }
+
+    .menu-toggle span {
+      position: absolute;
+      left: 50%;
+      width: 18px;
+      height: 2px;
+      background: #f5f8ff;
+      border-radius: 999px;
+      transform: translateX(-50%);
+      transition: transform 0.2s ease, top 0.2s ease;
+    }
+
+    .menu-toggle span:first-child {
+      top: 20px;
+    }
+
+    .menu-toggle span:last-child {
+      top: 28px;
+    }
+
+    .menu-toggle.is-open span:first-child {
+      top: 24px;
+      transform: translateX(-50%) rotate(45deg);
+    }
+
+    .menu-toggle.is-open span:last-child {
+      top: 24px;
+      transform: translateX(-50%) rotate(-45deg);
+    }
+
+    /* Hero */
+    .hero-premium-v2 {
+      position: relative;
+      overflow: hidden;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      isolation: isolate;
+      background-color: #05070c;
+      background-image:
+        linear-gradient(
+          90deg,
+          rgba(3, 5, 10, 0.96) 0%,
+          rgba(3, 5, 10, 0.88) 22%,
+          rgba(3, 5, 10, 0.68) 42%,
+          rgba(3, 5, 10, 0.38) 62%,
+          rgba(3, 5, 10, 0.18) 100%
+        ),
+        url('./assets/hero-bg.png');
+      background-size: cover;
+      background-position: center right;
+      background-repeat: no-repeat;
+      margin-top: -84px;
+      padding-top: 84px;
+    }
+
+    .hero-premium-v2::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background:
+        radial-gradient(circle at 18% 48%, rgba(57, 104, 255, 0.12), transparent 32%),
+        radial-gradient(circle at 32% 78%, rgba(128, 92, 255, 0.08), transparent 26%);
+      pointer-events: none;
+    }
+
+    .hero-premium-v2::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0.02) 0%,
+          rgba(255, 255, 255, 0) 18%,
+          rgba(255, 255, 255, 0) 82%,
+          rgba(255, 255, 255, 0.02) 100%
+        );
+      pointer-events: none;
+    }
+
+    .hero-container {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 28px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-content {
+      max-width: 620px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-title {
+      margin: 0 0 18px;
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 0.98;
+      letter-spacing: -0.055em;
+      font-weight: 700;
+      color: #f7f9ff;
+      text-wrap: balance;
+      max-width: 11ch;
+    }
+
+    .hero-subtext {
+      margin: 0 0 28px;
+      max-width: 58ch;
+      font-size: 17px;
+      line-height: 1.75;
+      color: rgba(214, 223, 243, 0.78);
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .hero-note {
+      margin-top: 18px;
+      max-width: 60ch;
+      font-size: 14px;
+      line-height: 1.65;
+      color: rgba(170, 182, 208, 0.68);
+    }
+
+    /* Results */
+    .stat-card-premium {
+      min-height: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .stat-number {
+      margin: 0 0 8px;
+      font-size: clamp(34px, 4vw, 54px);
+      line-height: 1;
+      letter-spacing: -0.05em;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .stat-label-premium {
+      margin: 0;
+      color: rgba(220, 228, 246, 0.78);
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    /* Case studies */
+    .case-card-premium {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    .case-lead {
+      margin: 0 0 10px !important;
+      color: #f2f6ff !important;
+      font-weight: 600;
+    }
+
+    .case-body {
+      margin: 0 0 14px !important;
+    }
+
+    .case-list {
+      margin: 0 0 18px;
+      padding-left: 18px;
+      color: rgba(214, 223, 243, 0.72);
+      line-height: 1.7;
+    }
+
+    .case-list li + li {
+      margin-top: 6px;
+    }
+
+    .case-result-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: auto;
+      margin-bottom: 18px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .case-result-row span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 38px;
+      padding: 0 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: #f6f9ff;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .case-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 18px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.045);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #f4f7ff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      transition: 0.2s ease;
+      position: relative;
+      z-index: 1;
+    }
+
+    .case-link:hover {
+      background: rgba(255,255,255,0.08);
+      transform: translateY(-1px);
+    }
+
+    /* Process */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 18px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .process-card {
+      text-align: center;
+      min-height: 140px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .process-number {
+      margin: 0 0 10px;
+      color: rgba(172, 187, 217, 0.66);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .process-title {
+      margin: 0;
+      color: #f7f9ff;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    /* CTA */
+    .section-cta-final {
+      padding-top: 110px;
+      padding-bottom: 120px;
+    }
+
+    .cta-final-wrap {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+      gap: 28px;
+      align-items: center;
+      padding: 32px;
+      margin-bottom: 22px;
+    }
+
+    .cta-final-content .section-title {
+      max-width: 12ch;
+    }
+
+    .cta-final-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      align-items: stretch;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-final-actions .btn-primary,
+    .cta-final-actions .btn-secondary {
+      width: 100%;
+    }
+
+    .cta-audit-list {
+      margin: 22px 0 0;
+      padding-left: 20px;
+      color: rgba(214, 223, 243, 0.76);
+      line-height: 1.8;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-audit-list li + li {
+      margin-top: 6px;
+    }
+
+    .text-link-premium {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      color: rgba(226, 234, 255, 0.82);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 999px;
+      transition: 0.2s ease;
+      position: relative;
+      z-index: 1;
+    }
+
+    .text-link-premium:hover {
+      color: #ffffff;
+      background: rgba(255,255,255,0.04);
+    }
+
+    .contact-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-meta-card h3 {
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    .premium-footer {
+      padding: 28px 0 40px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .footer-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .footer-name {
+      margin: 0;
+      color: #f7f9ff;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .footer-role {
+      margin: 4px 0 0;
+      color: rgba(184, 195, 220, 0.66);
+      font-size: 13px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .footer-links a {
+      color: rgba(214, 223, 243, 0.72);
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: #ffffff;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .premium-grid-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .premium-grid-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .cta-final-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-meta-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .hero-premium-v2 {
+        min-height: 92vh;
+        background-position: 68% center;
+      }
+
+      .hero-title {
+        max-width: 12ch;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .menu-toggle {
+        display: inline-flex;
+        flex-shrink: 0;
+      }
+
+      .site-nav {
+        position: absolute;
+        top: calc(100% + 10px);
+        right: 20px;
+        left: 20px;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6px;
+        padding: 10px;
+        border-radius: 22px;
+      }
+
+      .site-nav.is-open {
+        display: flex;
+      }
+
+      .site-nav a {
+        width: 100%;
+        justify-content: flex-start;
+        min-height: 48px;
+        padding: 0 16px;
+        border-radius: 16px;
+      }
+
+      .site-nav .nav-cta {
+        justify-content: center;
+        margin-top: 4px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .section-premium {
+        padding: 84px 0;
+      }
+
+      .premium-grid-2,
+      .premium-grid-3,
+      .premium-grid-4,
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .premium-card {
+        padding: 20px;
+      }
+
+      .section-title {
+        font-size: clamp(28px, 8vw, 40px);
+      }
+
+      .premium-header {
+        padding: 14px 0;
+      }
+
+      .header-container {
+        gap: 12px;
+      }
+
+      .brand-name {
+        font-size: 14px;
+      }
+
+      .brand-label {
+        font-size: 10px;
+      }
+
+      .hero-premium-v2 {
+        min-height: auto;
+        padding: 110px 0 84px;
+        background-position: 72% center;
+        background-image:
+          linear-gradient(
+            180deg,
+            rgba(3, 5, 10, 0.88) 0%,
+            rgba(3, 5, 10, 0.72) 36%,
+            rgba(3, 5, 10, 0.66) 100%
+          ),
+          url('./assets/hero-bg.png');
+        margin-top: -76px;
+        padding-top: 140px;
+      }
+
+      .hero-container {
+        padding: 0 20px;
+      }
+
+      .hero-content {
+        max-width: 100%;
+      }
+
+      .hero-title {
+        max-width: 100%;
+        font-size: clamp(34px, 10vw, 52px);
+      }
+
+      .hero-subtext {
+        font-size: 15px;
+        line-height: 1.7;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        width: 100%;
+      }
+
+      .section-cta-final {
+        padding-top: 84px;
+        padding-bottom: 90px;
+      }
+
+      .cta-final-wrap {
+        padding: 22px;
+      }
+
+      .cta-final-content .section-title {
+        max-width: 100%;
+      }
     }
   </style>
-
-  <script type="application/ld+json">
-    {
-      "@context":"https://schema.org",
-      "@type":"Person",
-      "name":"Mark Andrew S. Matti",
-      "jobTitle":"Paid Media Specialist",
-      "email":"mailto:sianmatti11@gmail.com",
-      "url":"https://sianmatti.github.io/mark-portfolio/",
-      "address":{
-        "@type":"PostalAddress",
-        "addressLocality":"Bacolod City",
-        "addressCountry":"PH"
-      },
-      "sameAs":[
-        "https://www.linkedin.com/in/markandrewmatti/"
-      ]
-    }
-  </script>
 </head>
-<body class="antialiased">
-  <a
-    href="#main-content"
-    class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-slate-900"
-  >
-    Skip to content
-  </a>
+<body id="top">
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <header class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/75 backdrop-blur-xl">
-    <div class="mx-auto max-w-7xl px-6 py-4 lg:px-10">
-      <div class="flex items-center justify-between">
-        <a href="#top" class="focus-ring rounded-lg">
-          <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-slate-500">Paid Media Portfolio</p>
-          <p class="mt-1 text-sm font-semibold text-slate-900">Mark Andrew S. Matti</p>
-        </a>
+  <header class="site-header premium-header">
+    <div class="container header-container">
+      <a href="#top" class="brand-wrap">
+        <span class="brand-label">Paid Media Portfolio</span>
+        <span class="brand-name">Mark Andrew S. Matti</span>
+      </a>
 
-        <nav class="hidden items-center gap-8 text-sm text-slate-600 md:flex" aria-label="Primary">
-          <a href="#results" class="focus-ring rounded-md transition hover:text-brand-500">Results</a>
-          <a href="#case-studies" class="focus-ring rounded-md transition hover:text-brand-500">Case Studies</a>
-          <a href="#services" class="focus-ring rounded-md transition hover:text-brand-500">Services</a>
-          <a href="#contact" class="focus-ring rounded-md transition hover:text-brand-500">Contact</a>
-        </nav>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        <span></span>
+        <span></span>
+      </button>
 
-        <button
-          id="menu-toggle"
-          class="focus-ring inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-3 py-2 text-slate-900 md:hidden"
-          type="button"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-          aria-label="Open menu"
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="#results">Results</a>
+        <a href="#case-studies">Case Studies</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <a
+          href="mailto:sianmatti11@gmail.com?subject=Paid%20Media%20Audit%20Inquiry"
+          class="nav-cta"
         >
-          <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-          <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" class="hidden h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M18 6L6 18" />
-          </svg>
-        </button>
-      </div>
-
-      <div id="mobile-menu" class="mobile-panel md:hidden">
-        <nav class="mt-4 grid gap-2 rounded-2xl border border-slate-200 bg-white p-3 shadow-soft" aria-label="Mobile">
-          <a href="#results" class="focus-ring rounded-xl px-4 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-500">Results</a>
-          <a href="#case-studies" class="focus-ring rounded-xl px-4 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-500">Case Studies</a>
-          <a href="#services" class="focus-ring rounded-xl px-4 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-500">Services</a>
-          <a href="#contact" class="focus-ring rounded-xl px-4 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-500">Contact</a>
-          <a
-            href="mailto:sianmatti11@gmail.com?subject=Paid%20Media%20Audit%20Inquiry"
-            class="focus-ring mt-2 inline-flex items-center justify-center rounded-xl bg-brand-500 px-4 py-3 text-sm font-semibold text-white"
-            onclick="trackCTA('cta_mobile_audit')"
-          >
-            Request Audit
-          </a>
-        </nav>
-      </div>
+          Request Audit
+        </a>
+      </nav>
     </div>
   </header>
 
   <main id="main-content">
-    <section class="hero-bg relative overflow-hidden border-b border-slate-200">
-      <div class="absolute left-1/2 top-24 hidden h-[320px] w-[320px] -translate-x-1/2 rounded-full bg-brand-500/10 blur-3xl lg:block"></div>
+    <section class="hero hero-premium-v2">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <p class="hero-eyebrow">Google Ads • Meta Ads • GA4 • GTM</p>
 
-      <div class="relative mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-[1.08fr_0.92fr] lg:px-10 lg:py-28">
-        <div>
-          <div class="glass inline-flex items-center gap-3 rounded-full border border-brand-500/15 px-4 py-2 shadow-soft">
-            <span class="h-2 w-2 rounded-full bg-brand-500"></span>
-            <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-slate-600">
-              Google Ads • Meta Ads • GA4 • GTM
-            </p>
-          </div>
-
-          <h1 class="mt-8 max-w-4xl text-4xl font-semibold tracking-[-0.04em] text-slate-950 sm:text-5xl md:text-6xl lg:text-[72px] lg:leading-[0.96]">
-            Paid Media Specialist for better leads, lower wasted spend, and cleaner tracking
+          <h1 class="hero-title">
+            Paid Media Systems for better leads, lower wasted spend, and cleaner tracking
           </h1>
 
-          <p class="mt-6 max-w-2xl text-base leading-8 text-slate-600 md:text-[19px]">
+          <p class="hero-subtext">
             I build and optimize Google Ads and Meta Ads systems backed by GA4 and GTM to help hospitality, attractions, and lead generation brands improve lead quality, campaign efficiency, and conversion visibility.
           </p>
 
-          <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+          <div class="hero-actions">
             <a
               href="mailto:sianmatti11@gmail.com?subject=Paid%20Media%20Audit%20Inquiry"
-              class="focus-ring inline-flex items-center justify-center rounded-2xl bg-brand-500 px-6 py-3.5 text-sm font-semibold text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-brand-600"
-              onclick="trackCTA('cta_hero_audit')"
+              class="btn-primary"
             >
               Request a Free Paid Media Audit
             </a>
 
-            <a
-              href="#case-studies"
-              class="focus-ring inline-flex items-center justify-center rounded-2xl border border-slate-300 bg-white/85 px-6 py-3.5 text-sm font-semibold text-slate-900 shadow-sm transition hover:border-slate-400 hover:bg-white"
-              onclick="trackCTA('cta_hero_results')"
-            >
+            <a href="#results" class="btn-secondary">
               See Campaign Results
             </a>
           </div>
 
-          <p class="mt-5 text-sm text-slate-500">
+          <p class="hero-note">
             Best fit for hospitality, attractions, and lead generation brands managing $5K–$20K in monthly ad spend.
           </p>
         </div>
+      </div>
+    </section>
 
-        <div class="relative self-end">
-          <div class="absolute -left-6 -top-6 h-24 w-24 rounded-[28px] border border-white/50 bg-white/40 blur-sm"></div>
-          <div class="absolute -bottom-6 -right-4 h-28 w-28 rounded-full bg-brand-500/10 blur-2xl"></div>
+    <section id="results" class="section-premium">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-kicker">Performance Snapshot</p>
+          <h2 class="section-title">Selected outcomes across paid media campaigns</h2>
+          <p class="section-text">
+            Results focused on lead quality, booking growth, campaign efficiency, and clearer conversion visibility.
+          </p>
+        </div>
 
-          <div class="glass relative rounded-[32px] border border-white/70 p-4 shadow-premium sm:p-5">
-            <div class="rounded-[28px] border border-slate-200 bg-gradient-to-b from-white to-brand-50 p-4 sm:p-5">
-              <div class="mb-5 flex items-center justify-between gap-4">
-                <div>
-                  <p class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Performance Snapshot</p>
-                  <p class="mt-2 text-lg font-semibold text-slate-950">Selected outcomes</p>
-                </div>
-                <div class="rounded-full bg-brand-500/10 px-3 py-1 text-xs font-semibold text-brand-500">Lead-focused</div>
-              </div>
+        <div class="premium-grid-4">
+          <article class="premium-card stat-card-premium">
+            <p class="stat-number">+35%</p>
+            <p class="stat-label-premium">Event turnout</p>
+          </article>
 
-              <div class="grid grid-cols-2 gap-4">
-                <div class="rounded-[24px] border border-slate-200 bg-white p-4 shadow-soft sm:p-5">
-                  <p class="text-3xl font-semibold tracking-[-0.04em] text-slate-950 sm:text-4xl">+35%</p>
-                  <p class="mt-2 text-sm text-slate-600">Event turnout</p>
-                </div>
+          <article class="premium-card stat-card-premium">
+            <p class="stat-number">+20%</p>
+            <p class="stat-label-premium">Direct bookings</p>
+          </article>
 
-                <div class="rounded-[24px] border border-slate-200 bg-white p-4 shadow-soft sm:p-5">
-                  <p class="text-3xl font-semibold tracking-[-0.04em] text-slate-950 sm:text-4xl">+20%</p>
-                  <p class="mt-2 text-sm text-slate-600">Direct bookings</p>
-                </div>
+          <article class="premium-card stat-card-premium">
+            <p class="stat-number">3,000+</p>
+            <p class="stat-label-premium">Qualified leads</p>
+          </article>
 
-                <div class="rounded-[24px] border border-slate-200 bg-white p-4 shadow-soft sm:p-5">
-                  <p class="text-3xl font-semibold tracking-[-0.04em] text-slate-950 sm:text-4xl">3,000+</p>
-                  <p class="mt-2 text-sm text-slate-600">Qualified leads</p>
-                </div>
-
-                <div class="rounded-[24px] border border-slate-200 bg-white p-4 shadow-soft sm:p-5">
-                  <p class="text-3xl font-semibold tracking-[-0.04em] text-slate-950 sm:text-4xl">$120K+</p>
-                  <p class="mt-2 text-sm text-slate-600">Revenue contribution</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <article class="premium-card stat-card-premium">
+            <p class="stat-number">$120K+</p>
+            <p class="stat-label-premium">Revenue contribution</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24">
-      <div class="max-w-3xl">
-        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-brand-500">The gap</p>
-        <h2 class="mt-4 text-3xl font-semibold tracking-[-0.03em] text-slate-950 md:text-5xl">
-          Most ad accounts do not fail because of budget. They fail because of structure and tracking.
-        </h2>
-      </div>
-
-      <div class="mt-10 grid gap-6 md:grid-cols-3">
-        <article class="rounded-[28px] border border-slate-200 bg-white p-7 shadow-soft">
-          <h3 class="text-xl font-semibold tracking-[-0.02em] text-slate-950">Poor structure</h3>
-          <p class="mt-3 text-sm leading-7 text-slate-600">
-            Campaigns misaligned with search intent, funnel stage, and budget priorities.
+    <section class="section-premium">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-kicker">The Gap</p>
+          <h2 class="section-title">Most ad accounts do not fail because of budget</h2>
+          <p class="section-text">
+            They usually underperform because campaign structure is weak, tracking is unreliable, and optimization decisions are being made on incomplete signals.
           </p>
-        </article>
-
-        <article class="rounded-[28px] border border-slate-200 bg-white p-7 shadow-soft">
-          <h3 class="text-xl font-semibold tracking-[-0.02em] text-slate-950">Unreliable tracking</h3>
-          <p class="mt-3 text-sm leading-7 text-slate-600">
-            Conversion data that is incomplete, inconsistent, or too weak to support confident optimization.
-          </p>
-        </article>
-
-        <article class="rounded-[28px] border border-slate-200 bg-white p-7 shadow-soft">
-          <h3 class="text-xl font-semibold tracking-[-0.02em] text-slate-950">Wasted spend</h3>
-          <p class="mt-3 text-sm leading-7 text-slate-600">
-            Low-quality traffic, weak exclusions, and loose targeting that reduce efficiency and lead quality.
-          </p>
-        </article>
-      </div>
-
-      <p class="mt-8 text-lg text-slate-700">
-        I do not just launch campaigns. I build systems that make them easier to optimize and harder to waste.
-      </p>
-    </section>
-
-    <section class="mx-auto max-w-7xl px-6 pb-20 lg:px-10 lg:pb-24">
-      <div class="dark-panel overflow-hidden rounded-[36px] border border-slate-200 px-8 py-10 text-white shadow-premium lg:px-10 lg:py-12">
-        <div class="max-w-3xl">
-          <p class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-200">Core value</p>
-          <h2 class="mt-4 text-3xl font-semibold tracking-[-0.03em] md:text-5xl">
-            Tracking, structure, and optimization built to improve results
-          </h2>
         </div>
 
-        <div class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          <article class="rounded-[26px] border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
-            <h3 class="text-lg font-semibold">Account architecture</h3>
-            <p class="mt-3 text-sm leading-7 text-white/75">
-              Campaign structures built around funnel stage, search intent, audience behavior, and budget efficiency.
+        <div class="premium-grid-3">
+          <article class="premium-card">
+            <p class="card-kicker">01</p>
+            <h3>Poor structure</h3>
+            <p>Campaigns misaligned with search intent, funnel stage, and budget priorities.</p>
+          </article>
+
+          <article class="premium-card">
+            <p class="card-kicker">02</p>
+            <h3>Unreliable tracking</h3>
+            <p>Conversion data that is incomplete, inconsistent, or too weak to support confident optimization.</p>
+          </article>
+
+          <article class="premium-card">
+            <p class="card-kicker">03</p>
+            <h3>Wasted spend</h3>
+            <p>Low-quality traffic, weak exclusions, and loose targeting that reduce efficiency and lead quality.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-premium">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-kicker">Core Value</p>
+          <h2 class="section-title">Tracking, structure, and optimization built to improve results</h2>
+        </div>
+
+        <div class="premium-grid-2">
+          <article class="premium-card">
+            <h3>Account architecture</h3>
+            <p>Campaign structures built around funnel stage, search intent, audience behavior, and budget efficiency.</p>
+          </article>
+
+          <article class="premium-card">
+            <h3>Reliable attribution</h3>
+            <p>GA4 and GTM setups that make conversion data more trustworthy, more usable, and easier to act on.</p>
+          </article>
+
+          <article class="premium-card">
+            <h3>Performance optimization</h3>
+            <p>Focused on CPA, lead quality, bookings, and conversion outcomes instead of vanity metrics.</p>
+          </article>
+
+          <article class="premium-card">
+            <h3>Budget control</h3>
+            <p>Cleaner targeting, exclusions, and budget allocation to reduce wasted spend and improve efficiency.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="case-studies" class="section-premium">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-kicker">Case Studies</p>
+          <h2 class="section-title">Selected case studies across attractions, hospitality, and lead generation</h2>
+          <p class="section-text">
+            A closer look at the problem, the system changes made, and the business result that followed.
+          </p>
+        </div>
+
+        <div class="premium-grid-3">
+          <article class="premium-card case-card-premium">
+            <p class="card-kicker">Attraction / Event Promotion</p>
+            <h3>Splash Park Bacolod</h3>
+            <p class="case-lead">
+              Increase event turnout while improving acquisition efficiency.
             </p>
+            <p class="case-body">
+              Meta Ads performance was limited by weak segmentation, unclear retargeting structure, and poor visibility into campaign performance.
+            </p>
+            <ul class="case-list">
+              <li>Audience segmentation</li>
+              <li>Prospecting vs retargeting setup</li>
+              <li>7D / 14D / 30D remarketing</li>
+              <li>GA4 reporting support</li>
+            </ul>
+            <div class="case-result-row">
+              <span>+35% turnout</span>
+              <span>-25% CPA</span>
+            </div>
+            <a href="https://sianmatti.github.io/mark-portfolio/case-studies/splash-park-bacolod.html" class="case-link">
+              View Full Case Study
+            </a>
           </article>
 
-          <article class="rounded-[26px] border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
-            <h3 class="text-lg font-semibold">Reliable attribution</h3>
-            <p class="mt-3 text-sm leading-7 text-white/75">
-              GA4 and GTM setups that make conversion data more trustworthy, more usable, and easier to act on.
+          <article class="premium-card case-card-premium">
+            <p class="card-kicker">Hospitality / Booking Growth</p>
+            <h3>SixtyFifth Hotel</h3>
+            <p class="case-lead">
+              Increase direct bookings and improve paid traffic quality.
             </p>
+            <p class="case-body">
+              Search performance needed cleaner structure, stronger keyword intent, and better alignment with the booking journey.
+            </p>
+            <ul class="case-list">
+              <li>Brand vs non-brand restructure</li>
+              <li>Negative keyword cleanup</li>
+              <li>Remarketing support</li>
+              <li>GA4 tracking support</li>
+            </ul>
+            <div class="case-result-row">
+              <span>+20% bookings</span>
+              <span>-30% CPC</span>
+            </div>
+            <a href="https://sianmatti.github.io/mark-portfolio/case-studies/sixtyfifth-hotel.html" class="case-link">
+              View Full Case Study
+            </a>
           </article>
 
-          <article class="rounded-[26px] border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
-            <h3 class="text-lg font-semibold">Performance optimization</h3>
-            <p class="mt-3 text-sm leading-7 text-white/75">
-              Focused on CPA, lead quality, bookings, and conversion outcomes instead of vanity metrics.
+          <article class="premium-card case-card-premium">
+            <p class="card-kicker">Lead Generation / Funnel Support</p>
+            <h3>Gotham Books Inc.</h3>
+            <p class="case-lead">
+              Drive qualified leads and stronger revenue contribution from paid acquisition.
             </p>
-          </article>
-
-          <article class="rounded-[26px] border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
-            <h3 class="text-lg font-semibold">Budget control</h3>
-            <p class="mt-3 text-sm leading-7 text-white/75">
-              Cleaner targeting, exclusions, and budget allocation to reduce wasted spend and improve efficiency.
+            <p class="case-body">
+              The funnel needed better alignment from paid traffic to landing page experience and follow-up support.
             </p>
+            <ul class="case-list">
+              <li>Paid campaign management</li>
+              <li>Landing page alignment</li>
+              <li>Creative iteration</li>
+              <li>CRM workflow support</li>
+            </ul>
+            <div class="case-result-row">
+              <span>3,000+ leads</span>
+              <span>$120K+ revenue</span>
+            </div>
+            <a href="https://sianmatti.github.io/mark-portfolio/case-studies/gotham-books.html" class="case-link">
+              View Full Case Study
+            </a>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="results" class="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24">
-      <div class="max-w-3xl">
-        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-brand-500">Selected results</p>
-        <h2 class="mt-4 text-3xl font-semibold tracking-[-0.03em] text-slate-950 md:text-5xl">
-          Real performance improvements across campaigns.
-        </h2>
-      </div>
-
-      <div class="mt-10 grid gap-6 md:grid-cols-2">
-        <article class="rounded-[30px] border border-slate-200 bg-white p-8 shadow-soft">
-          <p class="text-5xl font-semibold tracking-[-0.05em] text-slate-950 md:text-6xl">+35%</p>
-          <p class="mt-3 text-lg font-semibold text-slate-900">Event turnout</p>
-          <p class="mt-3 max-w-md text-sm leading-7 text-slate-600">
-            Reduced CPA by 25% through audience segmentation, remarketing structure, and promo testing.
-          </p>
-        </article>
-
-        <article class="rounded-[30px] border border-slate-200 bg-white p-8 shadow-soft">
-          <p class="text-5xl font-semibold tracking-[-0.05em] text-slate-950 md:text-6xl">+20%</p>
-          <p class="mt-3 text-lg font-semibold text-slate-900">Direct bookings</p>
-          <p class="mt-3 max-w-md text-sm leading-7 text-slate-600">
-            Lowered CPC by 30% through cleaner campaign architecture, intent targeting, and booking-path support.
-          </p>
-        </article>
-
-        <article class="rounded-[30px] border border-slate-200 bg-white p-8 shadow-soft">
-          <p class="text-5xl font-semibold tracking-[-0.05em] text-slate-950 md:text-6xl">3,000+</p>
-          <p class="mt-3 text-lg font-semibold text-slate-900">Qualified leads</p>
-          <p class="mt-3 max-w-md text-sm leading-7 text-slate-600">
-            Generated through stronger message-to-offer alignment, landing page support, and funnel clarity.
-          </p>
-        </article>
-
-        <article class="rounded-[30px] border border-slate-200 bg-white p-8 shadow-soft">
-          <p class="text-5xl font-semibold tracking-[-0.05em] text-slate-950 md:text-6xl">$120K+</p>
-          <p class="mt-3 text-lg font-semibold text-slate-900">Revenue contribution</p>
-          <p class="mt-3 max-w-md text-sm leading-7 text-slate-600">
-            Supported through disciplined optimization and clearer alignment between paid traffic and conversion flow.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section id="case-studies" class="case-bg relative overflow-hidden py-20 text-white lg:py-24">
-      <div class="relative mx-auto max-w-7xl px-6 lg:px-10">
-        <div class="max-w-3xl">
-          <p class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-300">Case studies</p>
-          <h2 class="mt-4 text-3xl font-semibold tracking-[-0.03em] md:text-5xl">
-            Selected case studies across attractions, hospitality, and lead generation
-          </h2>
+    <section id="services" class="section-premium">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-kicker">Services</p>
+          <h2 class="section-title">Services built around lead generation, booking growth, and tracking clarity</h2>
         </div>
 
-        <div class="mt-10 grid gap-6">
-          <article class="rounded-[32px] border border-white/10 bg-white/5 p-6 shadow-premium backdrop-blur-xl lg:p-8">
-            <div class="grid gap-8 lg:grid-cols-[1fr_1fr_0.85fr]">
-              <div>
-                <p class="text-sm uppercase tracking-[0.16em] text-white/50">Attraction / Event Promotion</p>
-                <h3 class="mt-3 text-2xl font-semibold tracking-[-0.02em]">Splash Park Bacolod</h3>
-                <p class="mt-4 text-sm leading-7 text-white/72">
-                  Increase event turnout while improving acquisition efficiency.
-                </p>
-                <p class="mt-3 text-sm leading-7 text-white/60">
-                  Meta Ads performance was limited by weak segmentation, unclear retargeting structure, and poor visibility into campaign performance.
-                </p>
-              </div>
-
-              <div>
-                <p class="text-sm font-semibold uppercase tracking-[0.16em] text-white/50">What I did</p>
-                <ul class="mt-4 space-y-3 text-sm text-white/85">
-                  <li class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">Audience segmentation</li>
-                  <li class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">Prospecting vs retargeting setup</li>
-                  <li class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">7D / 14D / 30D remarketing</li>
-                  <li class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">GA4 reporting support</li>
-                </ul>
-              </div>
-
-              <div class="flex flex-col justify-between rounded-[28px] border border-brand-500/30 bg-gradient-to-b from-brand-500/20 to-white/5 p-6">
-                <div>
-                  <p class="text-sm font-semibold uppercase tracking-[0.16em] text-blue-200">Result</p>
-                  <p class="mt-5 text-4xl font-semibold tracking-[-0.04em]">+35% turnout</p>
-                  <p class="mt-2 text-2xl font-semibold text-white/78">-25% CPA</p>
-                </div>
-                <a
-                  href="case-studies/splash-park-bacolod.html"
-                  class="mt-8 inline-flex items-center justify-center rounded-2xl border border-white/15 bg-white/5 px-4 py-3 text-sm font-semibold text-white/95 transition hover:bg-white/10"
-                  onclick="trackCTA('cta_case_splash')"
-                >
-                  View Splash Park Case Study
-                </a>
-              </div>
-            </div>
+        <div class="premium-grid-3">
+          <article class="premium-card">
+            <h3>Google Ads Management</h3>
+            <p>Search campaign setup, restructuring, keyword refinement, and efficiency improvements tied to intent and lead quality.</p>
           </article>
 
-          <article class="rounded-[32px] border border-white/10 bg-white/5 p-6 shadow-premium backdrop-blur-xl lg:p-8">
-            <div class="grid gap-8 lg:grid-cols-[1fr_1fr_0.85fr]">
-              <div>
-                <p class="text-sm uppercase tracking-[0.16em] text-white/50">Hospitality / Booking Growth</p>
-                <h3 class="mt-3 text-2xl font-semibold tracking-[-0.02em]">SixtyFifth Hotel</h3>
-                <p class="mt-4 text-sm leading-7 text-white/72">
-                  Increase direct bookings and improve paid traffic quality.
-                </p>
-                <p class="mt-3 text-sm leading-7 text-white/60">
-                  Search performance needed cleaner structure, stronger keyword intent, and better alignment with the booking journey.
-                </p>
-              </div>
-
-              <div>
-                <p class="text-sm font-semibold uppercase tracking-[0.16em] text-white/50">What I did</p>
-                <ul class="mt-4 space-y-3 text-sm text-white/85">
-                  <li class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">Brand vs non-brand restructure</li>
-                  <li class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">Negative keyword cleanup</li>
-                  <li class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">Remarketing support</li>
-                  <li class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">GA4 tracking support</li>
-                </ul>
-              </div>
-
-              <div class="flex flex-col justify-between rounded-[28px] border border-brand-500/30 bg-gradient-to-b from-brand-500/20 to-white/5 p-6">
-                <div>
-                  <p class="text-sm font-semibold uppercase tracking-[0.16em] text-blue-200">Result</p>
-                  <p class="mt-5 text-4xl font-semibold tracking-[-0.04em]">+20% bookings</p>
-                  <p class="mt-2 text-2xl font-semibold text-white/78">-30% CPC</p>
-                </div>
-                <a
-                  href="case-studies/sixtyfifth-hotel.html"
-                  class="mt-8 inline-flex items-center justify-center rounded-2xl border border-white/15 bg-white/5 px-4 py-3 text-sm font-semibold text-white/95 transition hover:bg-white/10"
-                  onclick="trackCTA('cta_case_sixtyfifth')"
-                >
-                  View Hotel Case Study
-                </a>
-              </div>
-            </div>
+          <article class="premium-card">
+            <h3>Meta Ads Management</h3>
+            <p>Prospecting, retargeting, audience segmentation, and creative testing across Facebook and Instagram campaigns.</p>
           </article>
 
-          <article class="rounded-[32px] border border-white/10 bg-white/5 p-6 shadow-premium backdrop-blur-xl lg:p-8">
-            <div class="grid gap-8 lg:grid-cols-[1fr_1fr_0.85fr]">
-              <div>
-                <p class="text-sm uppercase tracking-[0.16em] text-white/50">Lead Generation / Funnel Support</p>
-                <h3 class="mt-3 text-2xl font-semibold tracking-[-0.02em]">Gotham Books Inc.</h3>
-                <p class="mt-4 text-sm leading-7 text-white/72">
-                  Drive qualified leads and stronger revenue contribution from paid acquisition.
-                </p>
-                <p class="mt-3 text-sm leading-7 text-white/60">
-                  The funnel needed better alignment from paid traffic to landing page experience and follow-up support.
-                </p>
-              </div>
+          <article class="premium-card">
+            <h3>Tracking &amp; Reporting</h3>
+            <p>GA4, GTM, and reporting support for clearer optimization decisions and more trustworthy conversion data.</p>
+          </article>
 
-              <div>
-                <p class="text-sm font-semibold uppercase tracking-[0.16em] text-white/50">What I did</p>
-                <ul class="mt-4 space-y-3 text-sm text-white/85">
-                  <li class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">Paid campaign management</li>
-                  <li class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">Landing page alignment</li>
-                  <li class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">Creative iteration</li>
-                  <li class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">CRM workflow support</li>
-                </ul>
-              </div>
+          <article class="premium-card">
+            <h3>Campaign Audit &amp; Optimization</h3>
+            <p>Reviews focused on wasted spend, tracking gaps, and faster performance improvements.</p>
+          </article>
 
-              <div class="flex flex-col justify-between rounded-[28px] border border-brand-500/30 bg-gradient-to-b from-brand-500/20 to-white/5 p-6">
-                <div>
-                  <p class="text-sm font-semibold uppercase tracking-[0.16em] text-blue-200">Result</p>
-                  <p class="mt-5 text-4xl font-semibold tracking-[-0.04em]">3,000+ leads</p>
-                  <p class="mt-2 text-2xl font-semibold text-white/78">$120K+ revenue</p>
-                </div>
-                <a
-                  href="case-studies/gotham-books.html"
-                  class="mt-8 inline-flex items-center justify-center rounded-2xl border border-white/15 bg-white/5 px-4 py-3 text-sm font-semibold text-white/95 transition hover:bg-white/10"
-                  onclick="trackCTA('cta_case_gotham')"
-                >
-                  View Lead Gen Case Study
-                </a>
-              </div>
-            </div>
+          <article class="premium-card">
+            <h3>Retargeting &amp; Funnel Optimization</h3>
+            <p>Audience window segmentation and conversion flow support to improve lead quality and booking performance.</p>
+          </article>
+
+          <article class="premium-card">
+            <h3>Landing Page Alignment</h3>
+            <p>Support for message clarity, offer relevance, and reduced friction from click to conversion.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="services" class="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24">
-      <div class="max-w-3xl">
-        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-brand-500">Services</p>
-        <h2 class="mt-4 text-3xl font-semibold tracking-[-0.03em] text-slate-950 md:text-5xl">
-          Services built around lead generation, booking growth, and tracking clarity
-        </h2>
-      </div>
-
-      <div class="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-        <article class="rounded-[26px] border border-slate-200 bg-white p-6 shadow-soft">
-          <h3 class="text-base font-semibold text-slate-950">Google Ads Management</h3>
-          <p class="mt-2 text-sm leading-7 text-slate-600">
-            Search campaign setup, restructuring, keyword refinement, and efficiency improvements tied to intent and lead quality.
-          </p>
-        </article>
-
-        <article class="rounded-[26px] border border-slate-200 bg-white p-6 shadow-soft">
-          <h3 class="text-base font-semibold text-slate-950">Meta Ads Management</h3>
-          <p class="mt-2 text-sm leading-7 text-slate-600">
-            Prospecting, retargeting, audience segmentation, and creative testing across Facebook and Instagram campaigns.
-          </p>
-        </article>
-
-        <article class="rounded-[26px] border border-slate-200 bg-white p-6 shadow-soft">
-          <h3 class="text-base font-semibold text-slate-950">Tracking & Reporting</h3>
-          <p class="mt-2 text-sm leading-7 text-slate-600">
-            GA4, GTM, and reporting support for clearer optimization decisions and more trustworthy conversion data.
-          </p>
-        </article>
-
-        <article class="rounded-[26px] border border-slate-200 bg-white p-6 shadow-soft">
-          <h3 class="text-base font-semibold text-slate-950">Campaign Audit & Optimization</h3>
-          <p class="mt-2 text-sm leading-7 text-slate-600">
-            Reviews focused on wasted spend, tracking gaps, and faster performance improvements.
-          </p>
-        </article>
-
-        <article class="rounded-[26px] border border-slate-200 bg-white p-6 shadow-soft">
-          <h3 class="text-base font-semibold text-slate-950">Retargeting & Funnel Optimization</h3>
-          <p class="mt-2 text-sm leading-7 text-slate-600">
-            Audience window segmentation and conversion flow support to improve lead quality and booking performance.
-          </p>
-        </article>
-
-        <article class="rounded-[26px] border border-slate-200 bg-white p-6 shadow-soft">
-          <h3 class="text-base font-semibold text-slate-950">Landing Page Alignment</h3>
-          <p class="mt-2 text-sm leading-7 text-slate-600">
-            Support for message clarity, offer relevance, and reduced friction from click to conversion.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section class="mx-auto max-w-7xl px-6 pb-20 lg:px-10 lg:pb-24">
-      <div class="rounded-[36px] border border-slate-200 bg-gradient-to-b from-white to-slate-50 px-8 py-10 shadow-premium lg:px-10 lg:py-12">
-        <div class="max-w-3xl">
-          <p class="text-sm font-semibold uppercase tracking-[0.18em] text-brand-500">Process</p>
-          <h2 class="mt-4 text-3xl font-semibold tracking-[-0.03em] text-slate-950 md:text-5xl">
-            How I improve campaign performance
-          </h2>
-          <p class="mt-4 max-w-2xl text-sm leading-7 text-slate-600">
+    <section class="section-premium">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-kicker">Process</p>
+          <h2 class="section-title">How I improve campaign performance</h2>
+          <p class="section-text">
             A structured workflow built to identify waste, improve measurement, and support better optimization decisions.
           </p>
         </div>
 
-        <div class="mt-10 grid gap-4 md:grid-cols-3 xl:grid-cols-6">
-          <article class="rounded-[24px] border border-slate-200 bg-white p-6 shadow-soft">
-            <p class="text-sm font-semibold text-brand-500">01</p>
-            <p class="mt-3 text-lg font-semibold text-slate-950">Audit</p>
+        <div class="process-grid">
+          <article class="premium-card process-card">
+            <p class="process-number">01</p>
+            <p class="process-title">Audit</p>
           </article>
-          <article class="rounded-[24px] border border-slate-200 bg-white p-6 shadow-soft">
-            <p class="text-sm font-semibold text-brand-500">02</p>
-            <p class="mt-3 text-lg font-semibold text-slate-950">Tracking</p>
+
+          <article class="premium-card process-card">
+            <p class="process-number">02</p>
+            <p class="process-title">Tracking</p>
           </article>
-          <article class="rounded-[24px] border border-slate-200 bg-white p-6 shadow-soft">
-            <p class="text-sm font-semibold text-brand-500">03</p>
-            <p class="mt-3 text-lg font-semibold text-slate-950">Structure</p>
+
+          <article class="premium-card process-card">
+            <p class="process-number">03</p>
+            <p class="process-title">Structure</p>
           </article>
-          <article class="rounded-[24px] border border-slate-200 bg-white p-6 shadow-soft">
-            <p class="text-sm font-semibold text-brand-500">04</p>
-            <p class="mt-3 text-lg font-semibold text-slate-950">Testing</p>
+
+          <article class="premium-card process-card">
+            <p class="process-number">04</p>
+            <p class="process-title">Testing</p>
           </article>
-          <article class="rounded-[24px] border border-slate-200 bg-white p-6 shadow-soft">
-            <p class="text-sm font-semibold text-brand-500">05</p>
-            <p class="mt-3 text-lg font-semibold text-slate-950">Optimization</p>
+
+          <article class="premium-card process-card">
+            <p class="process-number">05</p>
+            <p class="process-title">Optimization</p>
           </article>
-          <article class="rounded-[24px] border border-slate-200 bg-white p-6 shadow-soft">
-            <p class="text-sm font-semibold text-brand-500">06</p>
-            <p class="mt-3 text-lg font-semibold text-slate-950">Reporting</p>
+
+          <article class="premium-card process-card">
+            <p class="process-number">06</p>
+            <p class="process-title">Reporting</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="mx-auto max-w-7xl px-6 pb-20 lg:px-10 lg:pb-24">
-      <div class="rounded-[34px] border border-slate-200 bg-white p-8 shadow-premium lg:p-10">
-        <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-          <div>
-            <p class="text-sm font-semibold uppercase tracking-[0.18em] text-brand-500">Tools</p>
-            <h2 class="mt-4 text-3xl font-semibold tracking-[-0.03em] text-slate-950 md:text-5xl">
-              Execution, tracking, and reporting systems that work together.
-            </h2>
-          </div>
+    <section class="section-premium">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-kicker">Tools</p>
+          <h2 class="section-title">Execution, tracking, and reporting systems that work together</h2>
+        </div>
 
-          <p class="max-w-xl text-sm leading-7 text-slate-600">
+        <div class="premium-card">
+          <p>
             Google Ads, Meta Ads Manager, GA4, GTM, Looker Studio, HubSpot, and Mailchimp used as one connected performance system.
           </p>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="mx-auto max-w-7xl px-6 pb-20 lg:px-10 lg:pb-24">
-      <div class="cta-bg overflow-hidden rounded-[38px] px-8 py-12 text-white shadow-glow lg:px-10 lg:py-14">
-        <div class="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
-          <div class="max-w-2xl">
-            <p class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-100">Contact</p>
-            <h2 class="mt-4 text-4xl font-semibold tracking-[-0.04em] md:text-6xl md:leading-[0.98]">
-              Let’s improve your paid media performance.
-            </h2>
-            <p class="mt-5 text-base leading-8 text-blue-50/92">
+    <section id="contact" class="section-premium section-cta-final">
+      <div class="container">
+        <div class="cta-final-wrap premium-card">
+          <div class="cta-final-content">
+            <p class="section-kicker">Request a Free Audit</p>
+            <h2 class="section-title">Let’s improve your paid media performance</h2>
+            <p class="section-text">
               Clear structure, reliable tracking, and better outcomes for lead generation and booking-focused campaigns.
             </p>
+
+            <ul class="cta-audit-list">
+              <li>Tracking review</li>
+              <li>Campaign structure analysis</li>
+              <li>Wasted spend findings</li>
+              <li>Priority recommendations</li>
+            </ul>
           </div>
 
-          <div class="flex w-full flex-col gap-4 sm:w-auto sm:flex-row sm:flex-wrap">
+          <div class="cta-final-actions">
             <a
-              href="mailto:sianmatti11@gmail.com?subject=Paid%20Media%20Inquiry"
-              class="focus-ring inline-flex items-center justify-center rounded-2xl bg-white px-5 py-3.5 text-sm font-semibold text-brand-600 shadow-soft"
-              onclick="trackCTA('cta_footer_audit')"
+              href="mailto:sianmatti11@gmail.com?subject=Paid%20Media%20Audit%20Inquiry"
+              class="btn-primary"
             >
               Request a Free Audit
             </a>
 
             <a
               href="https://www.linkedin.com/in/markandrewmatti/"
+              class="btn-secondary"
               target="_blank"
               rel="noopener noreferrer"
-              class="focus-ring inline-flex items-center justify-center rounded-2xl border border-white/30 bg-white/5 px-5 py-3.5 text-sm font-semibold text-white backdrop-blur-sm"
-              onclick="trackCTA('cta_footer_linkedin')"
             >
               View LinkedIn
             </a>
+
+            <a
+              href="mailto:sianmatti11@gmail.com"
+              class="text-link-premium"
+            >
+              sianmatti11@gmail.com
+            </a>
           </div>
+        </div>
+
+        <div class="contact-meta-grid">
+          <article class="premium-card contact-meta-card">
+            <p class="card-kicker">Location</p>
+            <h3>Bacolod City, Philippines</h3>
+            <p>Available for remote project-based and ongoing paid media work.</p>
+          </article>
+
+          <article class="premium-card contact-meta-card">
+            <p class="card-kicker">Typical Response Time</p>
+            <h3>Within 24 hours</h3>
+            <p>Best for brands that want a clear view of what needs fixing before scaling spend.</p>
+          </article>
+
+          <article class="premium-card contact-meta-card">
+            <p class="card-kicker">Best Fit</p>
+            <h3>$5K–$20K monthly ad spend</h3>
+            <p>Hospitality, attractions, and lead generation brands that need cleaner structure and stronger tracking.</p>
+          </article>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="border-t border-slate-200 bg-white">
-    <div class="mx-auto grid max-w-7xl gap-6 px-6 py-10 text-sm text-slate-600 md:grid-cols-4 lg:px-10">
-      <div>
-        <p class="font-semibold text-slate-950">Mark Andrew S. Matti</p>
-        <p class="mt-2">Paid Media Specialist</p>
+  <footer class="site-footer premium-footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <p class="footer-name">Mark Andrew S. Matti</p>
+        <p class="footer-role">Paid Media Specialist</p>
       </div>
 
-      <div>
-        <p class="font-semibold text-slate-950">Location</p>
-        <p class="mt-2">Bacolod City, Philippines</p>
-      </div>
-
-      <div>
-        <p class="font-semibold text-slate-950">Email</p>
-        <a href="mailto:sianmatti11@gmail.com" class="focus-ring mt-2 inline-block rounded-md text-brand-500 hover:text-brand-600">
-          sianmatti11@gmail.com
-        </a>
-      </div>
-
-      <div>
-        <p class="font-semibold text-slate-950">Typical response time</p>
-        <p class="mt-2">Within 24 hours</p>
+      <div class="footer-links">
+        <a href="#results">Results</a>
+        <a href="#case-studies">Case Studies</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
       </div>
     </div>
   </footer>
 
   <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const openIcon = document.getElementById('menu-icon-open');
-    const closeIcon = document.getElementById('menu-icon-close');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const siteNav = document.querySelector('.site-nav');
 
-    function closeMobileMenu() {
-      mobileMenu.classList.remove('open');
-      menuToggle.setAttribute('aria-expanded', 'false');
-      menuToggle.setAttribute('aria-label', 'Open menu');
-      openIcon.classList.remove('hidden');
-      closeIcon.classList.add('hidden');
-    }
+    if (menuToggle && siteNav) {
+      menuToggle.addEventListener('click', function () {
+        const isOpen = siteNav.classList.toggle('is-open');
+        menuToggle.classList.toggle('is-open', isOpen);
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+      });
 
-    function openMobileMenu() {
-      mobileMenu.classList.add('open');
-      menuToggle.setAttribute('aria-expanded', 'true');
-      menuToggle.setAttribute('aria-label', 'Close menu');
-      openIcon.classList.add('hidden');
-      closeIcon.classList.remove('hidden');
-    }
-
-    menuToggle.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.contains('open');
-      if (isOpen) {
-        closeMobileMenu();
-      } else {
-        openMobileMenu();
-      }
-    });
-
-    mobileMenu.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', closeMobileMenu);
-    });
-
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') {
-        closeMobileMenu();
-      }
-    });
-
-    function trackCTA(eventName) {
-      if (window.gtag) {
-        window.gtag('event', eventName);
-      }
-      console.log('CTA tracked:', eventName);
+      siteNav.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          siteNav.classList.remove('is-open');
+          menuToggle.classList.remove('is-open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
     }
   </script>
 </body>
