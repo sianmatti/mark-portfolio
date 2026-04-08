@@ -3,33 +3,71 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Paid Media Specialist | Google Ads, Meta Ads, GA4 & GTM | Mark Andrew S. Matti</title>
+
+  <title>Paid Media Specialist for Google Ads, Meta Ads, GA4 & GTM | Mark Andrew S. Matti</title>
+
   <meta
     name="description"
-    content="Paid Media Specialist helping hospitality, attractions, and lead generation brands improve Google Ads, Meta Ads, GA4, and GTM for better leads, lower wasted spend, and clearer tracking."
-  />
-  <meta
-    name="keywords"
-    content="Paid Media Specialist, Google Ads Specialist, Meta Ads Specialist, GA4, GTM, conversion tracking, hospitality marketing, lead generation, booking campaigns"
+    content="Paid Media Specialist helping hospitality, attractions, and lead generation brands improve Google Ads, Meta Ads, GA4, and GTM for stronger leads, lower wasted spend, and cleaner tracking."
   />
   <meta name="author" content="Mark Andrew S. Matti" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#05070c" />
+  <link rel="canonical" href="https://sianmatti.github.io/mark-portfolio/" />
 
-  <meta property="og:title" content="Paid Media Specialist | Google Ads, Meta Ads, GA4 & GTM | Mark Andrew S. Matti" />
+  <meta
+    property="og:title"
+    content="Paid Media Specialist for Google Ads, Meta Ads, GA4 & GTM | Mark Andrew S. Matti"
+  />
   <meta
     property="og:description"
-    content="Google Ads, Meta Ads, GA4, and GTM for better leads, lower wasted spend, and clearer tracking."
+    content="Paid Media Specialist helping hospitality, attractions, and lead generation brands improve Google Ads, Meta Ads, GA4, and GTM for stronger leads, lower wasted spend, and cleaner tracking."
   />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://sianmatti.github.io/mark-portfolio/" />
+  <meta property="og:site_name" content="Mark Andrew S. Matti" />
+  <meta property="og:locale" content="en_PH" />
   <meta property="og:image" content="https://sianmatti.github.io/mark-portfolio/assets/hero-bg.png" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Paid Media Specialist | Google Ads, Meta Ads, GA4 & GTM | Mark Andrew S. Matti" />
+  <meta
+    name="twitter:title"
+    content="Paid Media Specialist for Google Ads, Meta Ads, GA4 & GTM | Mark Andrew S. Matti"
+  />
   <meta
     name="twitter:description"
-    content="Google Ads, Meta Ads, GA4, and GTM for better leads, lower wasted spend, and clearer tracking."
+    content="Paid Media Specialist helping hospitality, attractions, and lead generation brands improve Google Ads, Meta Ads, GA4, and GTM for stronger leads, lower wasted spend, and cleaner tracking."
   />
   <meta name="twitter:image" content="https://sianmatti.github.io/mark-portfolio/assets/hero-bg.png" />
+
+  <link rel="preload" as="image" href="/mark-portfolio/assets/hero-bg.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mark Andrew S. Matti",
+    "url": "https://sianmatti.github.io/mark-portfolio/",
+    "jobTitle": "Paid Media Specialist",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bacolod City",
+      "addressCountry": "PH"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/markandrewmatti/"
+    ],
+    "knowsAbout": [
+      "Google Ads",
+      "Meta Ads",
+      "GA4",
+      "Google Tag Manager",
+      "Conversion Tracking",
+      "Lead Generation",
+      "Hospitality Marketing"
+    ]
+  }
+  </script>
 
   <style>
     :root {
@@ -306,7 +344,6 @@
       border-color: rgba(255, 255, 255, 0.22);
     }
 
-    /* Header */
     .premium-header {
       position: sticky;
       top: 0;
@@ -447,11 +484,10 @@
       transform: translateX(-50%) rotate(-45deg);
     }
 
-    /* Hero */
     .hero-premium-v2 {
       position: relative;
       overflow: hidden;
-      min-height: 100vh;
+      min-height: min(100vh, 920px);
       display: flex;
       align-items: center;
       isolation: isolate;
@@ -465,7 +501,7 @@
           rgba(3, 5, 10, 0.38) 62%,
           rgba(3, 5, 10, 0.18) 100%
         ),
-        url('./assets/hero-bg.png');
+        url('/mark-portfolio/assets/hero-bg.png');
       background-size: cover;
       background-position: center right;
       background-repeat: no-repeat;
@@ -524,6 +560,7 @@
       color: #f7f9ff;
       text-wrap: balance;
       max-width: 11ch;
+      overflow-wrap: anywhere;
     }
 
     .hero-subtext {
@@ -539,6 +576,12 @@
       align-items: center;
       gap: 14px;
       flex-wrap: wrap;
+      width: 100%;
+    }
+
+    .hero-actions .btn-primary,
+    .hero-actions .btn-secondary {
+      min-width: 0;
     }
 
     .hero-note {
@@ -549,7 +592,6 @@
       color: rgba(170, 182, 208, 0.68);
     }
 
-    /* Results */
     .stat-card-premium {
       min-height: 180px;
       display: flex;
@@ -573,7 +615,6 @@
       font-weight: 600;
     }
 
-    /* Case studies */
     .case-card-premium {
       display: flex;
       flex-direction: column;
@@ -647,7 +688,6 @@
       transform: translateY(-1px);
     }
 
-    /* Process */
     .process-grid {
       display: grid;
       grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -681,7 +721,6 @@
       letter-spacing: -0.03em;
     }
 
-    /* CTA */
     .section-cta-final {
       padding-top: 110px;
       padding-bottom: 120px;
@@ -760,7 +799,6 @@
       margin-bottom: 10px;
     }
 
-    /* Footer */
     .premium-footer {
       padding: 28px 0 40px;
       border-top: 1px solid rgba(255,255,255,0.06);
@@ -804,7 +842,6 @@
       color: #ffffff;
     }
 
-    /* Responsive */
     @media (max-width: 1024px) {
       .premium-grid-4 {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -912,7 +949,8 @@
       .hero-premium-v2 {
         min-height: auto;
         padding: 110px 0 84px;
-        background-position: 72% center;
+        background-position: center;
+        background-size: cover;
         background-image:
           linear-gradient(
             180deg,
@@ -920,7 +958,7 @@
             rgba(3, 5, 10, 0.72) 36%,
             rgba(3, 5, 10, 0.66) 100%
           ),
-          url('./assets/hero-bg.png');
+          url('/mark-portfolio/assets/hero-bg.png');
         margin-top: -76px;
         padding-top: 140px;
       }
@@ -929,7 +967,9 @@
         padding: 0 20px;
       }
 
-      .hero-content {
+      .hero-content,
+      .hero-subtext,
+      .hero-note {
         max-width: 100%;
       }
 
@@ -965,6 +1005,29 @@
       .cta-final-content .section-title {
         max-width: 100%;
       }
+
+      .premium-card,
+      .premium-header,
+      .site-nav,
+      .btn-secondary,
+      .section-kicker,
+      .hero-eyebrow {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+      }
     }
   </style>
 </head>
@@ -997,6 +1060,7 @@
         <a
           href="mailto:sianmatti11@gmail.com?subject=Paid%20Media%20Audit%20Inquiry"
           class="nav-cta"
+          data-cta="nav_request_audit"
         >
           Request Audit
         </a>
@@ -1022,17 +1086,18 @@
             <a
               href="mailto:sianmatti11@gmail.com?subject=Paid%20Media%20Audit%20Inquiry"
               class="btn-primary"
+              data-cta="hero_request_audit"
             >
-              Request a Free Paid Media Audit
+              Request Your Free Paid Media Audit
             </a>
 
-            <a href="#results" class="btn-secondary">
+            <a href="#results" class="btn-secondary" data-cta="hero_view_results">
               See Campaign Results
             </a>
           </div>
 
           <p class="hero-note">
-            Best fit for hospitality, attractions, and lead generation brands managing $5K–$20K in monthly ad spend.
+            Get a free audit covering tracking gaps, wasted spend, and priority fixes you can act on quickly.
           </p>
         </div>
       </div>
@@ -1165,7 +1230,12 @@
               <span>+35% turnout</span>
               <span>-25% CPA</span>
             </div>
-            <a href="https://sianmatti.github.io/mark-portfolio/case-studies/splash-park-bacolod.html" class="case-link">
+            <a
+              href="https://sianmatti.github.io/mark-portfolio/case-studies/splash-park-bacolod.html"
+              class="case-link"
+              aria-label="View full case study for Splash Park Bacolod"
+              data-cta="case_splash_park"
+            >
               View Full Case Study
             </a>
           </article>
@@ -1189,7 +1259,12 @@
               <span>+20% bookings</span>
               <span>-30% CPC</span>
             </div>
-            <a href="https://sianmatti.github.io/mark-portfolio/case-studies/sixtyfifth-hotel.html" class="case-link">
+            <a
+              href="https://sianmatti.github.io/mark-portfolio/case-studies/sixtyfifth-hotel.html"
+              class="case-link"
+              aria-label="View full case study for SixtyFifth Hotel"
+              data-cta="case_sixtyfifth_hotel"
+            >
               View Full Case Study
             </a>
           </article>
@@ -1213,7 +1288,12 @@
               <span>3,000+ leads</span>
               <span>$120K+ revenue</span>
             </div>
-            <a href="https://sianmatti.github.io/mark-portfolio/case-studies/gotham-books.html" class="case-link">
+            <a
+              href="https://sianmatti.github.io/mark-portfolio/case-studies/gotham-books.html"
+              class="case-link"
+              aria-label="View full case study for Gotham Books Inc."
+              data-cta="case_gotham_books"
+            >
               View Full Case Study
             </a>
           </article>
@@ -1343,8 +1423,9 @@
             <a
               href="mailto:sianmatti11@gmail.com?subject=Paid%20Media%20Audit%20Inquiry"
               class="btn-primary"
+              data-cta="contact_request_audit"
             >
-              Request a Free Audit
+              Request Your Free Audit
             </a>
 
             <a
@@ -1352,6 +1433,8 @@
               class="btn-secondary"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="View LinkedIn profile (opens in a new tab)"
+              data-cta="contact_view_linkedin"
             >
               View LinkedIn
             </a>
@@ -1359,6 +1442,7 @@
             <a
               href="mailto:sianmatti11@gmail.com"
               class="text-link-premium"
+              data-cta="contact_email_click"
             >
               sianmatti11@gmail.com
             </a>
@@ -1409,20 +1493,53 @@
     const siteNav = document.querySelector('.site-nav');
 
     if (menuToggle && siteNav) {
+      const closeMenu = () => {
+        siteNav.classList.remove('is-open');
+        menuToggle.classList.remove('is-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      };
+
+      const openMenu = () => {
+        siteNav.classList.add('is-open');
+        menuToggle.classList.add('is-open');
+        menuToggle.setAttribute('aria-expanded', 'true');
+      };
+
       menuToggle.addEventListener('click', function () {
-        const isOpen = siteNav.classList.toggle('is-open');
-        menuToggle.classList.toggle('is-open', isOpen);
-        menuToggle.setAttribute('aria-expanded', String(isOpen));
+        const isOpen = siteNav.classList.contains('is-open');
+        isOpen ? closeMenu() : openMenu();
       });
 
       siteNav.querySelectorAll('a').forEach((link) => {
-        link.addEventListener('click', () => {
-          siteNav.classList.remove('is-open');
-          menuToggle.classList.remove('is-open');
-          menuToggle.setAttribute('aria-expanded', 'false');
-        });
+        link.addEventListener('click', closeMenu);
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeMenu();
       });
     }
+
+    document.querySelectorAll('[data-cta]').forEach((el) => {
+      el.addEventListener('click', () => {
+        const payload = {
+          cta_name: el.getAttribute('data-cta'),
+          cta_text: el.textContent.trim(),
+          cta_href: el.getAttribute('href'),
+          page_path: window.location.pathname
+        };
+
+        if (typeof gtag === 'function') {
+          gtag('event', 'cta_click', payload);
+        }
+
+        if (window.dataLayer) {
+          window.dataLayer.push({
+            event: 'cta_click',
+            ...payload
+          });
+        }
+      });
+    });
   </script>
 </body>
 </html>
