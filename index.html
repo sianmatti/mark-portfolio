@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="Paid Media Specialist helping hospitality, attractions, and lead generation brands improve Google Ads, Meta Ads, GA4, and GTM for better leads, lower wasted spend, and cleaner tracking."
+    content="Paid Media Specialist helping hospitality, attractions, and lead generation brands improve Google Ads and Meta Ads performance with cleaner tracking, stronger structure, and clearer optimization."
   />
   <meta name="author" content="Mark Andrew S. Matti" />
   <meta name="robots" content="index, follow" />
@@ -21,7 +21,7 @@
   />
   <meta
     property="og:description"
-    content="Paid Media Specialist helping hospitality, attractions, and lead generation brands improve Google Ads, Meta Ads, GA4, and GTM for better leads, lower wasted spend, and cleaner tracking."
+    content="Paid Media Specialist helping hospitality, attractions, and lead generation brands improve Google Ads and Meta Ads performance with cleaner tracking, stronger structure, and clearer optimization."
   />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://sianmatti.github.io/mark-portfolio/" />
@@ -38,7 +38,7 @@
   />
   <meta
     name="twitter:description"
-    content="Paid Media Specialist helping hospitality, attractions, and lead generation brands improve Google Ads, Meta Ads, GA4, and GTM for better leads, lower wasted spend, and cleaner tracking."
+    content="Paid Media Specialist helping hospitality, attractions, and lead generation brands improve Google Ads and Meta Ads performance with cleaner tracking, stronger structure, and clearer optimization."
   />
   <meta name="twitter:image" content="https://sianmatti.github.io/mark-portfolio/assets/hero-bg.webp" />
 
@@ -524,7 +524,7 @@
     .hero-premium-v2 {
       position: relative;
       overflow: hidden;
-      min-height: min(100vh, 920px);
+      min-height: clamp(680px, 82vh, 860px);
       display: flex;
       align-items: center;
       isolation: isolate;
@@ -533,10 +533,10 @@
         linear-gradient(
           90deg,
           rgba(3, 5, 10, 0.97) 0%,
-          rgba(3, 5, 10, 0.90) 22%,
-          rgba(3, 5, 10, 0.72) 44%,
-          rgba(3, 5, 10, 0.36) 68%,
-          rgba(3, 5, 10, 0.14) 100%
+          rgba(3, 5, 10, 0.91) 24%,
+          rgba(3, 5, 10, 0.74) 46%,
+          rgba(3, 5, 10, 0.38) 70%,
+          rgba(3, 5, 10, 0.16) 100%
         ),
         url('/mark-portfolio/assets/hero-bg.webp');
       background-size: cover;
@@ -583,29 +583,28 @@
     }
 
     .hero-content {
-      max-width: 690px;
+      max-width: 620px;
       position: relative;
       z-index: 2;
     }
 
     .hero-title {
-      margin: 0 0 18px;
-      font-size: clamp(42px, 6vw, 72px);
-      line-height: 0.98;
+      margin: 0 0 16px;
+      font-size: clamp(40px, 5.4vw, 64px);
+      line-height: 0.96;
       letter-spacing: -0.055em;
       font-weight: 700;
       color: #f7f9ff;
       text-wrap: balance;
-      max-width: 12ch;
-      overflow-wrap: anywhere;
+      max-width: 11ch;
     }
 
     .hero-subtext {
-      margin: 0 0 28px;
-      max-width: 60ch;
-      font-size: 17px;
-      line-height: 1.75;
-      color: rgba(224, 231, 248, 0.8);
+      margin: 0 0 24px;
+      max-width: 56ch;
+      font-size: 16px;
+      line-height: 1.7;
+      color: rgba(224, 231, 248, 0.82);
     }
 
     .hero-actions {
@@ -622,21 +621,27 @@
     }
 
     .hero-note {
-      margin-top: 18px;
+      margin-top: 16px;
       max-width: 60ch;
       font-size: 14px;
-      line-height: 1.65;
+      line-height: 1.6;
       color: var(--text-muted);
     }
 
-    .hero-trust {
+    .trust-strip {
+      position: relative;
+      z-index: 3;
+      margin-top: -18px;
+      padding: 0 0 18px;
+    }
+
+    .trust-strip-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 22px;
     }
 
-    .hero-trust span {
+    .trust-strip-grid span {
       display: inline-flex;
       align-items: center;
       min-height: 38px;
@@ -921,12 +926,12 @@
       }
 
       .hero-premium-v2 {
-        min-height: 92vh;
+        min-height: clamp(620px, 78vh, 760px);
         background-position: 70% center;
       }
 
       .hero-title {
-        max-width: 13ch;
+        max-width: 12ch;
       }
     }
 
@@ -1005,19 +1010,18 @@
 
       .hero-premium-v2 {
         min-height: auto;
-        padding: 110px 0 84px;
+        margin-top: -76px;
+        padding: 116px 0 64px;
         background-position: center;
         background-size: cover;
         background-image:
           linear-gradient(
             180deg,
-            rgba(3, 5, 10, 0.88) 0%,
-            rgba(3, 5, 10, 0.72) 36%,
-            rgba(3, 5, 10, 0.66) 100%
+            rgba(3, 5, 10, 0.9) 0%,
+            rgba(3, 5, 10, 0.76) 38%,
+            rgba(3, 5, 10, 0.68) 100%
           ),
           url('/mark-portfolio/assets/hero-bg.webp');
-        margin-top: -76px;
-        padding-top: 140px;
       }
 
       .hero-container {
@@ -1032,12 +1036,13 @@
 
       .hero-title {
         max-width: 100%;
-        font-size: clamp(34px, 10vw, 52px);
+        font-size: clamp(32px, 9vw, 46px);
+        line-height: 1;
       }
 
       .hero-subtext {
         font-size: 15px;
-        line-height: 1.7;
+        line-height: 1.68;
       }
 
       .hero-actions {
@@ -1048,6 +1053,20 @@
       .btn-primary,
       .btn-secondary {
         width: 100%;
+      }
+
+      .trust-strip {
+        margin-top: 0;
+        padding: 0 0 10px;
+      }
+
+      .trust-strip-grid {
+        gap: 8px;
+      }
+
+      .trust-strip-grid span {
+        width: 100%;
+        justify-content: center;
       }
 
       .section-cta-final {
@@ -1101,7 +1120,7 @@
       <button
         class="menu-toggle"
         type="button"
-        aria-label="Toggle navigation menu"
+        aria-label="Open navigation menu"
         aria-expanded="false"
         aria-controls="site-nav"
       >
@@ -1119,7 +1138,7 @@
           class="nav-cta"
           data-cta="nav_request_audit"
         >
-          Request Audit
+          Request Free Audit
         </a>
       </nav>
     </div>
@@ -1132,11 +1151,11 @@
           <p class="hero-eyebrow">Google Ads • Meta Ads • GA4 • GTM</p>
 
           <h1 class="hero-title">
-            Paid media systems built to improve lead quality, reduce wasted spend, and make conversion data easier to trust
+            Paid media systems that improve lead quality and reduce wasted spend
           </h1>
 
           <p class="hero-subtext">
-            I help hospitality, attractions, and lead generation brands improve Google Ads and Meta Ads performance with stronger account structure, cleaner tracking, and sharper optimization decisions backed by GA4 and GTM.
+            I help hospitality, attractions, and lead generation brands improve campaign performance with cleaner tracking, stronger account structure, and sharper optimization.
           </p>
 
           <div class="hero-actions">
@@ -1145,24 +1164,26 @@
               class="btn-primary"
               data-cta="hero_request_audit"
             >
-              Request Your Free Paid Media Audit
+              Request Free Audit
             </a>
 
-            <a href="#results" class="btn-secondary" data-cta="hero_view_results">
-              See Campaign Results
+            <a href="#case-studies" class="btn-secondary" data-cta="hero_view_case_studies">
+              View Case Studies
             </a>
           </div>
 
           <p class="hero-note">
-            Request a free paid media audit to uncover tracking gaps, wasted spend, and the highest-priority fixes before you scale.
+            Best for brands already spending on paid acquisition.
           </p>
-
-          <div class="hero-trust" aria-label="Key credibility points">
-            <span>Hospitality, attractions, and lead generation</span>
-            <span>GA4 + GTM-backed optimization</span>
-            <span>Best fit for brands spending $5K–$20K/month</span>
-          </div>
         </div>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Key credibility points">
+      <div class="container trust-strip-grid">
+        <span>Hospitality, attractions, and lead generation</span>
+        <span>GA4 + GTM-backed optimization</span>
+        <span>Best fit for brands spending $5K–$20K/month</span>
       </div>
     </section>
 
@@ -1172,9 +1193,6 @@
           <p class="section-kicker">Performance Snapshot</p>
           <h2 class="section-title">Selected outcomes across paid media campaigns</h2>
           <p class="section-text">
-            Results focused on lead quality, booking growth, campaign efficiency, and clearer conversion visibility.
-          </p>
-          <p class="section-text" style="margin-top: 10px;">
             Selected outcomes from campaign restructuring, tracking improvement, and paid acquisition optimization work.
           </p>
         </div>
@@ -1520,7 +1538,7 @@
               class="btn-primary"
               data-cta="contact_request_audit"
             >
-              Request Your Free Audit
+              Request Free Audit
             </a>
 
             <a
@@ -1588,17 +1606,18 @@
     const siteNav = document.querySelector('.site-nav');
 
     if (menuToggle && siteNav) {
-      const closeMenu = () => {
-        siteNav.classList.remove('is-open');
-        menuToggle.classList.remove('is-open');
-        menuToggle.setAttribute('aria-expanded', 'false');
+      const setMenuState = (open) => {
+        siteNav.classList.toggle('is-open', open);
+        menuToggle.classList.toggle('is-open', open);
+        menuToggle.setAttribute('aria-expanded', String(open));
+        menuToggle.setAttribute(
+          'aria-label',
+          open ? 'Close navigation menu' : 'Open navigation menu'
+        );
       };
 
-      const openMenu = () => {
-        siteNav.classList.add('is-open');
-        menuToggle.classList.add('is-open');
-        menuToggle.setAttribute('aria-expanded', 'true');
-      };
+      const closeMenu = () => setMenuState(false);
+      const openMenu = () => setMenuState(true);
 
       menuToggle.addEventListener('click', function () {
         const isOpen = siteNav.classList.contains('is-open');
