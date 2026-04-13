@@ -506,7 +506,7 @@
     .hero-premium-v2 {
       position: relative;
       overflow: hidden;
-      min-height: clamp(680px, 82vh, 860px);
+      min-height: clamp(520px, 72vh, 640px);
       display: flex;
       align-items: center;
       isolation: isolate;
@@ -515,10 +515,10 @@
         linear-gradient(
           90deg,
           rgba(3, 5, 10, 0.97) 0%,
-          rgba(3, 5, 10, 0.91) 24%,
-          rgba(3, 5, 10, 0.74) 46%,
-          rgba(3, 5, 10, 0.38) 70%,
-          rgba(3, 5, 10, 0.16) 100%
+          rgba(3, 5, 10, 0.92) 22%,
+          rgba(3, 5, 10, 0.76) 42%,
+          rgba(3, 5, 10, 0.42) 68%,
+          rgba(3, 5, 10, 0.18) 100%
         ),
         url('/mark-portfolio/assets/hero-bg.webp');
       background-size: cover;
@@ -534,8 +534,8 @@
       inset: 0;
       z-index: -2;
       background:
-        radial-gradient(circle at 18% 48%, rgba(57, 104, 255, 0.12), transparent 32%),
-        radial-gradient(circle at 32% 78%, rgba(128, 92, 255, 0.08), transparent 26%);
+        radial-gradient(circle at 18% 48%, rgba(57, 104, 255, 0.10), transparent 32%),
+        radial-gradient(circle at 32% 78%, rgba(128, 92, 255, 0.06), transparent 26%);
       pointer-events: none;
     }
 
@@ -547,10 +547,10 @@
       background:
         linear-gradient(
           to bottom,
-          rgba(255, 255, 255, 0.02) 0%,
-          rgba(255, 255, 255, 0) 18%,
-          rgba(255, 255, 255, 0) 82%,
-          rgba(255, 255, 255, 0.02) 100%
+          rgba(255, 255, 255, 0.015) 0%,
+          rgba(255, 255, 255, 0) 20%,
+          rgba(255, 255, 255, 0) 80%,
+          rgba(255, 255, 255, 0.015) 100%
         );
       pointer-events: none;
     }
@@ -565,34 +565,34 @@
     }
 
     .hero-content {
-      max-width: 640px;
+      max-width: 560px;
       position: relative;
       z-index: 2;
     }
 
     .hero-title {
-      margin: 0 0 16px;
-      font-size: clamp(40px, 5.4vw, 64px);
-      line-height: 0.96;
+      margin: 0 0 14px;
+      font-size: clamp(36px, 4.8vw, 56px);
+      line-height: 0.98;
       letter-spacing: -0.055em;
       font-weight: 700;
       color: #f7f9ff;
       text-wrap: balance;
-      max-width: 12ch;
+      max-width: 10ch;
     }
 
     .hero-subtext {
-      margin: 0 0 24px;
-      max-width: 60ch;
-      font-size: 16px;
-      line-height: 1.72;
+      margin: 0 0 22px;
+      max-width: 52ch;
+      font-size: 15px;
+      line-height: 1.68;
       color: rgba(229, 236, 255, 0.84);
     }
 
     .hero-actions {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
       flex-wrap: wrap;
       width: 100%;
     }
@@ -603,11 +603,11 @@
     }
 
     .hero-note {
-      margin-top: 18px;
-      margin-bottom: 10px;
-      max-width: 60ch;
-      font-size: 14px;
-      line-height: 1.6;
+      margin-top: 14px;
+      margin-bottom: 0;
+      max-width: 54ch;
+      font-size: 13px;
+      line-height: 1.55;
       color: var(--text-muted);
     }
 
@@ -615,7 +615,7 @@
       position: relative;
       z-index: 3;
       margin-top: 0;
-      padding: 20px 0 18px;
+      padding: 28px 0 18px;
     }
 
     .trust-strip-grid {
@@ -893,11 +893,11 @@
       .process-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
       .hero-premium-v2 {
-        min-height: clamp(620px, 78vh, 760px);
+        min-height: clamp(500px, 68vh, 600px);
         background-position: 70% center;
       }
 
-      .hero-title { max-width: 12ch; }
+      .hero-title { max-width: 11ch; }
     }
 
     @media (max-width: 900px) {
@@ -959,15 +959,15 @@
       .hero-premium-v2 {
         min-height: auto;
         margin-top: -76px;
-        padding: 116px 0 64px;
+        padding: 104px 0 44px;
         background-position: center;
         background-size: cover;
         background-image:
           linear-gradient(
             180deg,
-            rgba(3, 5, 10, 0.9) 0%,
-            rgba(3, 5, 10, 0.76) 38%,
-            rgba(3, 5, 10, 0.68) 100%
+            rgba(3, 5, 10, 0.92) 0%,
+            rgba(3, 5, 10, 0.78) 38%,
+            rgba(3, 5, 10, 0.70) 100%
           ),
           url('/mark-portfolio/assets/hero-bg.webp');
       }
@@ -980,13 +980,13 @@
 
       .hero-title {
         max-width: 100%;
-        font-size: clamp(32px, 9vw, 46px);
+        font-size: clamp(30px, 8.6vw, 42px);
         line-height: 1;
       }
 
       .hero-subtext {
         font-size: 15px;
-        line-height: 1.68;
+        line-height: 1.66;
       }
 
       .hero-actions {
@@ -1001,7 +1001,7 @@
 
       .trust-strip {
         margin-top: 0;
-        padding: 10px 0 10px;
+        padding: 18px 0 10px;
       }
 
       .trust-strip-grid { gap: 8px; }
@@ -1086,11 +1086,11 @@
           <p class="hero-eyebrow">Google Ads • Meta Ads • GA4 • GTM</p>
 
           <h1 class="hero-title">
-            Paid media systems built to improve lead quality, reduce wasted spend, and make conversion data easier to trust
+            Cleaner tracking. Stronger lead quality. Less wasted spend.
           </h1>
 
           <p class="hero-subtext">
-            I help hospitality, attractions, and lead generation brands improve Google Ads and Meta Ads performance with cleaner tracking, stronger account structure, and sharper optimization decisions backed by GA4 and GTM.
+            I help hospitality, attractions, and lead generation brands improve Google Ads and Meta Ads performance with stronger structure and more confident optimization decisions.
           </p>
 
           <div class="hero-actions">
@@ -1112,7 +1112,7 @@
           </div>
 
           <p class="hero-note">
-            Best for brands already spending on paid acquisition.
+            Best for brands already spending $5K–$20K/month on paid acquisition.
           </p>
         </div>
       </div>
