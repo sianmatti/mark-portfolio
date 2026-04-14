@@ -3,179 +3,540 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gotham Books Inc. Case Study | Mark Andrew S. Matti</title>
+  <title>SixtyFifth Hotel Case Study | Mark Andrew S. Matti</title>
   <meta
     name="description"
-    content="Case study on generating qualified leads and revenue contribution for Gotham Books Inc. through paid media and funnel support."
+    content="Case study for SixtyFifth Hotel showing how Google Ads restructuring, keyword refinement, and cleaner search intent alignment improved direct bookings and reduced CPC."
   />
-  <meta name="theme-color" content="#2F5BFF" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'sans-serif']
-          },
-          colors: {
-            brand: {
-              50: '#EEF4FF',
-              100: '#DCE7FF',
-              200: '#BDD0FF',
-              300: '#8EB0FF',
-              400: '#5A7CFF',
-              500: '#2F5BFF',
-              600: '#2348D8',
-              700: '#1C3D8F',
-              800: '#153AA8',
-              900: '#081120'
-            }
-          }
-        }
-      }
-    };
-  </script>
-
   <style>
+    :root {
+      --bg: #0b1020;
+      --bg-soft: #121932;
+      --card: rgba(255, 255, 255, 0.08);
+      --card-border: rgba(255, 255, 255, 0.12);
+      --text: #f5f7ff;
+      --muted: #aab3d1;
+      --accent: #6ea8ff;
+      --accent-2: #8b7dff;
+      --success: #8df0c8;
+      --max-width: 1120px;
+      --radius: 22px;
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
     body {
-      font-family: 'Inter', sans-serif;
-      background: #f5f7fb;
-      color: #0f172a;
-    }
-
-    .hero-bg {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background:
-        radial-gradient(circle at top left, rgba(47,91,255,0.18), transparent 32%),
-        linear-gradient(135deg, #081120 0%, #153aa8 100%);
+        radial-gradient(circle at top right, rgba(110, 168, 255, 0.12), transparent 30%),
+        radial-gradient(circle at top left, rgba(139, 125, 255, 0.10), transparent 28%),
+        linear-gradient(180deg, #0a0f1f 0%, #0b1020 100%);
+      color: var(--text);
+      line-height: 1.65;
     }
 
-    .focus-ring:focus-visible {
-      outline: 3px solid rgba(47, 91, 255, 0.35);
-      outline-offset: 2px;
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(calc(100% - 32px), var(--max-width));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(14px);
+      background: rgba(11, 16, 32, 0.7);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .site-header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      min-height: 74px;
+    }
+
+    .brand { font-weight: 700; letter-spacing: -0.02em; }
+
+    .nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .nav a { color: var(--muted); font-size: 0.95rem; }
+    .nav a:hover { color: var(--text); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 18px;
+      border-radius: 999px;
+      font-weight: 600;
+      transition: 0.2s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #fff;
+      box-shadow: 0 12px 30px rgba(110, 168, 255, 0.25);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 36px rgba(110, 168, 255, 0.30);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 255, 255, 0.12);
+      color: var(--text);
+    }
+
+    .btn-secondary:hover { background: rgba(255, 255, 255, 0.1); }
+
+    .hero { padding: 84px 0 40px; }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 18px;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin: 0 0 16px;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 5vw, 4.3rem);
+      max-width: 900px;
+    }
+
+    h2 { font-size: clamp(1.7rem, 3vw, 2.4rem); }
+    h3 { font-size: 1.15rem; }
+
+    p {
+      margin: 0 0 16px;
+      color: var(--muted);
+    }
+
+    .hero-copy { max-width: 760px; }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 34px;
+    }
+
+    .stat-card,
+    .card {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(16px);
+    }
+
+    .stat-card { padding: 22px; }
+
+    .stat-value {
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .stat-label {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    section { padding: 28px 0; }
+
+    .section-header {
+      max-width: 780px;
+      margin-bottom: 24px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 22px;
+    }
+
+    .card { padding: 28px; }
+
+    ul.clean-list {
+      padding-left: 18px;
+      margin: 0;
+      color: var(--muted);
+    }
+
+    ul.clean-list li + li { margin-top: 10px; }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .pill {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.09);
+      color: #d8e0fb;
+      font-size: 0.92rem;
+    }
+
+    .system-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .system-item {
+      padding: 22px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .before-after {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .before { border: 1px solid rgba(255, 120, 120, 0.18); }
+    .after { border: 1px solid rgba(141, 240, 200, 0.18); }
+
+    .label {
+      display: inline-block;
+      margin-bottom: 12px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #dce5ff;
+    }
+
+    .insight-card {
+      padding: 30px;
+      border-radius: 26px;
+      background:
+        linear-gradient(135deg, rgba(110,168,255,0.13), rgba(139,125,255,0.10)),
+        rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: var(--shadow);
+    }
+
+    .insight-card p {
+      font-size: 1.05rem;
+      color: #d5defb;
+    }
+
+    .cta-card {
+      padding: 34px;
+      text-align: center;
+    }
+
+    .cta-card p {
+      max-width: 760px;
+      margin: 0 auto 20px;
+    }
+
+    .footer {
+      padding: 36px 0 60px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 960px) {
+      .stats-grid,
+      .grid-2,
+      .system-grid,
+      .before-after {
+        grid-template-columns: 1fr;
+      }
+
+      .site-header-inner {
+        flex-direction: column;
+        justify-content: center;
+        padding: 14px 0;
+      }
+
+      .nav { justify-content: center; }
+    }
+
+    @media (max-width: 640px) {
+      .hero { padding-top: 62px; }
+
+      .card,
+      .stat-card,
+      .cta-card,
+      .insight-card {
+        padding: 22px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn { width: 100%; }
     }
   </style>
 </head>
 <body>
-  <a
-    href="#main-content"
-    class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-slate-900"
-  >
-    Skip to content
-  </a>
+  <header class="site-header">
+    <div class="container site-header-inner">
+      <a class="brand" href="../index.html">Mark Andrew S. Matti</a>
+      <nav class="nav">
+        <a href="../index.html#results">Results</a>
+        <a href="../index.html#case-studies">Case Studies</a>
+        <a href="../index.html#services">Services</a>
+        <a href="../index.html#contact">Contact</a>
+        <a class="btn btn-secondary" href="mailto:sianmatti11@gmail.com?subject=Paid%20Media%20Audit%20Inquiry">Free Audit</a>
+      </nav>
+    </div>
+  </header>
 
-  <main id="main-content" class="mx-auto max-w-5xl px-6 py-16 lg:px-10">
-    <a href="../index.html" class="focus-ring text-sm font-medium text-blue-600 hover:text-blue-700">
-      ← Back to homepage
-    </a>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="eyebrow">Hospitality / Booking Growth</div>
+        <div class="hero-copy">
+          <h1>SixtyFifth Hotel</h1>
+          <p>
+            Improving direct bookings and traffic quality through cleaner search campaign structure,
+            stronger keyword intent alignment, and better control over wasted spend.
+          </p>
+        </div>
 
-    <section class="hero-bg mt-8 rounded-[32px] px-8 py-12 text-white shadow-2xl">
-      <p class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-200">Lead Generation / Funnel Support</p>
-      <h1 class="mt-4 text-4xl font-semibold tracking-[-0.04em] md:text-6xl">Gotham Books Inc.</h1>
-      <p class="mt-5 max-w-2xl text-base leading-8 text-white/80">
-        Paid media and funnel support focused on generating qualified leads, improving conversion performance, and supporting revenue contribution.
-      </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="mailto:sianmatti11@gmail.com?subject=Paid%20Media%20Audit%20Inquiry">Request a Free Paid Media Audit</a>
+          <a class="btn btn-secondary" href="../index.html#case-studies">Back to Case Studies</a>
+        </div>
 
-      <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
-          <p class="text-3xl font-semibold">3,000+</p>
-          <p class="mt-2 text-sm text-white/70">Qualified leads</p>
-        </div>
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
-          <p class="text-3xl font-semibold">$120K+</p>
-          <p class="mt-2 text-sm text-white/70">Revenue contribution</p>
-        </div>
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
-          <p class="text-3xl font-semibold">Google + Meta</p>
-          <p class="mt-2 text-sm text-white/70">Primary channels</p>
-        </div>
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
-          <p class="text-3xl font-semibold">Full funnel</p>
-          <p class="mt-2 text-sm text-white/70">Scope of support</p>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-value">+20%</div>
+            <div class="stat-label">Direct bookings</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">-30%</div>
+            <div class="stat-label">CPC</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">Better</div>
+            <div class="stat-label">Search intent alignment</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">Cleaner</div>
+            <div class="stat-label">Keyword structure</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="mt-12 grid gap-6 md:grid-cols-2">
-      <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
-        <h2 class="text-2xl font-semibold tracking-[-0.03em]">Overview</h2>
-        <div class="mt-5 space-y-4 text-sm leading-7 text-slate-600">
-          <p><strong class="text-slate-900">Goal:</strong> Drive qualified leads and stronger revenue contribution from paid acquisition.</p>
-          <p><strong class="text-slate-900">Industry:</strong> Lead Generation</p>
-          <p><strong class="text-slate-900">Platforms:</strong> Google Ads, Meta Ads, landing pages, CRM support</p>
-          <p><strong class="text-slate-900">Scope:</strong> Paid campaigns, message alignment, landing page support, creative iteration, and CRM workflow support.</p>
+    <section>
+      <div class="container grid-2">
+        <div class="card">
+          <div class="section-header">
+            <h2>The Problem</h2>
+            <p>
+              Search traffic was reaching the property, but campaign performance needed stronger structure and better keyword control to improve booking quality and cost efficiency.
+            </p>
+          </div>
+          <ul class="clean-list">
+            <li>Brand and non-brand traffic were not clearly structured for performance control.</li>
+            <li>Keyword intent needed refinement to better match the booking journey.</li>
+            <li>Negative keyword cleanup opportunities were limiting efficiency.</li>
+            <li>Paid traffic quality needed stronger alignment with direct booking goals.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="section-header">
+            <h2>Diagnosis</h2>
+            <p>
+              The account did not need more traffic at any cost. It needed better traffic quality. A cleaner search structure was necessary to better separate intent, reduce waste, and support more efficient booking acquisition.
+            </p>
+          </div>
+
+          <div class="pill-list">
+            <span class="pill">Intent mismatch</span>
+            <span class="pill">Keyword waste</span>
+            <span class="pill">Structure gap</span>
+            <span class="pill">Efficiency issue</span>
+          </div>
         </div>
       </div>
-
-      <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
-        <h2 class="text-2xl font-semibold tracking-[-0.03em]">Challenge</h2>
-        <p class="mt-5 text-sm leading-7 text-slate-600">
-          The funnel needed better alignment from paid traffic to landing page experience and follow-up support. Acquisition performance needed a clearer path from click to qualified lead.
-        </p>
-      </div>
     </section>
 
-    <section class="mt-6 rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
-      <h2 class="text-2xl font-semibold tracking-[-0.03em]">What I changed</h2>
-      <div class="mt-6 grid gap-4 md:grid-cols-2">
-        <div class="rounded-2xl bg-slate-50 p-5 text-sm leading-7 text-slate-600">Managed paid campaigns across acquisition channels for lead generation.</div>
-        <div class="rounded-2xl bg-slate-50 p-5 text-sm leading-7 text-slate-600">Improved message-to-offer and landing page alignment.</div>
-        <div class="rounded-2xl bg-slate-50 p-5 text-sm leading-7 text-slate-600">Supported targeting, creative iteration, and budget pacing decisions.</div>
-        <div class="rounded-2xl bg-slate-50 p-5 text-sm leading-7 text-slate-600">Supported CRM nurture and reporting workflows to strengthen follow-up performance.</div>
-      </div>
-    </section>
-
-    <section class="mt-6 rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
-      <h2 class="text-2xl font-semibold tracking-[-0.03em]">Results</h2>
-      <div class="mt-6 grid gap-4 sm:grid-cols-2">
-        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
-          <p class="text-3xl font-semibold text-slate-900">3,000+</p>
-          <p class="mt-2 text-sm text-slate-600">Qualified leads</p>
+    <section>
+      <div class="container">
+        <div class="section-header">
+          <h2>The System Fix</h2>
+          <p>
+            The work focused on restructuring the account to improve booking intent alignment, reduce low-value traffic, and support stronger optimization decisions from cleaner search data.
+          </p>
         </div>
-        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
-          <p class="text-3xl font-semibold text-slate-900">$120K+</p>
-          <p class="mt-2 text-sm text-slate-600">Revenue contribution</p>
+
+        <div class="system-grid">
+          <div class="system-item">
+            <h3>1. Brand vs Non-Brand Structure</h3>
+            <p>
+              Reorganized campaigns to separate branded demand from broader search acquisition, making performance easier to evaluate and budgets easier to control.
+            </p>
+          </div>
+
+          <div class="system-item">
+            <h3>2. Keyword Intent Refinement</h3>
+            <p>
+              Improved keyword direction so search traffic would align more closely with users who were more likely to move toward direct booking.
+            </p>
+          </div>
+
+          <div class="system-item">
+            <h3>3. Negative Keyword Cleanup</h3>
+            <p>
+              Reduced waste by tightening exclusions and removing low-value search traffic that did not match the property’s booking goals.
+            </p>
+          </div>
+
+          <div class="system-item">
+            <h3>4. Retargeting Support</h3>
+            <p>
+              Supported the search strategy with remarketing logic to stay connected to higher-intent users after initial site visits.
+            </p>
+          </div>
         </div>
       </div>
-      <p class="mt-6 text-sm leading-7 text-slate-600">
-        Performance improved by aligning acquisition, landing page experience, messaging, and follow-up into one clearer system. That created a stronger path from paid traffic to qualified lead.
-      </p>
     </section>
 
-    <section class="mt-6 rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
-      <h2 class="text-2xl font-semibold tracking-[-0.03em]">Takeaway</h2>
-      <p class="mt-5 text-sm leading-7 text-slate-600">
-        Lead generation results are stronger when media buying, landing page alignment, and follow-up workflows are treated as one connected performance system.
-      </p>
+    <section>
+      <div class="container grid-2">
+        <div class="card">
+          <div class="section-header">
+            <h2>Execution</h2>
+          </div>
+          <ul class="clean-list">
+            <li>Restructured campaigns into clearer brand and non-brand groups.</li>
+            <li>Refined keyword targeting around higher booking intent.</li>
+            <li>Cleaned up negative keywords to reduce wasted clicks.</li>
+            <li>Supported remarketing flow for warmer traffic.</li>
+            <li>Improved visibility into search performance through cleaner reporting support.</li>
+            <li>Aligned campaign logic more closely with the booking journey.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="section-header">
+            <h2>Results</h2>
+            <p>
+              With cleaner search structure and stronger keyword alignment, the account produced better booking outcomes with improved traffic efficiency.
+            </p>
+          </div>
+          <ul class="clean-list">
+            <li><strong style="color:#fff;">+20% increase in direct bookings</strong></li>
+            <li><strong style="color:#fff;">-30% reduction in CPC</strong></li>
+            <li>Improved traffic quality from stronger intent alignment</li>
+            <li>Clearer search campaign decision-making</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <section class="mt-12 rounded-[32px] bg-blue-600 px-8 py-10 text-white shadow-xl">
-      <h2 class="text-3xl font-semibold tracking-[-0.03em]">Want help improving lead quality?</h2>
-      <p class="mt-4 max-w-2xl text-sm leading-7 text-blue-50/90">
-        I help brands build cleaner acquisition systems that improve lead quality, reduce wasted spend, and support stronger conversion performance.
-      </p>
-      <div class="mt-6 flex flex-col gap-4 sm:flex-row">
-        <a
-          href="mailto:sianmatti11@gmail.com?subject=Paid%20Media%20Audit%20Inquiry"
-          class="focus-ring inline-flex items-center justify-center rounded-2xl bg-white px-5 py-3 text-sm font-semibold text-blue-700"
-        >
-          Request a Free Audit
-        </a>
-        <a
-          href="../index.html"
-          class="focus-ring inline-flex items-center justify-center rounded-2xl border border-white/30 px-5 py-3 text-sm font-semibold text-white"
-        >
-          Back to Homepage
-        </a>
+    <section>
+      <div class="container">
+        <div class="insight-card">
+          <h2>Key Insight</h2>
+          <p>
+            Search performance improves faster when the account is structured around intent, not just keywords. Cleaner separation between traffic types made spend more efficient and booking-focused optimization easier to manage.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-header">
+          <h2>Before vs After</h2>
+          <p>
+            The biggest shift was not simply traffic volume. It was the quality and control of the traffic entering the booking journey.
+          </p>
+        </div>
+
+        <div class="before-after">
+          <div class="card before">
+            <span class="label">Before</span>
+            <ul class="clean-list">
+              <li>Less separation between traffic intent types</li>
+              <li>Weaker keyword control</li>
+              <li>More room for inefficient spend</li>
+              <li>Paid traffic less aligned with direct booking goals</li>
+            </ul>
+          </div>
+
+          <div class="card after">
+            <span class="label">After</span>
+            <ul class="clean-list">
+              <li>Clearer brand vs non-brand structure</li>
+              <li>Stronger keyword intent targeting</li>
+              <li>Cleaner negative keyword control</li>
+              <li>Higher-quality traffic supporting direct bookings</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="card cta-card">
+          <h2>Cleaner search structure drives better booking performance</h2>
+          <p>
+            If your Google Ads account is already active but your booking results still feel inefficient, the issue is often keyword structure, search intent alignment, or weak control over wasted spend. That is where I can help.
+          </p>
+          <a class="btn btn-primary" href="mailto:sianmatti11@gmail.com?subject=Paid%20Media%20Audit%20Inquiry">Request a Free Paid Media Audit</a>
+        </div>
       </div>
     </section>
   </main>
+
+  <footer class="footer">
+    <div class="container">
+      © 2026 Mark Andrew S. Matti · Paid Media Specialist
+    </div>
+  </footer>
 </body>
 </html>
