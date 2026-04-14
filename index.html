@@ -152,7 +152,12 @@
       text-decoration: none;
     }
 
-    button { font: inherit; }
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
 
     .container {
       width: min(100% - 40px, var(--container));
@@ -176,7 +181,10 @@
     }
 
     a:focus-visible,
-    button:focus-visible {
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible {
       outline: 2px solid #ffffff;
       outline-offset: 3px;
     }
@@ -199,6 +207,16 @@
           rgba(255,255,255,0) 82%,
           rgba(255,255,255,0.015) 100%
         );
+    }
+
+    .section-bridge {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .section-bridge-tight {
+      padding-top: 12px;
+      padding-bottom: 0;
     }
 
     .section-header {
@@ -350,6 +368,8 @@
       box-shadow:
         0 12px 30px rgba(120, 153, 255, 0.18),
         inset 0 1px 0 rgba(255, 255, 255, 0.8);
+      border: 0;
+      cursor: pointer;
     }
 
     .btn-primary:hover {
@@ -564,27 +584,27 @@
     }
 
     .hero-content {
-      max-width: 520px;
+      max-width: 640px;
       position: relative;
       z-index: 2;
     }
 
     .hero-title {
       margin: 0 0 14px;
-      font-size: clamp(34px, 4.4vw, 52px);
+      font-size: clamp(34px, 4.4vw, 56px);
       line-height: 0.98;
       letter-spacing: -0.055em;
       font-weight: 700;
       color: #f7f9ff;
       text-wrap: balance;
-      max-width: 9ch;
+      max-width: 13ch;
     }
 
     .hero-subtext {
       margin: 0 0 20px;
-      max-width: 48ch;
+      max-width: 56ch;
       font-size: 15px;
-      line-height: 1.65;
+      line-height: 1.7;
       color: rgba(229, 236, 255, 0.82);
     }
 
@@ -604,7 +624,7 @@
     .hero-note {
       margin-top: 14px;
       margin-bottom: 0;
-      max-width: 54ch;
+      max-width: 58ch;
       font-size: 13px;
       line-height: 1.55;
       color: var(--text-muted);
@@ -747,10 +767,11 @@
 
     .process-card {
       text-align: center;
-      min-height: 140px;
+      min-height: 200px;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      gap: 8px;
     }
 
     .process-number {
@@ -768,6 +789,14 @@
       font-size: 18px;
       font-weight: 700;
       letter-spacing: -0.03em;
+    }
+
+    .process-text {
+      margin: 0 auto;
+      color: rgba(224, 231, 248, 0.76);
+      font-size: 14px;
+      line-height: 1.6;
+      max-width: 26ch;
     }
 
     .section-cta-final {
@@ -796,11 +825,6 @@
       justify-content: center;
       position: relative;
       z-index: 1;
-    }
-
-    .cta-final-actions .btn-primary,
-    .cta-final-actions .btn-secondary {
-      width: 100%;
     }
 
     .cta-audit-list {
@@ -888,6 +912,90 @@
 
     .footer-links a:hover { color: #ffffff; }
 
+    .lead-form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-field label {
+      font-size: 13px;
+      font-weight: 600;
+      color: rgba(230, 237, 255, 0.88);
+    }
+
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      width: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      background: rgba(255, 255, 255, 0.045);
+      color: #f7f9ff;
+      border-radius: 16px;
+      padding: 14px 16px;
+      line-height: 1.5;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+      appearance: none;
+    }
+
+    .form-field input::placeholder,
+    .form-field textarea::placeholder {
+      color: rgba(200, 210, 235, 0.58);
+    }
+
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+      outline: none;
+      border-color: rgba(255, 255, 255, 0.22);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .form-field textarea {
+      resize: vertical;
+      min-height: 132px;
+    }
+
+    .lead-submit {
+      width: 100%;
+    }
+
+    .lead-submit:disabled {
+      opacity: 0.72;
+      cursor: not-allowed;
+    }
+
+    .form-note {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.6;
+      color: rgba(200, 210, 235, 0.78);
+      text-align: center;
+    }
+
+    .form-status {
+      min-height: 20px;
+      margin: 0;
+      font-size: 13px;
+      text-align: center;
+      color: rgba(230, 237, 255, 0.88);
+    }
+
     @media (max-width: 1024px) {
       .premium-grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .premium-grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -900,7 +1008,7 @@
         background-position: 78% center;
       }
 
-      .hero-title { max-width: 10ch; }
+      .hero-title { max-width: 13ch; }
     }
 
     @media (max-width: 900px) {
@@ -949,7 +1057,8 @@
       .premium-grid-2,
       .premium-grid-3,
       .premium-grid-4,
-      .process-grid {
+      .process-grid,
+      .form-grid {
         grid-template-columns: 1fr;
       }
 
@@ -1118,12 +1227,8 @@
         <a href="#case-studies">Case Studies</a>
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
-        <a
-          href="mailto:sianmatti11@gmail.com?subject=Paid%20Media%20Audit%20Inquiry"
-          class="nav-cta"
-          data-cta="nav_request_audit"
-        >
-          Free Audit
+        <a href="#contact" class="nav-cta" data-cta="nav_get_free_audit">
+          Get Free Audit
         </a>
       </nav>
     </div>
@@ -1136,33 +1241,25 @@
           <p class="hero-eyebrow">Google Ads • Meta Ads • GA4 • GTM</p>
 
           <h1 class="hero-title">
-            Cleaner tracking. Stronger lead quality. Less wasted spend.
+            Most ad accounts don’t have a budget problem. They have a system problem.
           </h1>
 
           <p class="hero-subtext">
-            I help hospitality, attractions, and lead generation brands improve Google Ads and Meta Ads performance with cleaner tracking, stronger campaign structure, and sharper optimization.
+            If your campaigns feel inconsistent, tracking is unreliable, or spend is hard to control, the issue is usually structure and measurement. I help fix that through cleaner tracking, stronger campaign systems, and more reliable optimization decisions.
           </p>
 
           <div class="hero-actions">
-            <a
-              href="mailto:sianmatti11@gmail.com?subject=Paid%20Media%20Audit%20Inquiry"
-              class="btn-primary"
-              data-cta="hero_request_free_paid_media_audit"
-            >
-              Request a Free Paid Media Audit
+            <a href="#contact" class="btn-primary" data-cta="hero_request_free_paid_media_audit">
+              Request Free Audit
             </a>
 
-            <a
-              href="#case-studies"
-              class="btn-secondary"
-              data-cta="hero_view_case_studies"
-            >
+            <a href="#case-studies" class="btn-secondary" data-cta="hero_view_case_studies">
               View Case Studies
             </a>
           </div>
 
           <p class="hero-note">
-            Best for brands already spending $5K–$20K/month on paid acquisition.
+            Best for brands spending $5K–$20K/month that need clearer data, better structure, and more predictable performance before scaling.
           </p>
         </div>
       </div>
@@ -1171,10 +1268,64 @@
     <section class="trust-strip" aria-label="Key credibility points">
       <div class="container">
         <ul class="trust-strip-grid">
-          <li>Hospitality, attractions, and lead generation</li>
-          <li>GA4 + GTM-backed optimization</li>
-          <li>Best fit for brands spending $5K–$20K/month</li>
+          <li>Tracking-first campaign optimization</li>
+          <li>Structured Google Ads &amp; Meta Ads systems</li>
+          <li>Built for $5K–$20K/month ad spend brands</li>
         </ul>
+      </div>
+    </section>
+
+    <section class="section-premium section-bridge-tight">
+      <div class="container">
+        <div class="section-header" style="margin-bottom: 0;">
+          <p class="section-text" style="max-width: 60ch;">
+            Most underperforming campaigns are not limited by budget. They are limited by how tracking, structure, and optimization are set up.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-premium">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-kicker">The Gap</p>
+          <h2 class="section-title">Why most ad accounts underperform</h2>
+          <p class="section-text">
+            When campaigns feel inconsistent or results are hard to explain, it is usually not a platform issue. It is a system issue — where tracking, structure, and optimization are not aligned.
+          </p>
+        </div>
+
+        <div class="premium-grid-3">
+          <article class="premium-card">
+            <p class="card-kicker">01</p>
+            <h3>Poor structure</h3>
+            <p>
+              Campaigns are not aligned with intent, funnel stage, or budget priorities, making performance unpredictable and harder to scale.
+            </p>
+          </article>
+
+          <article class="premium-card">
+            <p class="card-kicker">02</p>
+            <h3>Unreliable tracking</h3>
+            <p>
+              Conversion data is incomplete or inconsistent, leading to weak optimization decisions and misleading performance signals.
+            </p>
+          </article>
+
+          <article class="premium-card">
+            <p class="card-kicker">03</p>
+            <h3>Wasted spend</h3>
+            <p>
+              Budget leaks into low-quality traffic due to weak targeting, poor exclusions, and lack of funnel alignment.
+            </p>
+          </article>
+        </div>
+
+        <div class="section-header" style="margin-top: 24px; margin-bottom: 0;">
+          <p class="section-text">
+            When these issues are fixed, performance becomes easier to control and scale. Here are selected outcomes from that approach.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -1212,13 +1363,23 @@
       </div>
     </section>
 
+    <section class="section-premium section-bridge">
+      <div class="container">
+        <div class="section-header" style="margin-bottom: 0;">
+          <p class="section-text">
+            These outcomes come from fixing the underlying campaign systems — not just adjusting ads.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <section id="case-studies" class="section-premium">
       <div class="container">
         <div class="section-header">
           <p class="section-kicker">Case Studies</p>
           <h2 class="section-title">Paid media case studies across attractions, hospitality, and lead generation</h2>
           <p class="section-text">
-            A closer look at the problem, the system changes made, and the business result that followed.
+            A closer look at the business problem, what was breaking performance, and the system changes that improved results.
           </p>
         </div>
 
@@ -1227,20 +1388,20 @@
             <p class="card-kicker">Attraction / Event Promotion</p>
             <h3>Splash Park Bacolod</h3>
             <p class="case-lead">
-              Increase event turnout while improving acquisition efficiency.
+              Event turnout was inconsistent, and acquisition efficiency was being limited by weak audience segmentation and underdeveloped retargeting.
             </p>
             <p class="case-body">
-              Meta Ads performance was limited by weak segmentation, unclear retargeting structure, and poor visibility into campaign performance.
+              The campaign structure needed clearer separation between prospecting and retargeting, along with stronger remarketing windows and better visibility into performance.
             </p>
             <ul class="case-list">
-              <li>Audience segmentation</li>
-              <li>Prospecting vs retargeting setup</li>
-              <li>7D / 14D / 30D remarketing</li>
+              <li>audience segmentation refinement</li>
+              <li>prospecting vs retargeting structure</li>
+              <li>7D / 14D / 30D remarketing windows</li>
               <li>GA4 reporting support</li>
             </ul>
             <div class="case-result-row">
               <span>+35% turnout</span>
-              <span>-25% CPA</span>
+              <span>improved cost efficiency</span>
             </div>
             <a
               href="https://sianmatti.github.io/mark-portfolio/case-studies/splash-park-bacolod.html"
@@ -1256,19 +1417,19 @@
             <p class="card-kicker">Hospitality / Booking Growth</p>
             <h3>SixtyFifth Hotel</h3>
             <p class="case-lead">
-              Increase direct bookings and improve paid traffic quality.
+              Paid traffic quality needed improvement, and direct booking growth was being held back by loose search structure and inefficient keyword targeting.
             </p>
             <p class="case-body">
-              Search performance needed cleaner structure, stronger keyword intent, and better alignment with the booking journey.
+              The account needed stronger alignment between campaign intent, keyword strategy, and the booking journey to drive more qualified traffic.
             </p>
             <ul class="case-list">
-              <li>Brand vs non-brand restructure</li>
-              <li>Negative keyword cleanup</li>
-              <li>Remarketing support</li>
+              <li>brand vs non-brand restructure</li>
+              <li>negative keyword cleanup</li>
+              <li>remarketing support</li>
               <li>GA4 tracking support</li>
             </ul>
             <div class="case-result-row">
-              <span>+20% bookings</span>
+              <span>+20% direct bookings</span>
               <span>-30% CPC</span>
             </div>
             <a
@@ -1285,15 +1446,15 @@
             <p class="card-kicker">Lead Generation / Funnel Support</p>
             <h3>Gotham Books Inc.</h3>
             <p class="case-lead">
-              Drive qualified leads and stronger revenue contribution from paid acquisition.
+              Lead generation performance depended on stronger alignment between paid traffic, landing page experience, and follow-up systems.
             </p>
             <p class="case-body">
-              The funnel needed better alignment from paid traffic to landing page experience and follow-up support.
+              The opportunity was not just to increase volume, but to improve the quality and conversion flow behind paid acquisition.
             </p>
             <ul class="case-list">
-              <li>Paid campaign management</li>
-              <li>Landing page alignment</li>
-              <li>Creative iteration</li>
+              <li>paid campaign management</li>
+              <li>landing page alignment</li>
+              <li>creative iteration</li>
               <li>CRM workflow support</li>
             </ul>
             <div class="case-result-row">
@@ -1327,61 +1488,29 @@
           <article class="premium-card">
             <h3>Cleaner tracking</h3>
             <p>
-              Better data quality leads to better optimization decisions. I work to make your conversion signals clearer, more reliable, and easier to trust.
+              When conversion data is unreliable, optimization becomes guesswork. I focus on making your tracking clearer so decisions are based on data you can trust.
             </p>
           </article>
 
           <article class="premium-card">
             <h3>Stronger account structure</h3>
             <p>
-              Campaigns perform better when they are aligned with search intent, funnel stage, audience quality, and budget priorities.
+              Disorganized campaigns lead to inconsistent results. I restructure accounts to align with intent, audience quality, and funnel stages.
             </p>
           </article>
 
           <article class="premium-card">
             <h3>Less wasted spend</h3>
             <p>
-              Cleaner targeting, exclusions, audience segmentation, and funnel alignment help reduce low-quality traffic and inefficient spend.
+              Inefficient targeting and weak exclusions quietly drain budget. I tighten these areas to improve cost efficiency and lead quality.
             </p>
           </article>
 
           <article class="premium-card">
             <h3>Operator mindset</h3>
             <p>
-              I focus on systems, clarity, and performance logic, not just launching campaigns and hoping results improve.
+              Not just campaign management. A systems-focused approach that prioritizes clarity, structure, and performance logic behind every decision.
             </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-premium">
-      <div class="container">
-        <div class="section-header">
-          <p class="section-kicker">The Gap</p>
-          <h2 class="section-title">Most underperforming ad accounts do not have a budget problem</h2>
-          <p class="section-text">
-            They usually have a structure, tracking, and optimization problem. When campaign architecture is weak and conversion signals are unreliable, spend becomes harder to control and decisions become harder to trust.
-          </p>
-        </div>
-
-        <div class="premium-grid-3">
-          <article class="premium-card">
-            <p class="card-kicker">01</p>
-            <h3>Poor structure</h3>
-            <p>Campaigns misaligned with search intent, funnel stage, and budget priorities.</p>
-          </article>
-
-          <article class="premium-card">
-            <p class="card-kicker">02</p>
-            <h3>Unreliable tracking</h3>
-            <p>Conversion data that is incomplete, inconsistent, or too weak to support confident optimization.</p>
-          </article>
-
-          <article class="premium-card">
-            <p class="card-kicker">03</p>
-            <h3>Wasted spend</h3>
-            <p>Low-quality traffic, weak exclusions, and loose targeting that reduce efficiency and lead quality.</p>
           </article>
         </div>
       </div>
@@ -1440,13 +1569,23 @@
       </div>
     </section>
 
+    <section class="section-premium section-bridge">
+      <div class="container">
+        <div class="section-header" style="margin-bottom: 0;">
+          <p class="section-text">
+            The same approach is applied across accounts. Here is the process used to identify issues and improve performance.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <section class="section-premium">
       <div class="container">
         <div class="section-header">
           <p class="section-kicker">Process</p>
-          <h2 class="section-title">How I improve campaign performance</h2>
+          <h2 class="section-title">How I turn weak campaign systems into clearer performance decisions</h2>
           <p class="section-text">
-            A structured workflow built to identify waste, improve measurement, and support better optimization decisions.
+            The goal is not just to launch or manage campaigns. It is to improve tracking clarity, strengthen account structure, reduce wasted spend, and create a better foundation for optimization.
           </p>
         </div>
 
@@ -1454,37 +1593,55 @@
           <article class="premium-card process-card">
             <p class="process-number">01</p>
             <p class="process-title">Audit</p>
+            <p class="process-text">
+              Identify wasted spend, tracking gaps, and structural weaknesses across campaigns and funnels.
+            </p>
           </article>
 
           <article class="premium-card process-card">
             <p class="process-number">02</p>
             <p class="process-title">Tracking</p>
+            <p class="process-text">
+              Improve conversion signal quality using GA4 and GTM so decisions are based on cleaner, more reliable data.
+            </p>
           </article>
 
           <article class="premium-card process-card">
             <p class="process-number">03</p>
             <p class="process-title">Structure</p>
+            <p class="process-text">
+              Align campaigns by intent, audience quality, funnel stage, and budget priority for stronger performance control.
+            </p>
           </article>
 
           <article class="premium-card process-card">
             <p class="process-number">04</p>
             <p class="process-title">Testing</p>
+            <p class="process-text">
+              Validate creatives, audiences, keywords, and landing page alignment to identify what actually drives results.
+            </p>
           </article>
 
           <article class="premium-card process-card">
             <p class="process-number">05</p>
             <p class="process-title">Optimization</p>
+            <p class="process-text">
+              Reduce inefficiency, improve lead quality, and scale what works through focused iteration and budget refinement.
+            </p>
           </article>
 
           <article class="premium-card process-card">
             <p class="process-number">06</p>
             <p class="process-title">Reporting</p>
+            <p class="process-text">
+              Translate performance data into clearer insights, priorities, and next actions you can actually use.
+            </p>
           </article>
         </div>
 
         <div class="section-header" style="margin-top: 24px; margin-bottom: 0;">
           <p class="section-text">
-            Every recommendation is meant to improve clarity, efficiency, and the quality of your optimization decisions.
+            Every step is designed to improve clarity, reduce wasted spend, and support better decisions before scaling further.
           </p>
         </div>
       </div>
@@ -1575,6 +1732,38 @@
       </div>
     </section>
 
+    <section class="section-premium">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-kicker">Fit</p>
+          <h2 class="section-title">This is not for everyone</h2>
+          <p class="section-text">
+            This works best when there is already some level of paid acquisition in place.
+          </p>
+        </div>
+
+        <div class="premium-grid-2">
+          <article class="premium-card">
+            <h3>Not ideal if</h3>
+            <ul class="case-list">
+              <li>No active ad spend yet</li>
+              <li>No clear offer or funnel</li>
+              <li>Looking for quick wins without fixing structure</li>
+            </ul>
+          </article>
+
+          <article class="premium-card">
+            <h3>Best fit if</h3>
+            <ul class="case-list">
+              <li>Already spending on ads</li>
+              <li>Performance feels inconsistent</li>
+              <li>Scaling is difficult or inefficient</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section id="contact" class="section-premium section-cta-final">
       <div class="container">
         <div class="cta-final-wrap premium-card">
@@ -1582,7 +1771,7 @@
             <p class="section-kicker">Free Paid Media Audit</p>
             <h2 class="section-title">Fix tracking gaps, reduce wasted spend, and improve paid media efficiency</h2>
             <p class="section-text">
-              Best for brands that are already spending on paid acquisition and want a clearer view of what is working, what is leaking budget, and what should be fixed first.
+              If your campaigns feel inconsistent, tracking is unclear, or spend is getting harder to justify, this audit will show exactly where performance is breaking and what should be fixed first.
             </p>
 
             <ul class="cta-audit-list">
@@ -1593,18 +1782,104 @@
             </ul>
 
             <p class="section-text" style="margin-top: 18px;">
-              You can expect a response within 24 hours.
+              No commitment required. Just a clear breakdown of what is working, what is wasting budget, and what to improve next.
             </p>
           </div>
 
           <div class="cta-final-actions">
-            <a
-              href="mailto:sianmatti11@gmail.com?subject=Paid%20Media%20Audit%20Inquiry"
-              class="btn-primary"
-              data-cta="contact_request_free_paid_media_audit"
+            <form
+              class="lead-form"
+              action="https://formspree.io/f/xqewabbn"
+              method="POST"
+              id="lead-form"
             >
-              Request a Free Paid Media Audit
-            </a>
+              <div class="form-grid">
+                <div class="form-field">
+                  <label for="name">Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Your name"
+                    autocomplete="name"
+                    required
+                  />
+                </div>
+
+                <div class="form-field">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="you@company.com or you@gmail.com"
+                    autocomplete="email"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="company">Company</label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  placeholder="Your company or brand"
+                  autocomplete="organization"
+                />
+              </div>
+
+              <div class="form-field">
+                <label for="budget">Monthly ad spend</label>
+                <select id="budget" name="budget" required>
+                  <option value="" disabled selected>Select range</option>
+                  <option value="Below $5K">Below $5K</option>
+                  <option value="$5K-$10K">$5K-$10K</option>
+                  <option value="$10K-$20K">$10K-$20K</option>
+                  <option value="$20K+">$20K+</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="platform">Main platform</label>
+                <select id="platform" name="platform" required>
+                  <option value="" disabled selected>Select platform</option>
+                  <option value="Google Ads">Google Ads</option>
+                  <option value="Meta Ads">Meta Ads</option>
+                  <option value="Google Ads + Meta Ads">Google Ads + Meta Ads</option>
+                  <option value="Not sure yet">Not sure yet</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="message">What feels broken right now?</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Example: tracking is unclear, leads are inconsistent, CPC is rising, or bookings are hard to improve"
+                  required
+                ></textarea>
+              </div>
+
+              <input type="hidden" name="_subject" value="New Paid Media Audit Inquiry" />
+              <input type="hidden" name="_source" value="Mark Portfolio Contact Form" />
+
+              <button
+                type="submit"
+                class="btn-primary lead-submit"
+                data-cta="contact_submit_lead_form"
+              >
+                Request Free Audit
+              </button>
+
+              <p class="form-note">
+                Best for brands already running paid campaigns and looking for clearer, more efficient performance.
+              </p>
+
+              <p class="form-status" id="form-status" aria-live="polite"></p>
+            </form>
 
             <a
               href="https://www.linkedin.com/in/markandrewmatti/"
@@ -1773,6 +2048,60 @@
     };
 
     window.addEventListener('scroll', trackScrollDepth, { passive: true });
+
+    const leadForm = document.getElementById('lead-form');
+    const formStatus = document.getElementById('form-status');
+    const submitButton = leadForm?.querySelector('.lead-submit');
+
+    if (leadForm && formStatus && submitButton) {
+      leadForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        formStatus.textContent = 'Submitting...';
+        submitButton.disabled = true;
+        submitButton.textContent = 'Submitting...';
+
+        const formData = new FormData(leadForm);
+
+        try {
+          const response = await fetch(leadForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+              Accept: 'application/json'
+            }
+          });
+
+          if (response.ok) {
+            formStatus.textContent = 'Thanks — your inquiry has been sent. I’ll review it and get back to you within 24 hours.';
+            leadForm.reset();
+
+            const payload = {
+              form_name: 'paid_media_audit_form',
+              page_path: window.location.pathname
+            };
+
+            if (typeof gtag === 'function') {
+              gtag('event', 'generate_lead', payload);
+            }
+
+            if (window.dataLayer) {
+              window.dataLayer.push({
+                event: 'generate_lead',
+                ...payload
+              });
+            }
+          } else {
+            formStatus.textContent = 'Something went wrong. Please try again or email me directly.';
+          }
+        } catch (error) {
+          formStatus.textContent = 'Something went wrong. Please try again or email me directly.';
+        } finally {
+          submitButton.disabled = false;
+          submitButton.textContent = 'Request Free Audit';
+        }
+      });
+    }
   </script>
 </body>
 </html>
