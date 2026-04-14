@@ -131,6 +131,11 @@
       --field-bg: rgba(255, 255, 255, 0.07);
       --field-border: rgba(255, 255, 255, 0.14);
       --field-placeholder: rgba(222, 231, 252, 0.78);
+      --section-space: 110px;
+      --section-space-mobile: 82px;
+      --content-max: 720px;
+      --radius-lg: 28px;
+      --radius-md: 22px;
     }
 
     * { box-sizing: border-box; }
@@ -194,7 +199,7 @@
 
     .section-premium {
       position: relative;
-      padding: 110px 0;
+      padding: var(--section-space) 0;
     }
 
     .section-premium::before {
@@ -223,8 +228,8 @@
     }
 
     .section-header {
-      max-width: 760px;
-      margin-bottom: 36px;
+      max-width: var(--content-max);
+      margin-bottom: 42px;
       position: relative;
       z-index: 1;
     }
@@ -234,7 +239,7 @@
     }
 
     .section-header.push-top-24 {
-      margin-top: 24px;
+      margin-top: 28px;
     }
 
     .section-kicker,
@@ -255,19 +260,24 @@
     }
 
     .section-title {
-      margin: 0 0 14px;
-      font-size: clamp(30px, 4vw, 52px);
-      line-height: 1.02;
-      letter-spacing: -0.045em;
+      margin: 0 0 16px;
+      font-size: clamp(30px, 4vw, 50px);
+      line-height: 1;
+      letter-spacing: -0.05em;
       color: var(--text);
+      text-wrap: balance;
     }
 
     .section-text {
       margin: 0;
       color: var(--text-soft);
       font-size: 16px;
-      line-height: 1.75;
-      max-width: 64ch;
+      line-height: 1.78;
+      max-width: 62ch;
+    }
+
+    .section-text.narrow {
+      max-width: 60ch;
     }
 
     .section-text.mt-18 {
@@ -289,18 +299,18 @@
 
     .premium-card {
       position: relative;
-      padding: 24px;
-      border-radius: 24px;
+      padding: 26px;
+      border-radius: var(--radius-md);
       border: 1px solid rgba(255,255,255,0.08);
       background:
         linear-gradient(
           180deg,
-          rgba(255,255,255,0.06) 0%,
-          rgba(255,255,255,0.03) 100%
+          rgba(255,255,255,0.065) 0%,
+          rgba(255,255,255,0.028) 100%
         );
       box-shadow:
-        0 24px 60px rgba(0,0,0,0.28),
-        inset 0 1px 0 rgba(255,255,255,0.04);
+        0 22px 52px rgba(0,0,0,0.26),
+        inset 0 1px 0 rgba(255,255,255,0.045);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
       overflow: hidden;
@@ -315,15 +325,15 @@
         linear-gradient(
           135deg,
           rgba(255,255,255,0.06) 0%,
-          rgba(255,255,255,0) 34%
+          rgba(255,255,255,0.00) 34%
         );
     }
 
     .premium-card h3 {
       margin: 0 0 10px;
       font-size: 20px;
-      line-height: 1.15;
-      letter-spacing: -0.03em;
+      line-height: 1.14;
+      letter-spacing: -0.035em;
       color: #f7f9ff;
       position: relative;
       z-index: 1;
@@ -545,7 +555,7 @@
     .hero-premium-v2 {
       position: relative;
       overflow: hidden;
-      min-height: clamp(460px, 62vh, 560px);
+      min-height: clamp(430px, 58vh, 520px);
       display: flex;
       align-items: center;
       isolation: isolate;
@@ -561,7 +571,7 @@
         ),
         url('/mark-portfolio/assets/hero-bg.webp');
       background-size: cover;
-      background-position: 76% center;
+      background-position: 78% center;
       background-repeat: no-repeat;
       margin-top: -84px;
       padding-top: 84px;
@@ -604,28 +614,28 @@
     }
 
     .hero-content {
-      max-width: 650px;
+      max-width: 620px;
       position: relative;
       z-index: 2;
     }
 
     .hero-title {
-      margin: 0 0 14px;
-      font-size: clamp(34px, 4.4vw, 56px);
-      line-height: 0.98;
-      letter-spacing: -0.055em;
+      margin: 0 0 16px;
+      font-size: clamp(36px, 4.6vw, 58px);
+      line-height: 0.96;
+      letter-spacing: -0.06em;
       font-weight: 700;
       color: #f7f9ff;
       text-wrap: balance;
-      max-width: 12ch;
+      max-width: 11.5ch;
     }
 
     .hero-subtext {
-      margin: 0 0 20px;
-      max-width: 56ch;
+      margin: 0 0 22px;
+      max-width: 54ch;
       font-size: 15px;
-      line-height: 1.7;
-      color: rgba(229, 236, 255, 0.82);
+      line-height: 1.72;
+      color: rgba(229, 236, 255, 0.84);
     }
 
     .hero-actions {
@@ -637,19 +647,19 @@
     }
 
     .hero-note {
-      margin-top: 14px;
+      margin-top: 16px;
       margin-bottom: 0;
       max-width: 58ch;
       font-size: 13px;
-      line-height: 1.55;
-      color: var(--text-muted);
+      line-height: 1.6;
+      color: rgba(206, 216, 238, 0.82);
     }
 
     .trust-strip {
       position: relative;
       z-index: 3;
       margin-top: 0;
-      padding: 22px 0 18px;
+      padding: 18px 0 10px;
     }
 
     .trust-strip-grid {
@@ -658,16 +668,16 @@
       padding: 0;
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 12px;
     }
 
     .trust-strip-grid li {
       display: inline-flex;
       align-items: center;
-      min-height: 38px;
-      padding: 0 14px;
+      min-height: 40px;
+      padding: 0 15px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.05);
+      background: rgba(255,255,255,0.055);
       border: 1px solid rgba(255,255,255,0.08);
       color: rgba(230, 237, 255, 0.82);
       font-size: 13px;
@@ -675,16 +685,16 @@
     }
 
     .stat-card-premium {
-      min-height: 198px;
+      min-height: 210px;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      gap: 8px;
+      gap: 10px;
     }
 
     .stat-number {
       margin: 0;
-      font-size: clamp(34px, 4vw, 54px);
+      font-size: clamp(38px, 4vw, 56px);
       line-height: 1;
       letter-spacing: -0.05em;
       font-weight: 700;
@@ -695,6 +705,7 @@
       margin: 0;
       color: rgba(220, 228, 246, 0.92);
       font-size: 15px;
+      line-height: 1.35;
       font-weight: 600;
     }
 
@@ -703,26 +714,29 @@
       color: rgba(198, 208, 232, 0.78);
       font-size: 13px;
       line-height: 1.55;
+      max-width: 24ch;
     }
 
     .case-card-premium {
       display: flex;
       flex-direction: column;
       min-height: 100%;
+      padding: 28px;
     }
 
     .case-lead {
-      margin: 0 0 10px !important;
+      margin: 0 0 12px !important;
       color: #f2f6ff !important;
       font-weight: 600;
+      line-height: 1.62;
     }
 
     .case-body {
-      margin: 0 0 14px !important;
+      margin: 0 0 16px !important;
     }
 
     .case-list {
-      margin: 0 0 18px;
+      margin: 0 0 20px;
       padding-left: 18px;
       color: rgba(224, 231, 248, 0.76);
       line-height: 1.7;
@@ -735,7 +749,7 @@
       flex-wrap: wrap;
       gap: 10px;
       margin-top: auto;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
       position: relative;
       z-index: 1;
     }
@@ -757,7 +771,7 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 48px;
+      min-height: 50px;
       padding: 0 18px;
       border-radius: 999px;
       background: rgba(255,255,255,0.045);
@@ -779,22 +793,24 @@
     .process-grid {
       display: grid;
       grid-template-columns: repeat(6, minmax(0, 1fr));
-      gap: 18px;
+      gap: 16px;
       position: relative;
       z-index: 1;
     }
 
     .process-card {
       text-align: center;
-      min-height: 190px;
+      min-height: 176px;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 8px;
+      gap: 6px;
+      padding-top: 22px;
+      padding-bottom: 22px;
     }
 
     .process-number {
-      margin: 0 0 10px;
+      margin: 0 0 8px;
       color: rgba(194, 205, 230, 0.82);
       font-size: 12px;
       font-weight: 700;
@@ -805,7 +821,7 @@
     .process-title {
       margin: 0;
       color: #f7f9ff;
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 700;
       letter-spacing: -0.03em;
     }
@@ -813,9 +829,9 @@
     .process-text {
       margin: 0 auto;
       color: rgba(224, 231, 248, 0.76);
-      font-size: 14px;
-      line-height: 1.6;
-      max-width: 24ch;
+      font-size: 13px;
+      line-height: 1.58;
+      max-width: 23ch;
     }
 
     .section-cta-final {
@@ -826,14 +842,15 @@
     .cta-final-wrap {
       display: grid;
       grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
-      gap: 28px;
+      gap: 34px;
       align-items: center;
-      padding: 32px;
+      padding: 36px;
       margin-bottom: 22px;
+      border-radius: var(--radius-lg);
     }
 
     .cta-final-content .section-title {
-      max-width: 13ch;
+      max-width: 11ch;
     }
 
     .cta-final-actions {
@@ -847,10 +864,10 @@
     }
 
     .cta-audit-list {
-      margin: 22px 0 0;
+      margin: 20px 0 0;
       padding-left: 20px;
       color: rgba(224, 231, 248, 0.8);
-      line-height: 1.8;
+      line-height: 1.82;
       position: relative;
       z-index: 1;
     }
@@ -881,6 +898,7 @@
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 18px;
+      margin-top: 6px;
       position: relative;
       z-index: 1;
     }
@@ -952,20 +970,21 @@
     }
 
     .form-field label {
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 600;
-      color: rgba(230, 237, 255, 0.88);
+      letter-spacing: 0.01em;
+      color: rgba(232, 238, 255, 0.88);
     }
 
     .form-field input,
     .form-field select,
     .form-field textarea {
       width: 100%;
-      min-height: 54px;
+      min-height: 56px;
       border: 1px solid var(--field-border);
       background: var(--field-bg);
       color: #f7f9ff;
-      border-radius: 16px;
+      border-radius: 15px;
       padding: 14px 16px;
       line-height: 1.5;
       box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
@@ -1011,7 +1030,7 @@
 
     .form-field textarea {
       resize: vertical;
-      min-height: 132px;
+      min-height: 140px;
     }
 
     .lead-submit {
@@ -1025,8 +1044,8 @@
 
     .form-note {
       margin: 0;
-      font-size: 13px;
-      line-height: 1.6;
+      font-size: 12.5px;
+      line-height: 1.65;
       color: rgba(200, 210, 235, 0.78);
       text-align: center;
     }
@@ -1104,7 +1123,9 @@
     }
 
     @media (max-width: 768px) {
-      .section-premium { padding: 84px 0; }
+      .section-premium {
+        padding: var(--section-space-mobile) 0;
+      }
 
       .premium-grid-2,
       .premium-grid-3,
@@ -1114,10 +1135,13 @@
         grid-template-columns: 1fr;
       }
 
-      .premium-card { padding: 20px; }
+      .section-header {
+        margin-bottom: 30px;
+      }
 
       .section-title {
         font-size: clamp(28px, 8vw, 40px);
+        line-height: 1.02;
       }
 
       .premium-header {
@@ -1168,10 +1192,15 @@
         color: #07101b;
       }
 
+      .premium-card {
+        padding: 20px;
+        border-radius: 20px;
+      }
+
       .hero-premium-v2 {
         min-height: auto;
         margin-top: -76px;
-        padding: 98px 0 40px;
+        padding: 96px 0 38px;
         background-position: center;
         background-size: cover;
         background-image:
@@ -1192,13 +1221,14 @@
 
       .hero-title {
         max-width: 100%;
-        font-size: clamp(28px, 8vw, 40px);
-        line-height: 1;
+        font-size: clamp(30px, 8vw, 42px);
+        line-height: 0.98;
       }
 
-      .hero-subtext {
+      .hero-subtext,
+      .section-text {
         font-size: 15px;
-        line-height: 1.66;
+        line-height: 1.7;
       }
 
       .hero-actions {
@@ -1213,24 +1243,27 @@
       }
 
       .trust-strip {
-        margin-top: 0;
-        padding: 14px 0 8px;
+        padding: 12px 0 6px;
       }
-
-      .trust-strip-grid { gap: 8px; }
 
       .trust-strip-grid li {
         width: 100%;
         justify-content: center;
       }
 
-      .section-cta-final {
-        padding-top: 84px;
-        padding-bottom: 90px;
+      .stat-card-premium,
+      .process-card {
+        min-height: auto;
       }
 
-      .cta-final-wrap { padding: 22px; }
-      .cta-final-content .section-title { max-width: 100%; }
+      .cta-final-wrap {
+        padding: 22px;
+        gap: 22px;
+      }
+
+      .cta-final-content .section-title {
+        max-width: 100%;
+      }
 
       .premium-card,
       .btn-secondary,
@@ -1330,7 +1363,7 @@
     <section class="section-premium section-bridge-tight">
       <div class="container">
         <div class="section-header flush-bottom">
-          <p class="section-text" style="max-width: 60ch;">
+          <p class="section-text narrow">
             Most underperforming campaigns are not limited by budget. They are limited by how tracking, structure, and optimization are set up.
           </p>
         </div>
@@ -1385,9 +1418,9 @@
       <div class="container">
         <div class="section-header">
           <p class="section-kicker">Performance Snapshot</p>
-          <h2 class="section-title">Selected outcomes across paid media campaigns</h2>
+          <h2 class="section-title">Selected paid media outcomes</h2>
           <p class="section-text">
-            Selected outcomes from campaign restructuring, tracking improvement, and paid acquisition optimization work across hospitality, attractions, and lead generation.
+            Outcomes driven by campaign restructuring, tracking improvement, and acquisition optimization across hospitality, attractions, and lead generation.
           </p>
         </div>
 
@@ -1433,9 +1466,9 @@
       <div class="container">
         <div class="section-header">
           <p class="section-kicker">Case Studies</p>
-          <h2 class="section-title">Paid media case studies across attractions, hospitality, and lead generation</h2>
+          <h2 class="section-title">Case studies</h2>
           <p class="section-text">
-            A closer look at the business problem, what was breaking performance, and the system changes that improved results.
+            A closer look at the business problem, what was limiting performance, and the system changes that improved results.
           </p>
         </div>
 
@@ -1576,7 +1609,7 @@
       <div class="container">
         <div class="section-header">
           <p class="section-kicker">Services</p>
-          <h2 class="section-title">Services built around lead generation, booking growth, and tracking clarity</h2>
+          <h2 class="section-title">Services built for cleaner performance</h2>
           <p class="section-text">
             Available as focused audits, implementation support, or ongoing optimization depending on what the account needs most.
           </p>
@@ -1642,9 +1675,9 @@
       <div class="container">
         <div class="section-header">
           <p class="section-kicker">Process</p>
-          <h2 class="section-title">How I turn weak campaign systems into clearer performance decisions</h2>
+          <h2 class="section-title">How performance gets fixed</h2>
           <p class="section-text">
-            The goal is not just to launch or manage campaigns. It is to improve tracking clarity, strengthen account structure, reduce wasted spend, and create a better foundation for optimization.
+            The goal is not just to manage campaigns. It is to improve tracking clarity, strengthen structure, reduce wasted spend, and create a better foundation for scaling.
           </p>
         </div>
 
@@ -1797,7 +1830,7 @@
         <div class="cta-final-wrap premium-card">
           <div class="cta-final-content">
             <p class="section-kicker">Free Paid Media Audit</p>
-            <h2 class="section-title">Fix tracking gaps, reduce wasted spend, and improve paid media efficiency</h2>
+            <h2 class="section-title">Fix what’s weakening paid media performance</h2>
             <p class="section-text">
               If your campaigns feel inconsistent, tracking is unclear, or spend is getting harder to justify, this audit will show exactly where performance is breaking and what should be fixed first.
             </p>
