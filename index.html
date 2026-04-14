@@ -98,10 +98,10 @@
       "https://www.linkedin.com/in/markandrewmatti/"
     ],
     "serviceType": [
-      "Google Ads Management",
-      "Meta Ads Management",
-      "GA4 and GTM Tracking",
       "Paid Media Audit",
+      "Google Ads Optimization",
+      "Meta Ads Optimization",
+      "GA4 and GTM Tracking",
       "Conversion Tracking",
       "Retargeting and Funnel Optimization"
     ]
@@ -128,6 +128,9 @@
       --line-strong: rgba(255, 255, 255, 0.14);
       --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.28);
       --container: 1180px;
+      --field-bg: rgba(255, 255, 255, 0.07);
+      --field-border: rgba(255, 255, 255, 0.14);
+      --field-placeholder: rgba(222, 231, 252, 0.78);
     }
 
     * { box-sizing: border-box; }
@@ -226,6 +229,14 @@
       z-index: 1;
     }
 
+    .section-header.flush-bottom {
+      margin-bottom: 0;
+    }
+
+    .section-header.push-top-24 {
+      margin-top: 24px;
+    }
+
     .section-kicker,
     .hero-eyebrow {
       display: inline-block;
@@ -257,6 +268,10 @@
       font-size: 16px;
       line-height: 1.75;
       max-width: 64ch;
+    }
+
+    .section-text.mt-18 {
+      margin-top: 18px;
     }
 
     .premium-grid-2,
@@ -530,7 +545,7 @@
     .hero-premium-v2 {
       position: relative;
       overflow: hidden;
-      min-height: clamp(500px, 68vh, 600px);
+      min-height: clamp(460px, 62vh, 560px);
       display: flex;
       align-items: center;
       isolation: isolate;
@@ -589,7 +604,7 @@
     }
 
     .hero-content {
-      max-width: 640px;
+      max-width: 650px;
       position: relative;
       z-index: 2;
     }
@@ -602,7 +617,7 @@
       font-weight: 700;
       color: #f7f9ff;
       text-wrap: balance;
-      max-width: 13ch;
+      max-width: 12ch;
     }
 
     .hero-subtext {
@@ -619,11 +634,6 @@
       gap: 12px;
       flex-wrap: wrap;
       width: 100%;
-    }
-
-    .hero-actions .btn-primary,
-    .hero-actions .btn-secondary {
-      min-width: 0;
     }
 
     .hero-note {
@@ -651,10 +661,6 @@
       gap: 10px;
     }
 
-    .trust-strip-grid li::marker {
-      content: "";
-    }
-
     .trust-strip-grid li {
       display: inline-flex;
       align-items: center;
@@ -669,14 +675,15 @@
     }
 
     .stat-card-premium {
-      min-height: 180px;
+      min-height: 198px;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
+      gap: 8px;
     }
 
     .stat-number {
-      margin: 0 0 8px;
+      margin: 0;
       font-size: clamp(34px, 4vw, 54px);
       line-height: 1;
       letter-spacing: -0.05em;
@@ -686,9 +693,16 @@
 
     .stat-label-premium {
       margin: 0;
-      color: rgba(220, 228, 246, 0.86);
+      color: rgba(220, 228, 246, 0.92);
       font-size: 15px;
       font-weight: 600;
+    }
+
+    .stat-context {
+      margin: 0;
+      color: rgba(198, 208, 232, 0.78);
+      font-size: 13px;
+      line-height: 1.55;
     }
 
     .case-card-premium {
@@ -772,7 +786,7 @@
 
     .process-card {
       text-align: center;
-      min-height: 200px;
+      min-height: 190px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -801,7 +815,7 @@
       color: rgba(224, 231, 248, 0.76);
       font-size: 14px;
       line-height: 1.6;
-      max-width: 26ch;
+      max-width: 24ch;
     }
 
     .section-cta-final {
@@ -948,8 +962,8 @@
     .form-field textarea {
       width: 100%;
       min-height: 54px;
-      border: 1px solid rgba(255, 255, 255, 0.10);
-      background: rgba(255, 255, 255, 0.045);
+      border: 1px solid var(--field-border);
+      background: var(--field-bg);
       color: #f7f9ff;
       border-radius: 16px;
       padding: 14px 16px;
@@ -963,8 +977,8 @@
     .form-field select {
       padding-right: 44px;
       background-image:
-        linear-gradient(45deg, transparent 50%, rgba(255,255,255,0.78) 50%),
-        linear-gradient(135deg, rgba(255,255,255,0.78) 50%, transparent 50%);
+        linear-gradient(45deg, transparent 50%, rgba(255,255,255,0.9) 50%),
+        linear-gradient(135deg, rgba(255,255,255,0.9) 50%, transparent 50%);
       background-position:
         calc(100% - 20px) calc(50% - 3px),
         calc(100% - 14px) calc(50% - 3px);
@@ -979,20 +993,20 @@
     }
 
     .form-field select:required:invalid {
-      color: rgba(200, 210, 235, 0.72);
+      color: var(--field-placeholder);
     }
 
     .form-field input::placeholder,
     .form-field textarea::placeholder {
-      color: rgba(200, 210, 235, 0.58);
+      color: rgba(214, 224, 247, 0.68);
     }
 
     .form-field input:focus,
     .form-field select:focus,
     .form-field textarea:focus {
       outline: none;
-      border-color: rgba(255, 255, 255, 0.22);
-      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 255, 255, 0.28);
+      background: rgba(255, 255, 255, 0.09);
     }
 
     .form-field textarea {
@@ -1039,14 +1053,14 @@
       .premium-grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .cta-final-wrap { grid-template-columns: 1fr; }
       .contact-meta-grid { grid-template-columns: 1fr; }
-      .process-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .process-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
       .hero-premium-v2 {
-        min-height: clamp(480px, 64vh, 560px);
+        min-height: clamp(440px, 58vh, 520px);
         background-position: 78% center;
       }
 
-      .hero-title { max-width: 13ch; }
+      .hero-title { max-width: 12ch; }
     }
 
     @media (max-width: 900px) {
@@ -1261,10 +1275,10 @@
       </button>
 
       <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
-        <a href="#results">Results</a>
         <a href="#case-studies">Case Studies</a>
         <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+        <a href="#process">Process</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact" class="nav-cta" data-cta="nav_request_free_audit">
           Request Free Audit
         </a>
@@ -1283,7 +1297,7 @@
           </h1>
 
           <p class="hero-subtext">
-            If your campaigns feel inconsistent, tracking is unreliable, or spend is hard to control, the issue is usually structure and measurement. I help fix that through cleaner tracking, stronger campaign systems, and more reliable optimization decisions.
+            I help brands clean up tracking, tighten campaign structure, and reduce wasted spend so paid media becomes easier to trust, manage, and scale.
           </p>
 
           <div class="hero-actions">
@@ -1297,7 +1311,7 @@
           </div>
 
           <p class="hero-note">
-            Best for brands spending $5K–$20K/month that need clearer data, better structure, and more predictable performance before scaling.
+            Best for brands spending $5K–$20K/month that need clearer data, stronger structure, and more predictable performance before scaling harder.
           </p>
         </div>
       </div>
@@ -1315,7 +1329,7 @@
 
     <section class="section-premium section-bridge-tight">
       <div class="container">
-        <div class="section-header" style="margin-bottom: 0;">
+        <div class="section-header flush-bottom">
           <p class="section-text" style="max-width: 60ch;">
             Most underperforming campaigns are not limited by budget. They are limited by how tracking, structure, and optimization are set up.
           </p>
@@ -1359,7 +1373,7 @@
           </article>
         </div>
 
-        <div class="section-header" style="margin-top: 24px; margin-bottom: 0;">
+        <div class="section-header push-top-24 flush-bottom">
           <p class="section-text">
             When these issues are fixed, performance becomes easier to control and scale. Here are selected outcomes from that approach.
           </p>
@@ -1381,21 +1395,25 @@
           <article class="premium-card stat-card-premium">
             <p class="stat-number">+35%</p>
             <p class="stat-label-premium">Event turnout</p>
+            <p class="stat-context">Event campaign restructuring + audience refinement</p>
           </article>
 
           <article class="premium-card stat-card-premium">
             <p class="stat-number">+20%</p>
             <p class="stat-label-premium">Direct bookings</p>
+            <p class="stat-context">Search structure + traffic quality improvement</p>
           </article>
 
           <article class="premium-card stat-card-premium">
             <p class="stat-number">3,000+</p>
             <p class="stat-label-premium">Qualified leads</p>
+            <p class="stat-context">Lead generation funnel support across campaign periods</p>
           </article>
 
           <article class="premium-card stat-card-premium">
             <p class="stat-number">$120K+</p>
             <p class="stat-label-premium">Revenue contribution</p>
+            <p class="stat-context">Paid acquisition-supported performance impact</p>
           </article>
         </div>
       </div>
@@ -1403,7 +1421,7 @@
 
     <section class="section-premium section-bridge">
       <div class="container">
-        <div class="section-header" style="margin-bottom: 0;">
+        <div class="section-header flush-bottom">
           <p class="section-text">
             These outcomes come from fixing the underlying campaign systems, not just adjusting ads.
           </p>
@@ -1432,10 +1450,10 @@
               The campaign structure needed clearer separation between prospecting and retargeting, along with stronger remarketing windows and better visibility into performance.
             </p>
             <ul class="case-list">
-              <li>Audience Segmentation Refinement</li>
-              <li>Prospecting vs Retargeting Structure</li>
-              <li>7D / 14D / 30D Remarketing Windows</li>
-              <li>GA4 Reporting Support</li>
+              <li>Audience segmentation refinement</li>
+              <li>Prospecting vs retargeting structure</li>
+              <li>7D / 14D / 30D remarketing windows</li>
+              <li>GA4 reporting support</li>
             </ul>
             <div class="case-result-row">
               <span>+35% turnout</span>
@@ -1461,10 +1479,10 @@
               The account needed stronger alignment between campaign intent, keyword strategy, and the booking journey to drive more qualified traffic.
             </p>
             <ul class="case-list">
-              <li>Brand vs Non-Brand Restructure</li>
-              <li>Negative Keyword Cleanup</li>
-              <li>Remarketing Support</li>
-              <li>GA4 Tracking Support</li>
+              <li>Brand vs non-brand restructure</li>
+              <li>Negative keyword cleanup</li>
+              <li>Remarketing support</li>
+              <li>GA4 tracking support</li>
             </ul>
             <div class="case-result-row">
               <span>+20% direct bookings</span>
@@ -1490,10 +1508,10 @@
               The opportunity was not just to increase volume, but to improve the quality and conversion flow behind paid acquisition.
             </p>
             <ul class="case-list">
-              <li>Paid Campaign Management</li>
-              <li>Landing Page Alignment</li>
-              <li>Creative Iteration</li>
-              <li>CRM Workflow Support</li>
+              <li>Paid campaign management</li>
+              <li>Landing page alignment</li>
+              <li>Creative iteration</li>
+              <li>CRM workflow support</li>
             </ul>
             <div class="case-result-row">
               <span>3,000+ leads</span>
@@ -1516,7 +1534,7 @@
       <div class="container">
         <div class="section-header">
           <p class="section-kicker">Why Work With Me</p>
-          <h2 class="section-title">A more structured approach to paid media performance</h2>
+          <h2 class="section-title">A systems-first approach to paid media performance</h2>
           <p class="section-text">
             Not just platform execution. A cleaner system for tracking, structure, optimization, and decision-making.
           </p>
@@ -1566,30 +1584,30 @@
 
         <div class="premium-grid-3">
           <article class="premium-card">
-            <h3>Google Ads Management</h3>
+            <h3>Paid Media Audit</h3>
+            <p>
+              Identify tracking gaps, wasted spend, structural inefficiencies, and the highest-priority fixes before more budget gets pushed into a weak system.
+            </p>
+          </article>
+
+          <article class="premium-card">
+            <h3>Google Ads Optimization</h3>
             <p>
               Search campaign strategy, account restructuring, keyword refinement, and optimization built around intent, lead quality, and cost efficiency.
             </p>
           </article>
 
           <article class="premium-card">
-            <h3>Meta Ads Management</h3>
+            <h3>Meta Ads Optimization</h3>
             <p>
               Prospecting, retargeting, audience segmentation, and creative testing designed to improve reach quality, conversion efficiency, and remarketing performance.
             </p>
           </article>
 
           <article class="premium-card">
-            <h3>Tracking &amp; Reporting</h3>
+            <h3>Tracking &amp; Reporting Setup</h3>
             <p>
               GA4, GTM, and reporting systems that make conversion data more reliable, more actionable, and easier to trust.
-            </p>
-          </article>
-
-          <article class="premium-card">
-            <h3>Campaign Audit &amp; Optimization</h3>
-            <p>
-              Focused audits that uncover wasted spend, weak tracking, structural inefficiencies, and the highest-priority fixes to improve performance faster.
             </p>
           </article>
 
@@ -1612,7 +1630,7 @@
 
     <section class="section-premium section-bridge">
       <div class="container">
-        <div class="section-header" style="margin-bottom: 0;">
+        <div class="section-header flush-bottom">
           <p class="section-text">
             The same approach is applied across accounts. Here is the process used to identify issues and improve performance.
           </p>
@@ -1620,7 +1638,7 @@
       </div>
     </section>
 
-    <section class="section-premium">
+    <section id="process" class="section-premium">
       <div class="container">
         <div class="section-header">
           <p class="section-kicker">Process</p>
@@ -1680,7 +1698,7 @@
           </article>
         </div>
 
-        <div class="section-header" style="margin-top: 24px; margin-bottom: 0;">
+        <div class="section-header push-top-24 flush-bottom">
           <p class="section-text">
             Every step is designed to improve clarity, reduce wasted spend, and support better decisions before scaling further.
           </p>
@@ -1767,6 +1785,7 @@
               <li>Already spending on ads</li>
               <li>Performance feels inconsistent</li>
               <li>Scaling is difficult or inefficient</li>
+              <li>You want clearer data before increasing spend</li>
             </ul>
           </article>
         </div>
@@ -1790,7 +1809,7 @@
               <li>Priority recommendations</li>
             </ul>
 
-            <p class="section-text" style="margin-top: 18px;">
+            <p class="section-text mt-18">
               No commitment required. You’ll get a clear view of what is wasting budget, where tracking is breaking, and which fixes should come first.
             </p>
           </div>
@@ -1830,7 +1849,7 @@
 
               <div class="form-grid">
                 <div class="form-field">
-                  <label for="company">Company</label>
+                  <label for="company">Company / Brand</label>
                   <input
                     type="text"
                     id="company"
@@ -1886,7 +1905,7 @@
               </button>
 
               <p class="form-note">
-                Best for brands already running paid campaigns and looking for clearer, more efficient performance.
+                Best for brands already running paid campaigns and looking for clearer, more efficient performance. Personal email addresses are fine too.
               </p>
 
               <p class="form-status" id="form-status" aria-live="polite"></p>
@@ -1959,6 +1978,7 @@
     if (menuToggle && siteNav) {
       const navLinks = Array.from(siteNav.querySelectorAll('a'));
       const firstNavLink = navLinks[0];
+      const lastNavLink = navLinks[navLinks.length - 1];
       let previousFocused = null;
 
       const setMenuState = (open, restoreFocus = true) => {
@@ -1973,15 +1993,17 @@
         if (open && firstNavLink) {
           previousFocused = document.activeElement;
           firstNavLink.focus();
-        } else if (restoreFocus && previousFocused) {
-          previousFocused.focus();
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = '';
+          if (restoreFocus && previousFocused) previousFocused.focus();
         }
       };
 
       const closeMenu = (restoreFocus = true) => setMenuState(false, restoreFocus);
       const openMenu = () => setMenuState(true, true);
 
-      menuToggle.addEventListener('click', function () {
+      menuToggle.addEventListener('click', () => {
         const isOpen = siteNav.classList.contains('is-open');
         isOpen ? closeMenu(true) : openMenu();
       });
@@ -1991,12 +2013,38 @@
       });
 
       document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeMenu(true);
+        const isOpen = siteNav.classList.contains('is-open');
+        if (!isOpen) return;
+
+        if (e.key === 'Escape') {
+          closeMenu(true);
+          return;
+        }
+
+        if (e.key === 'Tab' && firstNavLink && lastNavLink) {
+          if (e.shiftKey && document.activeElement === firstNavLink) {
+            e.preventDefault();
+            lastNavLink.focus();
+          } else if (!e.shiftKey && document.activeElement === lastNavLink) {
+            e.preventDefault();
+            firstNavLink.focus();
+          }
+        }
       });
 
       document.addEventListener('click', (e) => {
         if (!siteNav.contains(e.target) && !menuToggle.contains(e.target)) {
           closeMenu(true);
+        }
+      });
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 900) {
+          document.body.style.overflow = '';
+          siteNav.classList.remove('is-open');
+          menuToggle.classList.remove('is-open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          menuToggle.setAttribute('aria-label', 'Open navigation menu');
         }
       });
     }
@@ -2006,7 +2054,7 @@
         const payload = {
           cta_name: el.getAttribute('data-cta'),
           cta_text: el.textContent.trim(),
-          cta_href: el.getAttribute('href'),
+          cta_href: el.getAttribute('href') || '',
           cta_location: el.closest('section')?.id || 'global',
           page_path: window.location.pathname
         };
