@@ -3,44 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Splash Park Bacolod Case Study | Mark Andrew S. Matti</title>
+
+  <title>Splash Park Bacolod Case Study | Paid Media Specialist</title>
   <meta
     name="description"
-    content="Case study for Splash Park Bacolod showing how paid media restructuring, cleaner audience segmentation, and retargeting improvements helped increase turnout and reduce CPA."
+    content="How audience segmentation, retargeting structure, and GA4 visibility helped improve Splash Park Bacolod event turnout by 35%."
   />
+  <meta name="author" content="Mark Andrew S. Matti" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#05070c" />
+  <link rel="canonical" href="https://sianmatti.github.io/mark-portfolio/case-studies/splash-park-bacolod.html" />
+
+  <meta property="og:title" content="Splash Park Bacolod Case Study | Paid Media Specialist" />
+  <meta
+    property="og:description"
+    content="How audience segmentation, retargeting structure, and GA4 visibility helped improve Splash Park Bacolod event turnout by 35%."
+  />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://sianmatti.github.io/mark-portfolio/case-studies/splash-park-bacolod.html" />
+  <meta property="og:site_name" content="Mark Andrew S. Matti" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
   <style>
     :root {
-      --bg: #0b1020;
-      --bg-soft: #121932;
-      --card: rgba(255, 255, 255, 0.08);
-      --card-border: rgba(255, 255, 255, 0.12);
-      --text: #f5f7ff;
-      --muted: #aab3d1;
-      --accent: #6ea8ff;
-      --accent-2: #8b7dff;
-      --success: #8df0c8;
-      --max-width: 1120px;
-      --radius: 22px;
-      --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+      --bg: #05070c;
+      --bg-2: #0a0f18;
+      --card: rgba(255,255,255,0.045);
+      --line: rgba(255,255,255,0.08);
+      --text: #f7f9ff;
+      --text-soft: rgba(228, 235, 252, 0.88);
+      --text-muted: rgba(200, 210, 235, 0.78);
+      --container: 920px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background:
-        radial-gradient(circle at top right, rgba(110, 168, 255, 0.12), transparent 30%),
-        radial-gradient(circle at top left, rgba(139, 125, 255, 0.10), transparent 28%),
-        linear-gradient(180deg, #0a0f1f 0%, #0b1020 100%);
+        radial-gradient(circle at top left, rgba(57, 104, 255, 0.08), transparent 25%),
+        radial-gradient(circle at top right, rgba(128, 92, 255, 0.06), transparent 25%),
+        var(--bg);
       color: var(--text);
-      line-height: 1.65;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
     a {
@@ -49,543 +63,401 @@
     }
 
     .container {
-      width: min(calc(100% - 32px), var(--max-width));
+      width: min(100% - 40px, var(--container));
       margin: 0 auto;
     }
 
-    .site-header {
+    .header {
       position: sticky;
       top: 0;
-      z-index: 20;
+      z-index: 100;
+      background: rgba(5, 7, 12, 0.82);
       backdrop-filter: blur(14px);
-      background: rgba(11, 16, 32, 0.7);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
     }
 
-    .site-header-inner {
+    .header-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
+      gap: 16px;
       min-height: 74px;
     }
 
     .brand {
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-
-    .nav {
       display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-      align-items: center;
+      flex-direction: column;
     }
 
-    .nav a {
-      color: var(--muted);
-      font-size: 0.95rem;
+    .brand-label {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      font-weight: 700;
     }
 
-    .nav a:hover {
+    .brand-name {
+      font-size: 15px;
+      font-weight: 700;
       color: var(--text);
     }
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 48px;
-      padding: 0 18px;
-      border-radius: 999px;
+    .back-link {
+      font-size: 14px;
       font-weight: 600;
-      transition: 0.2s ease;
-      border: 1px solid transparent;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      color: #fff;
-      box-shadow: 0 12px 30px rgba(110, 168, 255, 0.25);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 18px 36px rgba(110, 168, 255, 0.30);
-    }
-
-    .btn-secondary {
-      background: rgba(255, 255, 255, 0.06);
-      border-color: rgba(255, 255, 255, 0.12);
-      color: var(--text);
-    }
-
-    .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.1);
+      color: var(--text-soft);
     }
 
     .hero {
-      padding: 84px 0 40px;
+      padding: 72px 0 36px;
     }
 
     .eyebrow {
       display: inline-flex;
-      align-items: center;
-      gap: 10px;
+      margin: 0 0 16px;
       padding: 8px 14px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.1);
-      color: var(--muted);
-      font-size: 0.9rem;
-      margin-bottom: 18px;
-    }
-
-    h1, h2, h3 {
-      line-height: 1.15;
-      letter-spacing: -0.03em;
-      margin: 0 0 16px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.04);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(232,239,255,0.82);
     }
 
     h1 {
-      font-size: clamp(2.4rem, 5vw, 4.3rem);
-      max-width: 900px;
+      margin: 0 0 14px;
+      font-size: clamp(36px, 6vw, 62px);
+      line-height: 0.96;
+      letter-spacing: -0.06em;
+      max-width: 11ch;
     }
 
-    h2 {
-      font-size: clamp(1.7rem, 3vw, 2.4rem);
+    .hero-text {
+      margin: 0;
+      max-width: 62ch;
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--text-soft);
     }
 
-    h3 {
-      font-size: 1.15rem;
-    }
-
-    p {
-      margin: 0 0 16px;
-      color: var(--muted);
-    }
-
-    .hero-copy {
-      max-width: 760px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 28px;
-    }
-
-    .stats-grid {
+    .stat-strip {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 16px;
-      margin-top: 34px;
-    }
-
-    .stat-card,
-    .card {
-      background: var(--card);
-      border: 1px solid var(--card-border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(16px);
+      margin-top: 32px;
     }
 
     .stat-card {
       padding: 22px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: var(--card);
+      box-shadow: 0 20px 44px rgba(0,0,0,0.22);
     }
 
-    .stat-value {
-      font-size: clamp(1.5rem, 3vw, 2.2rem);
+    .stat-number {
+      margin: 0 0 8px;
+      font-size: clamp(28px, 4vw, 42px);
       font-weight: 800;
-      margin-bottom: 6px;
+      letter-spacing: -0.05em;
     }
 
     .stat-label {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    section {
-      padding: 28px 0;
-    }
-
-    .section-header {
-      max-width: 780px;
-      margin-bottom: 24px;
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 22px;
-    }
-
-    .card {
-      padding: 28px;
-    }
-
-    ul.clean-list {
-      padding-left: 18px;
       margin: 0;
-      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--text-soft);
     }
 
-    ul.clean-list li + li {
-      margin-top: 10px;
+    .content {
+      padding: 24px 0 110px;
     }
 
-    .pill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 18px;
-    }
-
-    .pill {
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.09);
-      color: #d8e0fb;
-      font-size: 0.92rem;
-    }
-
-    .system-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-    }
-
-    .system-item {
-      padding: 22px;
-      border-radius: 20px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .before-after {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-    }
-
-    .before {
-      border: 1px solid rgba(255, 120, 120, 0.18);
-    }
-
-    .after {
-      border: 1px solid rgba(141, 240, 200, 0.18);
-    }
-
-    .label {
-      display: inline-block;
-      margin-bottom: 12px;
-      font-size: 0.82rem;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: #dce5ff;
-    }
-
-    .insight-card {
+    .section {
+      margin-bottom: 22px;
       padding: 30px;
-      border-radius: 26px;
-      background:
-        linear-gradient(135deg, rgba(110,168,255,0.13), rgba(139,125,255,0.10)),
-        rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.12);
-      box-shadow: var(--shadow);
+      border-radius: 24px;
+      border: 1px solid var(--line);
+      background: var(--card);
+      box-shadow: 0 20px 44px rgba(0,0,0,0.18);
     }
 
-    .insight-card p {
-      font-size: 1.05rem;
-      color: #d5defb;
+    .section h2 {
+      margin: 0 0 14px;
+      font-size: 24px;
+      line-height: 1.1;
+      letter-spacing: -0.04em;
     }
 
-    .cta-card {
+    .section p {
+      margin: 0;
+      color: var(--text-soft);
+      line-height: 1.82;
+      font-size: 16px;
+    }
+
+    .section p + p,
+    .section ul + p,
+    .section p + ul,
+    .section h3 + p,
+    .section h2 + ul {
+      margin-top: 14px;
+    }
+
+    .section h3 {
+      margin: 18px 0 10px;
+      font-size: 18px;
+      letter-spacing: -0.03em;
+    }
+
+    .section ul {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--text-soft);
+      line-height: 1.82;
+    }
+
+    .section li + li {
+      margin-top: 6px;
+    }
+
+    .quote-line {
+      padding-left: 18px;
+      border-left: 2px solid rgba(255,255,255,0.16);
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    .cta-box {
+      margin-top: 10px;
       padding: 34px;
-      text-align: center;
+      border-radius: 28px;
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.065), rgba(255,255,255,0.03));
+      box-shadow: 0 24px 60px rgba(0,0,0,0.24);
     }
 
-    .cta-card p {
-      max-width: 760px;
-      margin: 0 auto 20px;
+    .cta-box h2 {
+      margin: 0 0 12px;
+      font-size: clamp(28px, 4vw, 42px);
+      letter-spacing: -0.05em;
+      line-height: 1;
+      max-width: 12ch;
     }
 
-    .footer {
-      padding: 36px 0 60px;
-      color: var(--muted);
-      font-size: 0.95rem;
+    .cta-box p {
+      margin: 0;
+      max-width: 60ch;
+      color: var(--text-soft);
+      line-height: 1.8;
     }
 
-    @media (max-width: 960px) {
-      .stats-grid,
-      .grid-2,
-      .system-grid,
-      .before-after {
+    .cta-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 22px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 20px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .btn-primary {
+      color: #07101b;
+      background: linear-gradient(180deg, #ffffff 0%, #dfe8ff 100%);
+    }
+
+    .btn-secondary {
+      color: #f4f7ff;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.05);
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 54px 0 26px;
+      }
+
+      .content {
+        padding: 18px 0 80px;
+      }
+
+      .stat-strip {
         grid-template-columns: 1fr;
       }
 
-      .site-header-inner {
-        flex-direction: column;
-        justify-content: center;
-        padding: 14px 0;
-      }
-
-      .nav {
-        justify-content: center;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .hero {
-        padding-top: 62px;
-      }
-
-      .card,
-      .stat-card,
-      .cta-card,
-      .insight-card {
+      .section,
+      .cta-box {
         padding: 22px;
       }
 
-      .hero-actions {
+      .cta-actions {
         flex-direction: column;
-        align-items: stretch;
       }
 
-      .btn {
+      .btn-primary,
+      .btn-secondary {
         width: 100%;
       }
     }
   </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container site-header-inner">
-      <a class="brand" href="../index.html">Mark Andrew S. Matti</a>
-      <nav class="nav">
-        <a href="../index.html#results">Results</a>
-        <a href="../index.html#case-studies">Case Studies</a>
-        <a href="../index.html#services">Services</a>
-        <a href="../index.html#contact">Contact</a>
-        <a class="btn btn-secondary" href="mailto:sianmatti11@gmail.com?subject=Paid%20Media%20Audit%20Inquiry">Free Audit</a>
-      </nav>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="/mark-portfolio/" class="brand">
+        <span class="brand-label">Paid Media Portfolio</span>
+        <span class="brand-name">Mark Andrew S. Matti</span>
+      </a>
+      <a href="/mark-portfolio/#case-studies" class="back-link">← Back to Portfolio</a>
     </div>
   </header>
 
   <main>
     <section class="hero">
       <div class="container">
-        <div class="eyebrow">Attraction / Event Promotion</div>
-        <div class="hero-copy">
-          <h1>Splash Park Bacolod</h1>
-          <p>
-            Increasing event turnout while reducing wasted spend through better audience segmentation,
-            cleaner retargeting logic, and stronger campaign visibility.
-          </p>
-        </div>
+        <p class="eyebrow">Attraction / Event Promotion</p>
+        <h1>Splash Park Bacolod</h1>
+        <p class="hero-text">
+          Splash Park Bacolod needed to improve event turnout while maintaining cost efficiency. Campaigns were generating traffic, but performance was inconsistent and difficult to scale. The issue was not budget — it was how audiences, retargeting, and campaign structure were set up.
+        </p>
 
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="mailto:sianmatti11@gmail.com?subject=Paid%20Media%20Audit%20Inquiry">Request a Free Paid Media Audit</a>
-          <a class="btn btn-secondary" href="../index.html#case-studies">Back to Case Studies</a>
-        </div>
-
-        <div class="stats-grid">
-          <div class="stat-card">
-            <div class="stat-value">+35%</div>
-            <div class="stat-label">Event turnout</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-value">-25%</div>
-            <div class="stat-label">CPA</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-value">Clearer</div>
-            <div class="stat-label">Audience structure</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-value">Stronger</div>
-            <div class="stat-label">Performance visibility</div>
-          </div>
+        <div class="stat-strip">
+          <article class="stat-card">
+            <p class="stat-number">+35%</p>
+            <p class="stat-label">Increase in event turnout after restructuring audiences and retargeting.</p>
+          </article>
+          <article class="stat-card">
+            <p class="stat-number">Better Efficiency</p>
+            <p class="stat-label">Improved use of spend through clearer segmentation and stronger remarketing logic.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section>
-      <div class="container grid-2">
-        <div class="card">
-          <div class="section-header">
-            <h2>The Problem</h2>
-            <p>
-              The campaign was generating interest, but performance lacked clarity and efficiency.
-              Budget was being spent without a strong structure for separating cold audiences from warmer, higher-intent users.
-            </p>
-          </div>
-          <ul class="clean-list">
-            <li>Weak audience segmentation made optimization less precise.</li>
-            <li>No clear prospecting vs retargeting structure.</li>
-            <li>Remarketing windows were not organized by recency or intent.</li>
-            <li>Limited reporting visibility made decisions harder to trust.</li>
+    <section class="content">
+      <div class="container">
+        <article class="section">
+          <h2>Overview</h2>
+          <p>
+            Splash Park Bacolod needed to improve event turnout while maintaining cost efficiency. Campaigns were generating traffic, but performance was inconsistent and difficult to scale.
+          </p>
+          <p>
+            The issue was not budget — it was how audiences, retargeting, and campaign structure were set up.
+          </p>
+        </article>
+
+        <article class="section">
+          <h2>The Problem</h2>
+          <p>Event campaigns were running, but results lacked consistency.</p>
+          <ul>
+            <li>Audience targeting was too broad and not segmented by intent</li>
+            <li>Retargeting was underutilized and lacked structured windows</li>
+            <li>Campaign structure did not clearly separate cold vs warm traffic</li>
+            <li>There was limited visibility into which segments were actually driving turnout</li>
           </ul>
-        </div>
-
-        <div class="card">
-          <div class="section-header">
-            <h2>Diagnosis</h2>
-            <p>
-              This was not primarily a budget problem. It was a structure and visibility problem.
-              Without cleaner segmentation and stronger campaign logic, spend was harder to control and performance was harder to improve with confidence.
-            </p>
-          </div>
-
-          <div class="pill-list">
-            <span class="pill">Audience quality issue</span>
-            <span class="pill">Weak retargeting logic</span>
-            <span class="pill">Reporting clarity gap</span>
-            <span class="pill">Optimization friction</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="section-header">
-          <h2>The System Fix</h2>
           <p>
-            The goal was to rebuild the campaign into a cleaner acquisition system so decisions could be made from clearer signals, not guesswork.
+            This led to inefficient spend and missed opportunities to convert interested users.
           </p>
-        </div>
+        </article>
 
-        <div class="system-grid">
-          <div class="system-item">
-            <h3>1. Audience Structure</h3>
-            <p>
-              Reorganized the campaign to clearly separate prospecting from retargeting so budgets, messaging, and optimization could align with user intent.
-            </p>
-          </div>
+        <article class="section">
+          <h2>Diagnosis</h2>
+          <p class="quote-line">
+            Traffic was being generated, but not properly nurtured.
+          </p>
+          <p>
+            Cold audiences were treated the same as warm audiences, and remarketing was not strong enough to capture high-intent users who had already shown interest.
+          </p>
+          <p>
+            Without proper segmentation and retargeting depth, the system relied too heavily on constant new traffic.
+          </p>
+        </article>
 
-          <div class="system-item">
-            <h3>2. Retargeting Logic</h3>
-            <p>
-              Built 7-day, 14-day, and 30-day remarketing windows to improve recency-based messaging and better prioritize warm audience traffic.
-            </p>
-          </div>
-
-          <div class="system-item">
-            <h3>3. Tracking Visibility</h3>
-            <p>
-              Supported cleaner reporting through better GA4 visibility so campaign performance could be reviewed with more confidence.
-            </p>
-          </div>
-
-          <div class="system-item">
-            <h3>4. Optimization Control</h3>
-            <p>
-              Improved the campaign structure so spend allocation, audience refinement, and iteration decisions could be made more strategically.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container grid-2">
-        <div class="card">
-          <div class="section-header">
-            <h2>Execution</h2>
-          </div>
-          <ul class="clean-list">
-            <li>Rebuilt campaign structure around funnel stages.</li>
-            <li>Separated prospecting and retargeting flows.</li>
-            <li>Implemented segmented remarketing windows.</li>
-            <li>Refined audience targeting and exclusions.</li>
-            <li>Improved visibility into campaign performance with GA4 support.</li>
-            <li>Aligned optimization decisions with clearer audience intent.</li>
+        <article class="section">
+          <h2>Strategy</h2>
+          <p>The focus was to build a cleaner acquisition system, not just improve ads.</p>
+          <ul>
+            <li>Separate <strong>prospecting vs retargeting campaigns</strong></li>
+            <li>Build structured <strong>remarketing windows (7D / 14D / 30D)</strong></li>
+            <li>Improve <strong>audience signal quality</strong></li>
+            <li>Support decisions with clearer <strong>GA4 visibility</strong></li>
           </ul>
-        </div>
+        </article>
 
-        <div class="card">
-          <div class="section-header">
-            <h2>Results</h2>
-            <p>
-              After restructuring the paid media setup and improving retargeting clarity, the campaign produced stronger turnout performance with better acquisition efficiency.
-            </p>
-          </div>
-          <ul class="clean-list">
-            <li><strong style="color:#fff;">+35% increase in event turnout</strong></li>
-            <li><strong style="color:#fff;">-25% reduction in CPA</strong></li>
-            <li>Better visibility into audience performance</li>
-            <li>Stronger efficiency from a cleaner campaign system</li>
+        <article class="section">
+          <h2>Execution</h2>
+
+          <h3>1. Audience Segmentation</h3>
+          <p>
+            Audiences were redefined based on intent: cold audiences, warm audiences, and higher-intent users who had already engaged with the brand.
+          </p>
+          <p>
+            This made it easier to control budget and match campaign messaging to user readiness.
+          </p>
+
+          <h3>2. Campaign Restructure</h3>
+          <p>
+            Campaigns were reorganized into prospecting and retargeting lanes with clearer roles, instead of asking one structure to do everything at once.
+          </p>
+
+          <h3>3. Remarketing System</h3>
+          <p>
+            Instead of relying on a single retargeting pool, structured 7-day, 14-day, and 30-day windows were introduced to improve message relevance and timing.
+          </p>
+
+          <h3>4. Tracking & Visibility</h3>
+          <p>
+            GA4 support improved visibility into how users moved through the funnel and which audience segments contributed most to turnout.
+          </p>
+        </article>
+
+        <article class="section">
+          <h2>Results</h2>
+          <ul>
+            <li><strong>+35% increase in event turnout</strong></li>
+            <li><strong>Improved cost efficiency across campaigns</strong></li>
+            <li>Stronger contribution from retargeting segments</li>
+            <li>More predictable performance during campaign periods</li>
           </ul>
-        </div>
-      </div>
-    </section>
+        </article>
 
-    <section>
-      <div class="container">
-        <div class="insight-card">
-          <h2>Key Insight</h2>
+        <article class="section">
+          <h2>Key Takeaway</h2>
           <p>
-            Better performance did not come from simply increasing budget. It came from improving campaign structure, separating audience intent more clearly, and making optimization decisions easier to trust.
+            The improvement did not come from increasing budget. It came from fixing how the system worked: clearer audience segmentation, better retargeting structure, and stronger alignment between traffic and intent.
           </p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="section-header">
-          <h2>Before vs After</h2>
           <p>
-            Even without relying on screenshots, the system change can be clearly understood through the shift in campaign logic.
+            Once those were in place, performance became easier to scale and more consistent.
           </p>
-        </div>
+        </article>
 
-        <div class="before-after">
-          <div class="card before">
-            <span class="label">Before</span>
-            <ul class="clean-list">
-              <li>Mixed audiences inside the same campaign flow</li>
-              <li>Weak distinction between cold and warm users</li>
-              <li>Limited remarketing structure</li>
-              <li>Less confidence in optimization decisions</li>
-            </ul>
+        <article class="cta-box">
+          <h2>Want the same audit for your account?</h2>
+          <p>
+            I’ll review your tracking, campaign structure, and wasted spend areas — and show you exactly what should be fixed first.
+          </p>
+          <div class="cta-actions">
+            <a href="/mark-portfolio/#contact" class="btn-primary">Request Free Audit</a>
+            <a href="/mark-portfolio/#case-studies" class="btn-secondary">Back to Case Studies</a>
           </div>
-
-          <div class="card after">
-            <span class="label">After</span>
-            <ul class="clean-list">
-              <li>Clearer funnel-based campaign structure</li>
-              <li>Dedicated prospecting vs retargeting logic</li>
-              <li>7D / 14D / 30D audience windows</li>
-              <li>Stronger efficiency and better visibility</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="card cta-card">
-          <h2>Fix the structure before scaling the spend</h2>
-          <p>
-            If your campaigns are already spending but results still feel inconsistent, the issue is often not the budget. It is usually structure, tracking clarity, or weak optimization logic. That is exactly where I help.
-          </p>
-          <a class="btn btn-primary" href="mailto:sianmatti11@gmail.com?subject=Paid%20Media%20Audit%20Inquiry">Request a Free Paid Media Audit</a>
-        </div>
+        </article>
       </div>
     </section>
   </main>
-
-  <footer class="footer">
-    <div class="container">
-      © 2026 Mark Andrew S. Matti · Paid Media Specialist
-    </div>
-  </footer>
 </body>
 </html>
