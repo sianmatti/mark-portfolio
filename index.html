@@ -920,6 +920,11 @@
         gap: 6px;
         padding: 10px;
         border-radius: 22px;
+        background: rgba(7, 10, 16, 0.94);
+        border: 1px solid rgba(255, 255, 255, 0.10);
+        box-shadow:
+          0 18px 40px rgba(0, 0, 0, 0.34),
+          inset 0 1px 0 rgba(255, 255, 255, 0.04);
       }
 
       .site-nav.is-open { display: flex; }
@@ -954,10 +959,53 @@
         font-size: clamp(28px, 8vw, 40px);
       }
 
-      .premium-header { padding: 14px 0; }
+      .premium-header {
+        padding: 14px 0;
+        background: rgba(5, 7, 12, 0.92);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+      }
+
       .header-container { gap: 12px; }
       .brand-name { font-size: 14px; }
       .brand-label { font-size: 10px; }
+
+      .menu-toggle {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        box-shadow:
+          0 10px 24px rgba(0, 0, 0, 0.22),
+          inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      }
+
+      .menu-toggle span {
+        background: #ffffff;
+      }
+
+      .site-nav {
+        background: rgba(7, 10, 16, 0.96);
+        border: 1px solid rgba(255, 255, 255, 0.10);
+        box-shadow:
+          0 18px 40px rgba(0, 0, 0, 0.34),
+          inset 0 1px 0 rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+      }
+
+      .site-nav a {
+        color: rgba(245, 248, 255, 0.92);
+      }
+
+      .site-nav a:hover,
+      .site-nav a:focus-visible {
+        background: rgba(255, 255, 255, 0.07);
+        color: #ffffff;
+      }
+
+      .site-nav .nav-cta {
+        color: #07101b;
+      }
 
       .hero-premium-v2 {
         min-height: auto;
@@ -1024,8 +1072,6 @@
       .cta-final-content .section-title { max-width: 100%; }
 
       .premium-card,
-      .premium-header,
-      .site-nav,
       .btn-secondary,
       .section-kicker,
       .hero-eyebrow {
