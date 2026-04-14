@@ -498,6 +498,11 @@
       position: relative;
     }
 
+    .menu-toggle.is-open {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.18);
+    }
+
     .menu-toggle span {
       position: absolute;
       left: 50%;
@@ -866,7 +871,6 @@
       z-index: 1;
     }
 
-    #testimonials .premium-card,
     #faq .premium-card {
       height: 100%;
     }
@@ -943,6 +947,7 @@
     .form-field select,
     .form-field textarea {
       width: 100%;
+      min-height: 54px;
       border: 1px solid rgba(255, 255, 255, 0.10);
       background: rgba(255, 255, 255, 0.045);
       color: #f7f9ff;
@@ -951,6 +956,30 @@
       line-height: 1.5;
       box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
       appearance: none;
+      -webkit-appearance: none;
+      box-sizing: border-box;
+    }
+
+    .form-field select {
+      padding-right: 44px;
+      background-image:
+        linear-gradient(45deg, transparent 50%, rgba(255,255,255,0.78) 50%),
+        linear-gradient(135deg, rgba(255,255,255,0.78) 50%, transparent 50%);
+      background-position:
+        calc(100% - 20px) calc(50% - 3px),
+        calc(100% - 14px) calc(50% - 3px);
+      background-size: 6px 6px, 6px 6px;
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }
+
+    .form-field select option {
+      color: #111111;
+      background: #ffffff;
+    }
+
+    .form-field select:required:invalid {
+      color: rgba(200, 210, 235, 0.72);
     }
 
     .form-field input::placeholder,
@@ -990,10 +1019,19 @@
 
     .form-status {
       min-height: 20px;
-      margin: 0;
+      margin: 4px 0 0;
       font-size: 13px;
       text-align: center;
+      font-weight: 600;
       color: rgba(230, 237, 255, 0.88);
+    }
+
+    .form-status.success {
+      color: #b9ffd0;
+    }
+
+    .form-status.error {
+      color: #ffb8b8;
     }
 
     @media (max-width: 1024px) {
@@ -1227,8 +1265,8 @@
         <a href="#case-studies">Case Studies</a>
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
-        <a href="#contact" class="nav-cta" data-cta="nav_get_free_audit">
-          Get Free Audit
+        <a href="#contact" class="nav-cta" data-cta="nav_request_free_audit">
+          Request Free Audit
         </a>
       </nav>
     </div>
@@ -1291,7 +1329,7 @@
           <p class="section-kicker">The Gap</p>
           <h2 class="section-title">Why most ad accounts underperform</h2>
           <p class="section-text">
-            When campaigns feel inconsistent or results are hard to explain, it is usually not a platform issue. It is a system issue — where tracking, structure, and optimization are not aligned.
+            When campaigns feel inconsistent or results are hard to explain, it is usually not a platform issue. It is a system issue where tracking, structure, and optimization are not aligned.
           </p>
         </div>
 
@@ -1367,7 +1405,7 @@
       <div class="container">
         <div class="section-header" style="margin-bottom: 0;">
           <p class="section-text">
-            These outcomes come from fixing the underlying campaign systems — not just adjusting ads.
+            These outcomes come from fixing the underlying campaign systems, not just adjusting ads.
           </p>
         </div>
       </div>
@@ -1394,14 +1432,14 @@
               The campaign structure needed clearer separation between prospecting and retargeting, along with stronger remarketing windows and better visibility into performance.
             </p>
             <ul class="case-list">
-              <li>audience segmentation refinement</li>
-              <li>prospecting vs retargeting structure</li>
-              <li>7D / 14D / 30D remarketing windows</li>
-              <li>GA4 reporting support</li>
+              <li>Audience Segmentation Refinement</li>
+              <li>Prospecting vs Retargeting Structure</li>
+              <li>7D / 14D / 30D Remarketing Windows</li>
+              <li>GA4 Reporting Support</li>
             </ul>
             <div class="case-result-row">
               <span>+35% turnout</span>
-              <span>improved cost efficiency</span>
+              <span>Improved cost efficiency</span>
             </div>
             <a
               href="https://sianmatti.github.io/mark-portfolio/case-studies/splash-park-bacolod.html"
@@ -1423,10 +1461,10 @@
               The account needed stronger alignment between campaign intent, keyword strategy, and the booking journey to drive more qualified traffic.
             </p>
             <ul class="case-list">
-              <li>brand vs non-brand restructure</li>
-              <li>negative keyword cleanup</li>
-              <li>remarketing support</li>
-              <li>GA4 tracking support</li>
+              <li>Brand vs Non-Brand Restructure</li>
+              <li>Negative Keyword Cleanup</li>
+              <li>Remarketing Support</li>
+              <li>GA4 Tracking Support</li>
             </ul>
             <div class="case-result-row">
               <span>+20% direct bookings</span>
@@ -1452,10 +1490,10 @@
               The opportunity was not just to increase volume, but to improve the quality and conversion flow behind paid acquisition.
             </p>
             <ul class="case-list">
-              <li>paid campaign management</li>
-              <li>landing page alignment</li>
-              <li>creative iteration</li>
-              <li>CRM workflow support</li>
+              <li>Paid Campaign Management</li>
+              <li>Landing Page Alignment</li>
+              <li>Creative Iteration</li>
+              <li>CRM Workflow Support</li>
             </ul>
             <div class="case-result-row">
               <span>3,000+ leads</span>
@@ -1521,6 +1559,9 @@
         <div class="section-header">
           <p class="section-kicker">Services</p>
           <h2 class="section-title">Services built around lead generation, booking growth, and tracking clarity</h2>
+          <p class="section-text">
+            Available as focused audits, implementation support, or ongoing optimization depending on what the account needs most.
+          </p>
         </div>
 
         <div class="premium-grid-3">
@@ -1647,38 +1688,6 @@
       </div>
     </section>
 
-    <section id="testimonials" class="section-premium">
-      <div class="container">
-        <div class="section-header">
-          <p class="section-kicker">Working Style</p>
-          <h2 class="section-title">What the work is designed to improve</h2>
-          <p class="section-text">
-            A clear, structured approach built around performance clarity, better decision-making, and cleaner execution.
-          </p>
-        </div>
-
-        <div class="premium-grid-3">
-          <article class="premium-card">
-            <p>
-              Clearer reporting, better campaign visibility, and more organized optimization.
-            </p>
-          </article>
-
-          <article class="premium-card">
-            <p>
-              Stronger visibility into what is working, what is wasting budget, and what should be fixed first.
-            </p>
-          </article>
-
-          <article class="premium-card">
-            <p>
-              Practical recommendations focused on performance clarity, cleaner execution, and real business outcomes.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <section id="faq" class="section-premium">
       <div class="container">
         <div class="section-header">
@@ -1716,16 +1725,16 @@
           </article>
 
           <article class="premium-card" role="listitem">
-            <h3>Do you work project-based or ongoing?</h3>
+            <h3>What do you need access to get started?</h3>
             <p>
-              Both can work, depending on the business need. Some brands need a focused audit and cleanup, while others need ongoing optimization support.
+              Usually the ad account, GA4, GTM if available, and any relevant landing pages or reporting setup. If some of those are missing, I can still review the current setup and identify the main gaps.
             </p>
           </article>
 
           <article class="premium-card" role="listitem">
-            <h3>Who are you best suited to work with?</h3>
+            <h3>Do you work project-based or ongoing?</h3>
             <p>
-              Best suited for hospitality, attractions, and lead generation brands that already spend on paid acquisition and want cleaner systems before scaling further.
+              Both can work, depending on the business need. Some brands need a focused audit and cleanup, while others need ongoing optimization support.
             </p>
           </article>
         </div>
@@ -1782,7 +1791,7 @@
             </ul>
 
             <p class="section-text" style="margin-top: 18px;">
-              No commitment required. Just a clear breakdown of what is working, what is wasting budget, and what to improve next.
+              No commitment required. You’ll get a clear view of what is wasting budget, where tracking is breaking, and which fixes should come first.
             </p>
           </div>
 
@@ -1819,26 +1828,28 @@
                 </div>
               </div>
 
-              <div class="form-field">
-                <label for="company">Company</label>
-                <input
-                  type="text"
-                  id="company"
-                  name="company"
-                  placeholder="Your company or brand"
-                  autocomplete="organization"
-                />
-              </div>
+              <div class="form-grid">
+                <div class="form-field">
+                  <label for="company">Company</label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    placeholder="Your company or brand"
+                    autocomplete="organization"
+                  />
+                </div>
 
-              <div class="form-field">
-                <label for="budget">Monthly ad spend</label>
-                <select id="budget" name="budget" required>
-                  <option value="" disabled selected>Select range</option>
-                  <option value="Below $5K">Below $5K</option>
-                  <option value="$5K-$10K">$5K-$10K</option>
-                  <option value="$10K-$20K">$10K-$20K</option>
-                  <option value="$20K+">$20K+</option>
-                </select>
+                <div class="form-field">
+                  <label for="budget">Monthly ad spend</label>
+                  <select id="budget" name="budget" required>
+                    <option value="" disabled selected>Select range</option>
+                    <option value="Below $5K">Below $5K</option>
+                    <option value="$5K-$10K">$5K-$10K</option>
+                    <option value="$10K-$20K">$10K-$20K</option>
+                    <option value="$20K+">$20K+</option>
+                  </select>
+                </div>
               </div>
 
               <div class="form-field">
@@ -1950,7 +1961,7 @@
       const firstNavLink = navLinks[0];
       let previousFocused = null;
 
-      const setMenuState = (open) => {
+      const setMenuState = (open, restoreFocus = true) => {
         siteNav.classList.toggle('is-open', open);
         menuToggle.classList.toggle('is-open', open);
         menuToggle.setAttribute('aria-expanded', String(open));
@@ -1962,30 +1973,30 @@
         if (open && firstNavLink) {
           previousFocused = document.activeElement;
           firstNavLink.focus();
-        } else if (previousFocused) {
+        } else if (restoreFocus && previousFocused) {
           previousFocused.focus();
         }
       };
 
-      const closeMenu = () => setMenuState(false);
-      const openMenu = () => setMenuState(true);
+      const closeMenu = (restoreFocus = true) => setMenuState(false, restoreFocus);
+      const openMenu = () => setMenuState(true, true);
 
       menuToggle.addEventListener('click', function () {
         const isOpen = siteNav.classList.contains('is-open');
-        isOpen ? closeMenu() : openMenu();
+        isOpen ? closeMenu(true) : openMenu();
       });
 
       navLinks.forEach((link) => {
-        link.addEventListener('click', closeMenu);
+        link.addEventListener('click', () => closeMenu(false));
       });
 
       document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeMenu();
+        if (e.key === 'Escape') closeMenu(true);
       });
 
       document.addEventListener('click', (e) => {
         if (!siteNav.contains(e.target) && !menuToggle.contains(e.target)) {
-          closeMenu();
+          closeMenu(true);
         }
       });
     }
@@ -2057,6 +2068,7 @@
       leadForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
+        formStatus.className = 'form-status';
         formStatus.textContent = 'Submitting...';
         submitButton.disabled = true;
         submitButton.textContent = 'Submitting...';
@@ -2073,6 +2085,7 @@
           });
 
           if (response.ok) {
+            formStatus.className = 'form-status success';
             formStatus.textContent = 'Thanks — your inquiry has been sent. I’ll review it and get back to you within 24 hours.';
             leadForm.reset();
 
@@ -2092,9 +2105,11 @@
               });
             }
           } else {
+            formStatus.className = 'form-status error';
             formStatus.textContent = 'Something went wrong. Please try again or email me directly.';
           }
         } catch (error) {
+          formStatus.className = 'form-status error';
           formStatus.textContent = 'Something went wrong. Please try again or email me directly.';
         } finally {
           submitButton.disabled = false;
