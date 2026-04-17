@@ -610,14 +610,16 @@ textarea:focus-visible {
 .stat-card-premium {
   min-height: 250px;
   display: grid;
-  grid-template-rows: auto auto 1fr;
-  align-content: start;
-  gap: 16px;
+  grid-template-rows: 96px 56px 1fr;
+  align-items: start;
+  gap: 10px;
   padding: 34px;
 }
 
 .stat-number {
   margin: 0;
+  display: flex;
+  align-items: flex-start;
   font-size: clamp(44px, 4.8vw, 64px);
   line-height: 0.92;
   letter-spacing: -0.05em;
@@ -627,7 +629,8 @@ textarea:focus-visible {
 
 .stat-label-premium {
   margin: 0;
-  min-height: 2.8em;
+  display: flex;
+  align-items: flex-start;
   color: rgba(220, 228, 246, 0.92);
   font-size: 14px;
   line-height: 1.35;
@@ -640,6 +643,15 @@ textarea:focus-visible {
   font-size: 12.5px;
   line-height: 1.55;
   max-width: 22ch;
+}
+
+@media (max-width: 768px) {
+  .stat-card-premium {
+    min-height: auto;
+    grid-template-rows: auto auto auto;
+    gap: 12px;
+    padding: 24px;
+  }
 }
 
 
