@@ -185,6 +185,7 @@ textarea:focus-visible {
 
 .premium-grid-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
 }
 
 
@@ -241,8 +242,7 @@ textarea:focus-visible {
   padding: 24px;
   border-radius: var(--radius-lg);
   border: 1px solid var(--line);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.045) 0%, rgba(255, 255, 255, 0.03) 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.045) 0%, rgba(255, 255, 255, 0.03) 100%);
   box-shadow:
     0 16px 38px rgba(0, 0, 0, 0.22),
     inset 0 1px 0 rgba(255, 255, 255, 0.035);
@@ -608,17 +608,18 @@ textarea:focus-visible {
 }
 
 .stat-card-premium {
-  min-height: 210px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  gap: 10px;
+  min-height: 250px;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  align-content: start;
+  gap: 16px;
+  padding: 34px;
 }
 
 .stat-number {
   margin: 0;
   font-size: clamp(44px, 4.8vw, 64px);
-  line-height: 0.95;
+  line-height: 0.92;
   letter-spacing: -0.05em;
   font-weight: 800;
   color: #ffffff;
@@ -626,6 +627,7 @@ textarea:focus-visible {
 
 .stat-label-premium {
   margin: 0;
+  min-height: 2.8em;
   color: rgba(220, 228, 246, 0.92);
   font-size: 14px;
   line-height: 1.35;
@@ -636,8 +638,8 @@ textarea:focus-visible {
   margin: 0;
   color: rgba(205, 214, 236, 0.8);
   font-size: 12.5px;
-  line-height: 1.5;
-  max-width: 24ch;
+  line-height: 1.55;
+  max-width: 22ch;
 }
 
 
@@ -898,8 +900,8 @@ textarea:focus-visible {
 }
 
 .form-field input,
-.form-field select,
-.form-field textarea {
+.form-field textarea,
+.form-field select {
   width: 100%;
   min-height: 56px;
   border: 1px solid var(--field-border);
@@ -909,20 +911,21 @@ textarea:focus-visible {
   padding: 14px 16px;
   line-height: 1.5;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
-  appearance: none;
-  -webkit-appearance: none;
   box-sizing: border-box;
 }
 
+.form-field input,
+.form-field textarea {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
 .form-field select {
-  padding-right: 44px;
-  background-image:
-    linear-gradient(45deg, transparent 50%, rgba(255,255,255,0.92) 50%),
-    linear-gradient(135deg, rgba(255,255,255,0.92) 50%, transparent 50%);
-  background-position: calc(100% - 20px) calc(50% - 3px), calc(100% - 14px) calc(50% - 3px);
-  background-size: 6px 6px, 6px 6px;
-  background-repeat: no-repeat;
+  appearance: auto;
+  -webkit-appearance: menulist;
   cursor: pointer;
+  padding-right: 16px;
+  background-image: none;
 }
 
 .form-field select option {
@@ -1212,11 +1215,11 @@ textarea:focus-visible {
   }
 
   .premium-header {
-    padding: 14px 0;
-    background: rgba(5, 7, 12, 0.92);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
+    padding: 12px 0;
+    background: rgba(5, 7, 12, 0.94);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
 
   .header-container {
@@ -1326,6 +1329,12 @@ textarea:focus-visible {
   }
 
   .stat-card-premium {
+    min-height: auto;
+    padding: 24px;
+    gap: 14px;
+  }
+
+  .stat-label-premium {
     min-height: auto;
   }
 
