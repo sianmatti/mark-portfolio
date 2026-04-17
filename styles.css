@@ -27,8 +27,8 @@
   --radius-md: 20px;
   --radius-lg: 28px;
 
-  --section-space: 84px;
-  --section-space-mobile: 52px;
+  --section-space: 72px;
+  --section-space-mobile: 44px;
 }
 
 
@@ -136,18 +136,18 @@ textarea:focus-visible {
 }
 
 .section-bridge-tight {
-  padding-top: 22px;
-  padding-bottom: 18px;
+  padding-top: 14px;
+  padding-bottom: 10px;
 }
 
 .section-bridge {
-  padding-top: 28px;
-  padding-bottom: 28px;
+  padding-top: 18px;
+  padding-bottom: 18px;
 }
 
 .section-header {
   max-width: 760px;
-  margin-bottom: 34px;
+  margin-bottom: 28px;
 }
 
 .section-header.flush-bottom {
@@ -604,7 +604,7 @@ textarea:focus-visible {
    ========================================================= */
 
 #results .section-header {
-  margin-bottom: 42px;
+  margin-bottom: 34px;
 }
 
 .stat-card-premium {
@@ -643,15 +643,6 @@ textarea:focus-visible {
   font-size: 12.5px;
   line-height: 1.55;
   max-width: 22ch;
-}
-
-@media (max-width: 768px) {
-  .stat-card-premium {
-    min-height: auto;
-    grid-template-rows: auto auto auto;
-    gap: 12px;
-    padding: 24px;
-  }
 }
 
 
@@ -804,8 +795,8 @@ textarea:focus-visible {
    ========================================================= */
 
 .section-cta-final {
-  padding-top: 84px;
-  padding-bottom: 96px;
+  padding-top: var(--section-space);
+  padding-bottom: var(--section-space);
 }
 
 .cta-final-wrap {
@@ -1089,16 +1080,11 @@ textarea:focus-visible {
 
 #results,
 #case-studies,
-#contact {
-  padding-top: 96px;
-  padding-bottom: 96px;
-}
-
 #why-work-with-me,
 #services,
-#faq {
-  padding-top: 72px;
-  padding-bottom: 72px;
+#faq,
+#contact {
+  scroll-margin-top: 110px;
 }
 
 
@@ -1332,7 +1318,7 @@ textarea:focus-visible {
   }
 
   .trust-strip {
-    padding: 10px 0 4px;
+    padding: 8px 0 2px;
   }
 
   .trust-strip-grid li {
@@ -1342,12 +1328,9 @@ textarea:focus-visible {
 
   .stat-card-premium {
     min-height: auto;
+    grid-template-rows: auto auto auto;
+    gap: 12px;
     padding: 24px;
-    gap: 14px;
-  }
-
-  .stat-label-premium {
-    min-height: auto;
   }
 
   .process-card {
@@ -1422,8 +1405,8 @@ textarea:focus-visible {
   }
 
   .section-cta-final {
-    padding-top: 56px;
-    padding-bottom: 64px;
+    padding-top: var(--section-space-mobile);
+    padding-bottom: var(--section-space-mobile);
   }
 }
 
