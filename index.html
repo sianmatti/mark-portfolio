@@ -117,13 +117,78 @@
   }
   </script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What ad spend range are you best suited for?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Best fit is for brands already investing in paid acquisition, especially businesses spending around $5K–$20K per month and needing clearer tracking, stronger structure, and more reliable performance before scaling further."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you work on Google Ads, Meta Ads, or both?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "I can support Google Ads, Meta Ads, or both, depending on where your acquisition efforts are focused and where the biggest performance gaps are."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you also handle GA4 and GTM?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Tracking clarity is a key part of the work, especially when campaign decisions depend on reliable conversion data."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens in the free audit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The audit reviews the main bottlenecks across tracking, campaign structure, wasted spend, and funnel alignment so you can see what is limiting results and what should be fixed first."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What do you need access to get started?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Usually the ad account, GA4, GTM if available, landing pages, and any relevant reporting setup. If some of those are missing, I can still review the setup and identify the most important gaps."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you work project-based or ongoing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Both can work. Some brands need a focused audit and cleanup, while others need ongoing optimization support after the main issues are identified."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens after I submit the form?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "I review the information you shared, identify the most obvious pressure points, and follow up with the next step for the audit."
+        }
+      }
+    ]
+  }
+  </script>
+
   <style>
     :root {
       --bg: #05070c;
       --bg-2: #0a0f18;
       --text: #f7f9ff;
-      --text-soft: rgba(228, 235, 252, 0.88);
-      --text-muted: rgba(200, 210, 235, 0.84);
+      --text-soft: rgba(228, 235, 252, 0.9);
+      --text-muted: rgba(205, 214, 236, 0.86);
       --line: rgba(255, 255, 255, 0.08);
       --line-strong: rgba(255, 255, 255, 0.14);
       --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.28);
@@ -132,7 +197,7 @@
       --field-border: rgba(255, 255, 255, 0.14);
       --field-placeholder: rgba(222, 231, 252, 0.78);
       --section-space: 84px;
-      --section-space-mobile: 48px;
+      --section-space-mobile: 52px;
       --content-max: 720px;
       --radius-lg: 28px;
       --radius-md: 22px;
@@ -217,7 +282,7 @@
       background: rgba(255,255,255,0.04);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
-      color: rgba(232, 239, 255, 0.80);
+      color: rgba(232, 239, 255, 0.84);
       font-size: 12px;
       font-weight: 700;
       letter-spacing: 0.14em;
@@ -238,7 +303,7 @@
       color: var(--text-soft);
       font-size: 16px;
       line-height: 1.72;
-      max-width: 60ch;
+      max-width: 62ch;
     }
 
     .section-text.narrow { max-width: 60ch; }
@@ -289,13 +354,13 @@
 
     .premium-card p {
       margin:0;
-      color: rgba(230, 238, 255, 0.80);
+      color: rgba(230, 238, 255, 0.84);
       line-height: 1.72;
     }
 
     .card-kicker {
       margin:0 0 12px;
-      color: rgba(199, 209, 235, 0.80);
+      color: rgba(208, 217, 239, 0.84);
       font-size: 12px;
       font-weight: 700;
       letter-spacing: 0.12em;
@@ -522,10 +587,10 @@
 
     .hero-subtext {
       margin:0 0 22px;
-      max-width: 54ch;
+      max-width: 56ch;
       font-size:15px;
       line-height:1.72;
-      color: rgba(229, 236, 255, 0.84);
+      color: rgba(229, 236, 255, 0.86);
     }
 
     .hero-actions {
@@ -542,7 +607,7 @@
       max-width: 58ch;
       font-size:13px;
       line-height:1.6;
-      color: rgba(206, 216, 238, 0.82);
+      color: rgba(214, 223, 244, 0.86);
     }
 
     .trust-strip {
@@ -569,7 +634,7 @@
       border-radius:999px;
       background: rgba(255,255,255,0.055);
       border:1px solid rgba(255,255,255,0.08);
-      color: rgba(230, 237, 255, 0.82);
+      color: rgba(236, 242, 255, 0.86);
       font-size:13px;
       font-weight:700;
     }
@@ -601,10 +666,10 @@
 
     .stat-context {
       margin:0;
-      color: rgba(198, 208, 232, 0.78);
+      color: rgba(205, 214, 236, 0.8);
       font-size:13px;
       line-height:1.55;
-      max-width:24ch;
+      max-width:26ch;
     }
 
     .case-card-premium {
@@ -612,6 +677,14 @@
       flex-direction:column;
       min-height:100%;
       padding:28px;
+    }
+
+    .case-context {
+      margin: 0 0 14px !important;
+      color: rgba(224, 231, 248, 0.72) !important;
+      font-size: 13px;
+      line-height: 1.58;
+      font-weight: 600;
     }
 
     .case-lead {
@@ -626,7 +699,7 @@
     .case-list {
       margin:0 0 18px;
       padding-left:18px;
-      color: rgba(224, 231, 248, 0.76);
+      color: rgba(224, 231, 248, 0.78);
       line-height:1.62;
     }
 
@@ -642,7 +715,8 @@
       z-index:1;
     }
 
-    .case-result-row span {
+    .case-result-row span,
+    .audit-next-steps span {
       display:inline-flex;
       align-items:center;
       min-height:38px;
@@ -699,7 +773,7 @@
 
     .process-number {
       margin:0 0 8px;
-      color: rgba(194, 205, 230, 0.82);
+      color: rgba(214, 223, 244, 0.84);
       font-size:12px;
       font-weight:700;
       letter-spacing:0.14em;
@@ -716,10 +790,28 @@
 
     .process-text {
       margin:0 auto;
-      color: rgba(224, 231, 248, 0.76);
+      color: rgba(224, 231, 248, 0.78);
       font-size:13px;
       line-height:1.58;
       max-width:23ch;
+    }
+
+    .audit-next-steps {
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin: 0 0 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .trust-proof {
+      margin: 0 0 18px;
+      color: rgba(226, 234, 255, 0.82);
+      font-size: 13px;
+      line-height: 1.65;
+      position: relative;
+      z-index: 1;
     }
 
     .section-cta-final {
@@ -752,7 +844,7 @@
     .cta-audit-list {
       margin:20px 0 0;
       padding-left:20px;
-      color: rgba(224, 231, 248, 0.8);
+      color: rgba(224, 231, 248, 0.82);
       line-height:1.82;
       position:relative;
       z-index:1;
@@ -857,7 +949,7 @@
       font-size:12px;
       font-weight:600;
       letter-spacing:0.01em;
-      color: rgba(232, 238, 255, 0.88);
+      color: rgba(236, 242, 255, 0.9);
     }
 
     .form-field input,
@@ -894,7 +986,7 @@
     }
 
     .form-field select:required:invalid { color: var(--field-placeholder); }
-    .form-field input::placeholder, .form-field textarea::placeholder { color: rgba(214, 224, 247, 0.68); }
+    .form-field input::placeholder, .form-field textarea::placeholder { color: rgba(214, 224, 247, 0.72); }
 
     .form-field input:focus,
     .form-field select:focus,
@@ -916,7 +1008,7 @@
       margin:0;
       font-size: 12.5px;
       line-height:1.65;
-      color: rgba(200, 210, 235, 0.78);
+      color: rgba(208, 217, 239, 0.82);
       text-align:center;
     }
 
@@ -970,7 +1062,7 @@
       .section-premium { padding: var(--section-space-mobile) 0; }
       .premium-grid-2, .premium-grid-3, .premium-grid-4, .process-grid, .form-grid { grid-template-columns: 1fr; }
       .section-header { margin-bottom: 24px; }
-      .section-title { font-size: clamp(28px, 8vw, 40px); line-height: 1.02; }
+      .section-title { font-size: clamp(28px, 8vw, 40px); line-height: 1.02; text-wrap: pretty; }
 
       .premium-header {
         padding: 14px 0;
@@ -1016,7 +1108,7 @@
       }
 
       .hero-container { padding:0 20px; }
-      .hero-content, .hero-subtext, .hero-note { max-width:100%; }
+      .hero-content, .hero-subtext, .hero-note, .section-text { max-width:100%; }
       .hero-title { max-width:100%; font-size: clamp(30px, 8vw, 42px); line-height:0.98; }
       .hero-subtext, .section-text { font-size:15px; line-height:1.7; }
 
@@ -1026,9 +1118,34 @@
       .trust-strip { padding: 10px 0 4px; }
       .trust-strip-grid li { width:100%; justify-content:center; }
 
-      .stat-card-premium, .process-card { min-height:auto; }
+      .stat-card-premium { min-height:auto; }
+
+      .process-card {
+        min-height:auto;
+        text-align:left;
+        align-items:flex-start;
+        justify-content:flex-start;
+        gap:10px;
+        padding:20px 18px;
+      }
+
+      .process-number,
+      .process-title {
+        width:100%;
+        text-align:left;
+      }
+
+      .process-text {
+        margin:0;
+        max-width:none;
+        text-align:left;
+      }
+
       .cta-final-wrap { padding:20px; gap:18px; }
       .cta-final-content .section-title { max-width:100%; }
+      .audit-next-steps { flex-direction:column; }
+      .audit-next-steps span { width:100%; justify-content:flex-start; }
+      .case-result-row span { justify-content:center; }
 
       .premium-card, .btn-secondary, .section-kicker, .hero-eyebrow {
         backdrop-filter:none;
@@ -1086,7 +1203,7 @@
           </h1>
 
           <p class="hero-subtext">
-            I help brands fix tracking signals, tighten account structure, and align funnels so paid media becomes easier to trust, optimize, and scale.
+            I help brands fix broken tracking, clean up campaign structure, and improve funnel alignment so paid media stops feeling noisy, inconsistent, and hard to scale.
           </p>
 
           <div class="hero-actions">
@@ -1100,7 +1217,7 @@
           </div>
 
           <p class="hero-note">
-            Best for brands spending $5K–$20K/month that need clearer data, stronger structure, and more predictable performance before scaling harder.
+            Best for brands spending $5K–$20K/month that need clearer data, stronger structure, and more reliable performance before scaling harder.
           </p>
         </div>
       </div>
@@ -1109,9 +1226,9 @@
     <section class="trust-strip" aria-label="Key credibility points">
       <div class="container">
         <ul class="trust-strip-grid">
-          <li>Reduce wasted spend (fast)</li>
-          <li>Cleaner tracking you can trust</li>
-          <li>Structure that scales predictably</li>
+          <li>Find wasted spend faster</li>
+          <li>Fix tracking you can actually trust</li>
+          <li>Build structure that scales cleaner</li>
         </ul>
       </div>
     </section>
@@ -1120,7 +1237,7 @@
       <div class="container">
         <div class="section-header flush-bottom">
           <p class="section-text narrow">
-            Most underperforming accounts are starved of signal and structure—so they’re hard to scale even when budget exists.
+            Most underperforming accounts are not short on budget. They are short on signal quality, structure, and clean decision-making.
           </p>
         </div>
       </div>
@@ -1132,7 +1249,7 @@
           <p class="section-kicker">The Gap</p>
           <h2 class="section-title">Why most ad accounts underperform</h2>
           <p class="section-text">
-            When campaigns feel inconsistent or results are hard to explain, it is usually not a platform issue. It is a system issue where tracking, structure, and optimization are not aligned.
+            When campaigns feel inconsistent, lead quality drops, or results get harder to explain, the issue usually is not the platform. It is the system behind it: weak tracking, loose structure, and optimization decisions built on unreliable signals.
           </p>
         </div>
 
@@ -1141,7 +1258,7 @@
             <p class="card-kicker">01</p>
             <h3>Poor structure</h3>
             <p>
-              Campaigns are not aligned with intent, funnel stage, or budget priorities, making performance unpredictable and harder to scale.
+              Campaigns are not mapped cleanly to intent, funnel stage, or budget priority, which makes performance harder to control and scale.
             </p>
           </article>
 
@@ -1149,7 +1266,7 @@
             <p class="card-kicker">02</p>
             <h3>Unreliable tracking</h3>
             <p>
-              Conversion data is incomplete or inconsistent, leading to weak optimization decisions and misleading performance signals.
+              Incomplete or inconsistent conversion tracking weakens optimization and makes reporting harder to trust.
             </p>
           </article>
 
@@ -1157,14 +1274,14 @@
             <p class="card-kicker">03</p>
             <h3>Wasted spend</h3>
             <p>
-              Budget leaks into low-quality traffic due to weak targeting, poor exclusions, and lack of funnel alignment.
+              Budget slips into low-quality traffic when targeting, exclusions, and funnel alignment are not tightly managed.
             </p>
           </article>
         </div>
 
         <div class="section-header push-top-24 flush-bottom">
           <p class="section-text">
-            When these issues are fixed, performance becomes easier to control and scale. Here are selected outcomes from that approach.
+            When those issues get fixed, performance becomes easier to control, easier to explain, and easier to scale.
           </p>
         </div>
       </div>
@@ -1176,7 +1293,7 @@
           <p class="section-kicker">Performance Snapshot</p>
           <h2 class="section-title">Selected paid media outcomes</h2>
           <p class="section-text">
-            Outcomes driven by campaign restructuring, tracking improvement, and acquisition optimization across hospitality, attractions, and lead generation.
+            Examples of performance improvement driven by cleaner tracking, stronger campaign structure, and tighter acquisition systems across hospitality, attractions, and lead generation.
           </p>
         </div>
 
@@ -1184,35 +1301,31 @@
           <article class="premium-card stat-card-premium">
             <p class="stat-number">+35%</p>
             <p class="stat-label-premium">Event turnout</p>
-            <p class="stat-context">Event campaign restructuring + audience refinement</p>
+            <p class="stat-context">Better segmentation, cleaner retargeting, stronger campaign flow</p>
           </article>
 
           <article class="premium-card stat-card-premium">
             <p class="stat-number">+20%</p>
             <p class="stat-label-premium">Direct bookings</p>
-            <p class="stat-context">Search structure + traffic quality improvement</p>
+            <p class="stat-context">Search restructure and traffic-quality improvements</p>
           </article>
 
           <article class="premium-card stat-card-premium">
             <p class="stat-number">3,000+</p>
             <p class="stat-label-premium">Qualified leads</p>
-            <p class="stat-context">Lead generation funnel support across campaign periods</p>
+            <p class="stat-context">Paid traffic, landing page, and funnel support across campaign periods</p>
           </article>
 
           <article class="premium-card stat-card-premium">
             <p class="stat-number">$120K+</p>
             <p class="stat-label-premium">Revenue contribution</p>
-            <p class="stat-context">Paid acquisition-supported performance impact</p>
+            <p class="stat-context">Paid acquisition-supported business impact</p>
           </article>
         </div>
-      </div>
-    </section>
 
-    <section class="section-premium section-bridge">
-      <div class="container">
-        <div class="section-header flush-bottom">
+        <div class="section-header push-top-24 flush-bottom">
           <p class="section-text">
-            These outcomes come from fixing the underlying campaign systems, not just adjusting ads.
+            These results came from fixing what was happening behind the ads, not just changing the ads themselves.
           </p>
         </div>
       </div>
@@ -1232,6 +1345,7 @@
           <article class="premium-card case-card-premium">
             <p class="card-kicker">Attraction / Event Promotion</p>
             <h3>Splash Park Bacolod</h3>
+            <p class="case-context">Goal: improve turnout efficiency for an event-driven campaign with better audience segmentation and stronger retargeting timing.</p>
             <p class="case-lead">
               Event turnout was inconsistent, and acquisition efficiency was being limited by weak audience segmentation and underdeveloped retargeting.
             </p>
@@ -1254,13 +1368,14 @@
               aria-label="View full case study for Splash Park Bacolod"
               data-cta="case_splash_park"
             >
-              See what was fixed →
+              View full case study →
             </a>
           </article>
 
           <article class="premium-card case-card-premium">
             <p class="card-kicker">Hospitality / Booking Growth</p>
             <h3>SixtyFifth Hotel</h3>
+            <p class="case-context">Goal: improve booking intent and traffic quality from search by tightening structure and keyword control.</p>
             <p class="case-lead">
               Paid traffic quality needed improvement, and direct booking growth was being held back by loose search structure and inefficient keyword targeting.
             </p>
@@ -1283,13 +1398,14 @@
               aria-label="View full case study for SixtyFifth Hotel"
               data-cta="case_sixtyfifth_hotel"
             >
-              See what was fixed →
+              View full case study →
             </a>
           </article>
 
           <article class="premium-card case-card-premium">
             <p class="card-kicker">Lead Generation / Funnel Support</p>
             <h3>Gotham Books Inc.</h3>
+            <p class="case-context">Goal: improve lead quality and follow-through by aligning paid traffic, landing pages, and CRM flow.</p>
             <p class="case-lead">
               Lead generation performance depended on stronger alignment between paid traffic, landing page experience, and follow-up systems.
             </p>
@@ -1312,7 +1428,7 @@
               aria-label="View full case study for Gotham Books Inc."
               data-cta="case_gotham_books"
             >
-              See what was fixed →
+              View full case study →
             </a>
           </article>
         </div>
@@ -1325,7 +1441,7 @@
           <p class="section-kicker">Why Work With Me</p>
           <h2 class="section-title">A systems-first approach to paid media performance</h2>
           <p class="section-text">
-            Not just platform execution. A cleaner system for tracking, structure, optimization, and decision-making.
+            Not just platform execution. A clearer operating system for tracking, structure, optimization, and paid media decision-making.
           </p>
         </div>
 
@@ -1333,28 +1449,28 @@
           <article class="premium-card">
             <h3>Cleaner tracking</h3>
             <p>
-              When conversion data is unreliable, optimization becomes guesswork. I focus on making your tracking clearer so decisions are based on data you can trust.
+              When measurement is weak, optimization gets slower and less reliable. I focus on making performance data clearer before pushing harder on campaign changes.
             </p>
           </article>
 
           <article class="premium-card">
             <h3>Stronger account structure</h3>
             <p>
-              Disorganized campaigns lead to inconsistent results. I restructure accounts to align with intent, audience quality, and funnel stages.
+              I reorganize campaigns around intent, traffic quality, and business priorities so performance is easier to manage and explain.
             </p>
           </article>
 
           <article class="premium-card">
             <h3>Less wasted spend</h3>
             <p>
-              Inefficient targeting and weak exclusions quietly drain budget. I tighten these areas to improve cost efficiency and lead quality.
+              I look for the quiet leaks: weak exclusions, poor audience separation, messy retargeting, and spend that is not moving the business.
             </p>
           </article>
 
           <article class="premium-card">
             <h3>Operator mindset</h3>
             <p>
-              Not just campaign management. A systems-focused approach that prioritizes clarity, structure, and performance logic behind every decision.
+              I do not treat paid media as isolated platform work. I look at the full acquisition system behind the results.
             </p>
           </article>
         </div>
@@ -1365,9 +1481,9 @@
       <div class="container">
         <div class="section-header">
           <p class="section-kicker">Services</p>
-          <h2 class="section-title">Services built for cleaner performance</h2>
+          <h2 class="section-title">Ways I help fix performance problems</h2>
           <p class="section-text">
-            Available as focused audits, implementation support, or ongoing optimization depending on what the account needs most.
+            Available as focused audits, implementation support, or ongoing optimization depending on where the account is breaking.
           </p>
         </div>
 
@@ -1375,42 +1491,42 @@
           <article class="premium-card">
             <h3>Paid Media Audit</h3>
             <p>
-              Identify tracking gaps, wasted spend, structural inefficiencies, and the highest-priority fixes before more budget gets pushed into a weak system.
+              Find the biggest tracking, structure, and spend-efficiency issues before more budget goes into the wrong places.
             </p>
           </article>
 
           <article class="premium-card">
             <h3>Google Ads Optimization</h3>
             <p>
-              Search campaign strategy, account restructuring, keyword refinement, and optimization built around intent, lead quality, and cost efficiency.
+              Improve search account structure, keyword quality, exclusions, and campaign control so traffic is more qualified and easier to convert.
             </p>
           </article>
 
           <article class="premium-card">
             <h3>Meta Ads Optimization</h3>
             <p>
-              Prospecting, retargeting, audience segmentation, and creative testing designed to improve reach quality, conversion efficiency, and remarketing performance.
+              Improve prospecting, retargeting, audience quality, and creative testing so spend works harder across the funnel.
             </p>
           </article>
 
           <article class="premium-card">
             <h3>Tracking &amp; Reporting Setup</h3>
             <p>
-              GA4, GTM, and reporting systems that make conversion data more reliable, more actionable, and easier to trust.
+              Fix GA4, GTM, and reporting gaps so optimization decisions are based on cleaner signals.
             </p>
           </article>
 
           <article class="premium-card">
             <h3>Retargeting &amp; Funnel Optimization</h3>
             <p>
-              Audience window segmentation and funnel support built to improve lead quality, booking intent, and conversion follow-through.
+              Build tighter audience windows and better follow-up paths so more high-intent users make it through the funnel.
             </p>
           </article>
 
           <article class="premium-card">
             <h3>Landing Page Alignment</h3>
             <p>
-              Offer, message, and conversion-path alignment to reduce friction between ad click, landing page experience, and final action.
+              Reduce the disconnect between ad promise, landing page experience, and final conversion action.
             </p>
           </article>
         </div>
@@ -1421,7 +1537,7 @@
       <div class="container">
         <div class="section-header flush-bottom">
           <p class="section-text">
-            The same approach is applied across accounts. Here is the process used to identify issues and improve performance.
+            The same systems-first approach applies across accounts. Here is how I diagnose issues and improve performance.
           </p>
         </div>
       </div>
@@ -1431,9 +1547,9 @@
       <div class="container">
         <div class="section-header">
           <p class="section-kicker">Process</p>
-          <h2 class="section-title">How performance gets fixed</h2>
+          <h2 class="section-title">How I diagnose and improve performance</h2>
           <p class="section-text">
-            The goal is not just to manage campaigns. It is to improve tracking clarity, strengthen structure, reduce wasted spend, and create a better foundation for scaling.
+            The goal is not just to manage campaigns. It is to improve tracking clarity, strengthen structure, reduce wasted spend, and build a better base for scaling.
           </p>
         </div>
 
@@ -1450,7 +1566,7 @@
             <p class="process-number">02</p>
             <p class="process-title">Tracking</p>
             <p class="process-text">
-              Improve conversion signal quality using GA4 and GTM so decisions are based on cleaner, more reliable data.
+              Improve conversion signal quality with GA4 and GTM so decisions are based on cleaner, more reliable data.
             </p>
           </article>
 
@@ -1458,7 +1574,7 @@
             <p class="process-number">03</p>
             <p class="process-title">Structure</p>
             <p class="process-text">
-              Align campaigns by intent, audience quality, funnel stage, and budget priority for stronger performance control.
+              Align campaigns by intent, audience quality, funnel stage, and budget priority for better control.
             </p>
           </article>
 
@@ -1466,7 +1582,7 @@
             <p class="process-number">04</p>
             <p class="process-title">Testing</p>
             <p class="process-text">
-              Validate creatives, audiences, keywords, and landing page alignment to identify what actually drives results.
+              Validate creatives, audiences, keywords, and landing page alignment to find what actually moves performance.
             </p>
           </article>
 
@@ -1474,7 +1590,7 @@
             <p class="process-number">05</p>
             <p class="process-title">Optimization</p>
             <p class="process-text">
-              Reduce inefficiency, improve lead quality, and scale what works through focused iteration and budget refinement.
+              Reduce inefficiency, improve lead quality, and scale what is working through focused iteration.
             </p>
           </article>
 
@@ -1482,15 +1598,57 @@
             <p class="process-number">06</p>
             <p class="process-title">Reporting</p>
             <p class="process-text">
-              Translate performance data into clearer insights, priorities, and next actions you can actually use.
+              Translate performance into clear insights, priorities, and next actions you can actually use.
             </p>
           </article>
         </div>
 
         <div class="section-header push-top-24 flush-bottom">
           <p class="section-text">
-            Every step is designed to improve clarity, reduce wasted spend, and support better decisions before scaling further.
+            Every step is designed to reduce noise, improve clarity, and support better decisions before scaling further.
           </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="audit-deliverable" class="section-premium">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-kicker">Audit Deliverable</p>
+          <h2 class="section-title">What you get from the free audit</h2>
+          <p class="section-text">
+            A practical breakdown of where performance is leaking, what is most likely causing it, and what should be fixed first.
+          </p>
+        </div>
+
+        <div class="premium-grid-4">
+          <article class="premium-card">
+            <h3>Tracking review</h3>
+            <p>
+              Broken or missing conversion signals, attribution gaps, and measurement issues that make optimization harder to trust.
+            </p>
+          </article>
+
+          <article class="premium-card">
+            <h3>Structure review</h3>
+            <p>
+              Campaign setup issues, audience overlap, weak segmentation, and budget misalignment that limit performance control.
+            </p>
+          </article>
+
+          <article class="premium-card">
+            <h3>Spend-efficiency findings</h3>
+            <p>
+              Where budget is being diluted by low-quality traffic, weak exclusions, or funnel leakage.
+            </p>
+          </article>
+
+          <article class="premium-card">
+            <h3>Priority action plan</h3>
+            <p>
+              The highest-impact fixes to make first, in order, so next steps are clear.
+            </p>
+          </article>
         </div>
       </div>
     </section>
@@ -1506,56 +1664,35 @@
           <article class="premium-card" role="listitem">
             <h3>What ad spend range are you best suited for?</h3>
             <p>
-              Best fit is for brands already investing in paid acquisition, especially businesses spending around $5K–$20K per month and needing clearer tracking, stronger structure, and more predictable performance before scaling further.
+              Best fit is for brands already investing in paid acquisition, especially businesses spending around $5K–$20K per month and needing clearer tracking, stronger structure, and more reliable performance before scaling further.
             </p>
           </article>
 
           <article class="premium-card" role="listitem">
             <h3>Do you work on Google Ads, Meta Ads, or both?</h3>
             <p>
-              I can support Google Ads, Meta Ads, or both, depending on where your acquisition efforts are currently focused and where the biggest performance gaps are.
+              I can support Google Ads, Meta Ads, or both, depending on where your acquisition efforts are focused and where the biggest performance gaps are.
             </p>
           </article>
 
           <article class="premium-card" role="listitem">
             <h3>Do you also handle GA4 and GTM?</h3>
             <p>
-              Yes. Tracking clarity is a key part of the work, especially when campaign decisions depend on reliable conversion data. If GA4 or GTM is incomplete, I can identify what is missing and where the signal is breaking.
-            </p>
-          </article>
-
-          <article class="premium-card" role="listitem">
-            <h3>Can you also help if we’re still setting things up?</h3>
-            <p>
-              Yes. I can support businesses that are still setting up their paid media and tracking foundation, especially when the goal is to start with cleaner structure, clearer data, and a stronger system before pushing more budget into campaigns.
+              Yes. Tracking clarity is a key part of the work, especially when campaign decisions depend on reliable conversion data.
             </p>
           </article>
 
           <article class="premium-card" role="listitem">
             <h3>What happens in the free audit?</h3>
             <p>
-              The audit reviews the main performance bottlenecks across tracking, campaign structure, wasted spend, and funnel alignment. You’ll get a clear view of what is limiting results and which fixes should come first.
+              The audit reviews the main bottlenecks across tracking, campaign structure, wasted spend, and funnel alignment so you can see what is limiting results and what should be fixed first.
             </p>
           </article>
 
           <article class="premium-card" role="listitem">
             <h3>What do you need access to get started?</h3>
             <p>
-              Usually the ad account, GA4, GTM if available, landing pages, and any relevant reporting setup. If some of those are missing, I can still review the current setup and identify the most important gaps.
-            </p>
-          </article>
-
-          <article class="premium-card" role="listitem">
-            <h3>Can you help even if tracking is messy or incomplete?</h3>
-            <p>
-              Yes. In many cases, that is exactly where the problem starts. Even if the setup is incomplete, I can usually identify where the signal is weak, what is missing, and what needs to be fixed first before scaling.
-            </p>
-          </article>
-
-          <article class="premium-card" role="listitem">
-            <h3>Do you only work with hospitality and attractions?</h3>
-            <p>
-              No. Those are just some of the clearest examples shown here. The same systems-first approach also applies to lead generation and other service-based businesses that need clearer data, stronger structure, and better acquisition efficiency.
+              Usually the ad account, GA4, GTM if available, landing pages, and any relevant reporting setup. If some of those are missing, I can still review the setup and identify the most important gaps.
             </p>
           </article>
 
@@ -1569,7 +1706,7 @@
           <article class="premium-card" role="listitem">
             <h3>What happens after I submit the form?</h3>
             <p>
-              Once the form is submitted, I’ll review the information you shared and follow up with the next step for the audit. The goal is to quickly identify where performance is breaking and what should be prioritized first.
+              I review the information you shared, identify the most obvious pressure points, and follow up with the next step for the audit.
             </p>
           </article>
         </div>
@@ -1582,7 +1719,7 @@
           <p class="section-kicker">Fit</p>
           <h2 class="section-title">This is not for everyone</h2>
           <p class="section-text">
-            This works best for businesses that are already running paid campaigns or are preparing to set up their paid media the right way from the start.
+            This works best for businesses already running paid campaigns or preparing to build paid media on a cleaner foundation from the start.
           </p>
         </div>
 
@@ -1590,20 +1727,20 @@
           <article class="premium-card">
             <h3>Not ideal if</h3>
             <ul class="case-list">
-              <li>No intent to invest in paid acquisition yet</li>
-              <li>No clear offer, funnel, or conversion goal</li>
-              <li>Looking for quick wins without fixing structure or tracking</li>
+              <li>You are not ready to invest in paid acquisition yet</li>
+              <li>You do not yet have a clear offer or conversion goal</li>
+              <li>You want quick wins without fixing the underlying system</li>
             </ul>
           </article>
 
           <article class="premium-card">
             <h3>Best fit if</h3>
             <ul class="case-list">
-              <li>Already spending on ads but performance feels inconsistent</li>
-              <li>Planning to launch campaigns and want to start with a clean setup</li>
-              <li>Tracking feels unclear or unreliable</li>
-              <li>Scaling is difficult or inefficient</li>
-              <li>You want clearer data before increasing spend</li>
+              <li>You are already spending but results feel inconsistent</li>
+              <li>Tracking is unclear or unreliable</li>
+              <li>Traffic quality is weaker than it should be</li>
+              <li>Scaling feels harder than it should</li>
+              <li>You want clearer priorities before increasing spend</li>
             </ul>
           </article>
         </div>
@@ -1615,24 +1752,36 @@
         <div class="cta-final-wrap premium-card">
           <div class="cta-final-content">
             <p class="section-kicker">Free Paid Media Audit</p>
-            <h2 class="section-title">See exactly what’s wasting budget (and what to fix first)</h2>
+            <h2 class="section-title">See exactly what’s wasting budget — and what to fix first</h2>
             <p class="section-text">
-              If your campaigns feel inconsistent, tracking is unclear, or performance is getting harder to trust, this audit will show exactly where the gaps are and what should be prioritized first.
+              If your campaigns feel inconsistent, tracking is unclear, or performance is getting harder to trust, this audit will show where the main gaps are and what should be prioritized first.
             </p>
 
             <ul class="cta-audit-list">
               <li>Tracking review to identify broken or missing conversion signals</li>
               <li>Campaign structure analysis to uncover inefficiencies and misalignment</li>
-              <li>Wasted spend findings across targeting, exclusions, and funnel gaps</li>
+              <li>Spend-efficiency findings across targeting, exclusions, and funnel gaps</li>
               <li>Clear priority recommendations so you know what to fix first</li>
             </ul>
 
             <p class="section-text mt-18">
-              No commitment required. Just a clear view of what is wasting budget, where tracking is breaking, and which fixes should come first.
+              No commitment required. Just a clear view of where performance is breaking and what should be fixed first.
             </p>
           </div>
 
           <div class="cta-final-actions">
+            <div>
+              <p class="card-kicker">What happens next</p>
+              <div class="audit-next-steps">
+                <span>1. You submit the form</span>
+                <span>2. I review your setup and main issues</span>
+                <span>3. I follow up with the next step for the audit</span>
+              </div>
+              <p class="trust-proof">
+                Built from real account work across hospitality, attractions, and lead generation — not generic audit templates.
+              </p>
+            </div>
+
             <form
               class="lead-form"
               action="https://formspree.io/f/xqewabbn"
@@ -1692,7 +1841,7 @@
               <div class="form-grid">
                 <div class="form-field">
                   <label for="budget">Monthly ad spend</label>
-                  <select id="budget" name="budget">
+                  <select id="budget" name="budget" required>
                     <option value="" disabled selected>Select range</option>
                     <option value="Below $5K">Below $5K</option>
                     <option value="$5K-$10K">$5K-$10K</option>
@@ -1714,12 +1863,12 @@
               </div>
 
               <div class="form-field">
-                <label for="message">What feels unclear or not working in your campaigns?</label>
+                <label for="message">What feels off in your paid media right now?</label>
                 <textarea
                   id="message"
                   name="message"
                   rows="5"
-                  placeholder="Example: tracking is unclear, leads are inconsistent, CPC is rising, or bookings are hard to improve"
+                  placeholder="Example: tracking is messy, lead quality is inconsistent, CPC keeps rising, or bookings are harder to improve than they should be"
                   required
                 ></textarea>
               </div>
@@ -1736,7 +1885,7 @@
               </button>
 
               <p class="form-note">
-                No commitment required. Personal email addresses are fine. You’ll get a clear, practical breakdown of what to fix first.
+                No commitment required. Personal email addresses are fine. The goal is simply to show where performance is breaking and what should be fixed first.
               </p>
 
               <p class="form-status" id="form-status" aria-live="polite"></p>
