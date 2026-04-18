@@ -5,11 +5,14 @@
 :root {
   --bg: #05070c;
   --bg-2: #0a0f18;
+
   --panel: rgba(255, 255, 255, 0.045);
   --panel-strong: rgba(255, 255, 255, 0.07);
+
   --text: #f7f9ff;
   --text-soft: rgba(230, 238, 255, 0.88);
   --text-muted: rgba(205, 214, 236, 0.82);
+
   --line: rgba(255, 255, 255, 0.08);
   --line-strong: rgba(255, 255, 255, 0.14);
 
@@ -23,9 +26,14 @@
   --shadow-xl: 0 24px 60px rgba(0, 0, 0, 0.3);
 
   --container: 1180px;
+
   --radius-sm: 15px;
   --radius-md: 20px;
   --radius-lg: 28px;
+
+  --gap-sm: 12px;
+  --gap-md: 18px;
+  --gap-lg: 28px;
 
   --section-space: 56px;
   --section-space-mobile: 36px;
@@ -132,17 +140,12 @@ textarea:focus-visible {
 }
 
 .section-premium {
-  padding: var(--section-space) 0;
+  padding-block: var(--section-space);
 }
 
-.section-bridge-tight {
-  padding-top: 6px;
-  padding-bottom: 2px;
-}
-
+.section-bridge-tight,
 .section-bridge {
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-block: 0;
 }
 
 .section-header {
@@ -170,7 +173,7 @@ textarea:focus-visible {
 .premium-grid-3,
 .premium-grid-4 {
   display: grid;
-  gap: 18px;
+  gap: var(--gap-md);
   position: relative;
   z-index: 1;
 }
@@ -258,7 +261,7 @@ textarea:focus-visible {
   letter-spacing: -0.03em;
 }
 
-.premium-card p {
+.premium-card > p {
   margin: 0;
   color: rgba(224, 231, 248, 0.8);
   line-height: 1.68;
@@ -321,7 +324,7 @@ textarea:focus-visible {
 
 .text-link-premium:hover {
   color: #ffffff;
-  background: rgba(255,255,255,0.04);
+  background: rgba(255, 255, 255, 0.04);
 }
 
 
@@ -336,11 +339,11 @@ textarea:focus-visible {
 }
 
 .premium-header {
-  padding: 18px 0;
-  background: rgba(5, 7, 12, 0.72);
-  border-bottom: 1px solid rgba(255,255,255,0.05);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  padding: 16px 0;
+  background: rgba(5, 7, 12, 0.64);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 .header-container {
@@ -582,7 +585,7 @@ textarea:focus-visible {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: var(--gap-sm);
 }
 
 .trust-strip-grid li {
@@ -591,8 +594,8 @@ textarea:focus-visible {
   min-height: 40px;
   padding: 0 15px;
   border-radius: 999px;
-  background: rgba(255,255,255,0.055);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   color: rgba(236, 242, 255, 0.86);
   font-size: 13px;
   font-weight: 700;
@@ -603,9 +606,9 @@ textarea:focus-visible {
    10. Results / Stats
    ========================================================= */
 
-#results {
-  padding-top: 24px;
-  padding-bottom: 28px;
+#results,
+#case-studies {
+  padding-block: 32px;
 }
 
 #results .section-header {
@@ -614,17 +617,15 @@ textarea:focus-visible {
 
 .stat-card-premium {
   min-height: 250px;
-  display: grid;
-  grid-template-rows: 96px 56px 1fr;
-  align-items: start;
-  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
   padding: 34px;
 }
 
 .stat-number {
-  margin: 0;
-  display: flex;
-  align-items: flex-start;
+  margin: 0 0 6px;
+  display: block;
   font-size: clamp(44px, 4.8vw, 64px);
   line-height: 0.92;
   letter-spacing: -0.05em;
@@ -633,9 +634,8 @@ textarea:focus-visible {
 }
 
 .stat-label-premium {
-  margin: 0;
-  display: flex;
-  align-items: flex-start;
+  margin: 0 0 8px;
+  min-height: 2.8em;
   color: rgba(220, 228, 246, 0.92);
   font-size: 14px;
   line-height: 1.35;
@@ -643,7 +643,7 @@ textarea:focus-visible {
 }
 
 .stat-context {
-  margin: 0;
+  margin-top: auto;
   color: rgba(205, 214, 236, 0.8);
   font-size: 12.5px;
   line-height: 1.55;
@@ -655,8 +655,11 @@ textarea:focus-visible {
    11. Case Studies
    ========================================================= */
 
-#case-studies {
-  padding-top: 24px;
+#case-studies .section-title,
+#services .section-title,
+#faq .section-title,
+#why-work-with-me .section-title {
+  font-size: clamp(30px, 4vw, 48px);
 }
 
 .case-card-premium {
@@ -718,8 +721,8 @@ textarea:focus-visible {
   min-height: 38px;
   padding: 10px 14px;
   border-radius: 999px;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   color: #f6f9ff;
   font-size: 13px;
   font-weight: 700;
@@ -734,8 +737,8 @@ textarea:focus-visible {
   min-height: 50px;
   padding: 0 18px;
   border-radius: 999px;
-  background: rgba(255,255,255,0.045);
-  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   color: #f4f7ff;
   text-decoration: none;
   font-size: 14px;
@@ -746,7 +749,7 @@ textarea:focus-visible {
 }
 
 .case-link:hover {
-  background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
   transform: translateY(-1px);
 }
 
@@ -804,8 +807,7 @@ textarea:focus-visible {
    ========================================================= */
 
 .section-cta-final {
-  padding-top: var(--section-space);
-  padding-bottom: var(--section-space);
+  padding-block: var(--section-space);
 }
 
 .cta-final-wrap {
@@ -1012,7 +1014,7 @@ textarea:focus-visible {
 
 .premium-footer {
   padding: 28px 0 40px;
-  border-top: 1px solid rgba(255,255,255,0.06);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .footer-container {
@@ -1059,13 +1061,13 @@ textarea:focus-visible {
    ========================================================= */
 
 #why-work-with-me .premium-card {
-  box-shadow: 0 16px 38px rgba(0,0,0,0.22), inset 0 1px 0 rgba(255,255,255,0.035);
-  border-color: rgba(255,255,255,0.07);
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.035);
+  border-color: rgba(255, 255, 255, 0.07);
 }
 
 #services .premium-card {
-  box-shadow: 0 14px 34px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.03);
-  border-color: rgba(255,255,255,0.065);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.065);
 }
 
 #services .premium-card p {
@@ -1075,8 +1077,8 @@ textarea:focus-visible {
 
 #faq .premium-card {
   height: 100%;
-  box-shadow: 0 12px 28px rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.03);
-  border-color: rgba(255,255,255,0.06);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.06);
 }
 
 #faq .premium-card h3 {
@@ -1176,8 +1178,8 @@ textarea:focus-visible {
     padding: 10px;
     border-radius: 22px;
     background: rgba(7, 10, 16, 0.94);
-    border: 1px solid rgba(255,255,255,0.1);
-    box-shadow: 0 18px 40px rgba(0,0,0,0.34), inset 0 1px 0 rgba(255,255,255,0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.34), inset 0 1px 0 rgba(255, 255, 255, 0.04);
   }
 
   .site-nav.is-open {
@@ -1200,7 +1202,12 @@ textarea:focus-visible {
 
 @media (max-width: 768px) {
   .section-premium {
-    padding: var(--section-space-mobile) 0;
+    padding-block: var(--section-space-mobile);
+  }
+
+  #results,
+  #case-studies {
+    padding-block: 18px;
   }
 
   .premium-grid-2,
@@ -1224,7 +1231,7 @@ textarea:focus-visible {
   .premium-header {
     padding: 12px 0;
     background: rgba(5, 7, 12, 0.94);
-    border-bottom: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
   }
@@ -1242,9 +1249,9 @@ textarea:focus-visible {
   }
 
   .menu-toggle {
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.14);
-    box-shadow: 0 10px 24px rgba(0,0,0,0.22), inset 0 1px 0 rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.05);
   }
 
   .menu-toggle span {
@@ -1252,20 +1259,20 @@ textarea:focus-visible {
   }
 
   .site-nav {
-    background: rgba(7,10,16,0.96);
-    border: 1px solid rgba(255,255,255,0.1);
-    box-shadow: 0 18px 40px rgba(0,0,0,0.34), inset 0 1px 0 rgba(255,255,255,0.04);
+    background: rgba(7, 10, 16, 0.96);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.34), inset 0 1px 0 rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
   }
 
   .site-nav a {
-    color: rgba(245,248,255,0.92);
+    color: rgba(245, 248, 255, 0.92);
   }
 
   .site-nav a:hover,
   .site-nav a:focus-visible {
-    background: rgba(255,255,255,0.07);
+    background: rgba(255, 255, 255, 0.07);
     color: #ffffff;
   }
 
@@ -1337,9 +1344,12 @@ textarea:focus-visible {
 
   .stat-card-premium {
     min-height: auto;
-    grid-template-rows: auto auto auto;
     gap: 12px;
     padding: 24px;
+  }
+
+  .stat-label-premium {
+    min-height: auto;
   }
 
   .process-card {
@@ -1403,6 +1413,14 @@ textarea:focus-visible {
     -webkit-backdrop-filter: none;
   }
 
+  .premium-header,
+  .site-nav,
+  .menu-toggle,
+  .section-kicker,
+  .hero-eyebrow {
+    box-shadow: none;
+  }
+
   .premium-card {
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
   }
@@ -1414,17 +1432,7 @@ textarea:focus-visible {
   }
 
   .section-cta-final {
-    padding-top: var(--section-space-mobile);
-    padding-bottom: var(--section-space-mobile);
-  }
-
-  #results {
-    padding-top: 18px;
-    padding-bottom: 22px;
-  }
-
-  #case-studies {
-    padding-top: 18px;
+    padding-block: var(--section-space-mobile);
   }
 }
 
