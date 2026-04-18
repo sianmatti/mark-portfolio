@@ -880,6 +880,20 @@ textarea:focus-visible {
   z-index: 1;
 }
 
+.contact-links-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+.contact-links-row .btn-secondary,
+.contact-links-row .text-link-premium {
+  min-width: 220px;
+}
+
 
 /* =========================================================
    14. Form
@@ -1401,6 +1415,17 @@ textarea:focus-visible {
 
   .case-result-row span {
     justify-content: center;
+  }
+
+  .contact-links-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .contact-links-row .btn-secondary,
+  .contact-links-row .text-link-premium {
+    width: 100%;
+    min-width: 0;
   }
 
   .premium-card,
