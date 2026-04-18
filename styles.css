@@ -27,8 +27,8 @@
   --radius-md: 20px;
   --radius-lg: 28px;
 
-  --section-space: 72px;
-  --section-space-mobile: 44px;
+  --section-space: 56px;
+  --section-space-mobile: 36px;
 }
 
 
@@ -148,10 +148,6 @@ textarea:focus-visible {
 .section-header {
   max-width: 760px;
   margin-bottom: 24px;
-}
-
-#results {
-  padding-top: 32px;
 }
 
 .section-header.flush-bottom {
@@ -607,8 +603,13 @@ textarea:focus-visible {
    10. Results / Stats
    ========================================================= */
 
+#results {
+  padding-top: 24px;
+  padding-bottom: 28px;
+}
+
 #results .section-header {
-  margin-bottom: 34px;
+  margin-bottom: 26px;
 }
 
 .stat-card-premium {
@@ -653,6 +654,10 @@ textarea:focus-visible {
 /* =========================================================
    11. Case Studies
    ========================================================= */
+
+#case-studies {
+  padding-top: 24px;
+}
 
 .case-card-premium {
   display: flex;
@@ -1411,6 +1416,15 @@ textarea:focus-visible {
   .section-cta-final {
     padding-top: var(--section-space-mobile);
     padding-bottom: var(--section-space-mobile);
+  }
+
+  #results {
+    padding-top: 18px;
+    padding-bottom: 22px;
+  }
+
+  #case-studies {
+    padding-top: 18px;
   }
 }
 
