@@ -39,7 +39,6 @@
   --section-space-mobile: 36px;
 }
 
-
 /* =========================================================
    02. Base / Reset
    ========================================================= */
@@ -94,7 +93,6 @@ a {
   color: #ffffff;
 }
 
-
 /* =========================================================
    03. Accessibility
    ========================================================= */
@@ -126,7 +124,6 @@ textarea:focus-visible {
   outline-offset: 3px;
   box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.08);
 }
-
 
 /* =========================================================
    04. Layout Helpers
@@ -191,7 +188,6 @@ textarea:focus-visible {
   align-items: stretch;
 }
 
-
 /* =========================================================
    05. Typography / Shared UI
    ========================================================= */
@@ -245,7 +241,11 @@ textarea:focus-visible {
   padding: 24px;
   border-radius: var(--radius-lg);
   border: 1px solid var(--line);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.045) 0%, rgba(255, 255, 255, 0.03) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.045) 0%,
+    rgba(255, 255, 255, 0.03) 100%
+  );
   box-shadow:
     0 16px 38px rgba(0, 0, 0, 0.22),
     inset 0 1px 0 rgba(255, 255, 255, 0.035);
@@ -267,7 +267,6 @@ textarea:focus-visible {
   line-height: 1.68;
 }
 
-
 /* =========================================================
    06. Buttons / Links
    ========================================================= */
@@ -284,13 +283,19 @@ textarea:focus-visible {
   text-decoration: none;
   font-size: 14px;
   font-weight: 700;
-  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .btn-primary {
   color: #07101b;
   background: linear-gradient(180deg, #ffffff 0%, #dfe8ff 100%);
-  box-shadow: 0 10px 24px rgba(120, 153, 255, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.82);
+  box-shadow:
+    0 10px 24px rgba(120, 153, 255, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.82);
 }
 
 .btn-primary:hover {
@@ -326,7 +331,6 @@ textarea:focus-visible {
   color: #ffffff;
   background: rgba(255, 255, 255, 0.04);
 }
-
 
 /* =========================================================
    07. Header / Navigation
@@ -384,7 +388,9 @@ textarea:focus-visible {
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(255, 255, 255, 0.045);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
 }
@@ -400,7 +406,10 @@ textarea:focus-visible {
   font-size: 14px;
   font-weight: 600;
   color: rgba(230, 237, 255, 0.82);
-  transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
 }
 
 .site-nav a:hover {
@@ -412,7 +421,9 @@ textarea:focus-visible {
 .site-nav .nav-cta {
   color: #07101b;
   background: linear-gradient(180deg, #ffffff 0%, #dfe8ff 100%);
-  box-shadow: 0 10px 24px rgba(120, 153, 255, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.82);
+  box-shadow:
+    0 10px 24px rgba(120, 153, 255, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.82);
 }
 
 .menu-toggle {
@@ -422,7 +433,9 @@ textarea:focus-visible {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.045);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   cursor: pointer;
@@ -442,7 +455,9 @@ textarea:focus-visible {
   background: #f5f8ff;
   border-radius: 999px;
   transform: translateX(-50%);
-  transition: transform 0.2s ease, top 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    top 0.2s ease;
 }
 
 .menu-toggle span:first-child {
@@ -462,7 +477,6 @@ textarea:focus-visible {
   top: 24px;
   transform: translateX(-50%) rotate(-45deg);
 }
-
 
 /* =========================================================
    08. Hero
@@ -567,7 +581,6 @@ textarea:focus-visible {
   color: rgba(214, 223, 244, 0.82);
 }
 
-
 /* =========================================================
    09. Trust Strip
    ========================================================= */
@@ -600,7 +613,6 @@ textarea:focus-visible {
   font-size: 13px;
   font-weight: 700;
 }
-
 
 /* =========================================================
    10. Results / Stats
@@ -650,7 +662,6 @@ textarea:focus-visible {
   max-width: 22ch;
 }
 
-
 /* =========================================================
    11. Case Studies
    ========================================================= */
@@ -673,24 +684,10 @@ textarea:focus-visible {
   margin-bottom: 12px;
 }
 
-.case-context {
-  margin: 0 0 16px !important;
-  color: rgba(224, 231, 248, 0.72) !important;
-  font-size: 13px;
-  line-height: 1.58;
-  font-weight: 600;
-}
-
-.case-lead {
-  margin: 0 0 14px !important;
-  color: #f2f6ff !important;
-  font-weight: 600;
-  line-height: 1.62;
-}
-
-.case-body {
+.case-summary {
   margin: 0 0 18px !important;
-  color: rgba(224, 231, 248, 0.74) !important;
+  color: rgba(224, 231, 248, 0.78) !important;
+  line-height: 1.68;
 }
 
 .case-list {
@@ -753,7 +750,6 @@ textarea:focus-visible {
   transform: translateY(-1px);
 }
 
-
 /* =========================================================
    12. Process
    ========================================================= */
@@ -800,7 +796,6 @@ textarea:focus-visible {
   line-height: 1.58;
   max-width: 23ch;
 }
-
 
 /* =========================================================
    13. Contact / CTA
@@ -893,7 +888,6 @@ textarea:focus-visible {
 .contact-links-row .text-link-premium {
   min-width: 220px;
 }
-
 
 /* =========================================================
    14. Form
@@ -1021,7 +1015,6 @@ textarea:focus-visible {
   color: #ffb8b8;
 }
 
-
 /* =========================================================
    15. Footer
    ========================================================= */
@@ -1069,18 +1062,21 @@ textarea:focus-visible {
   color: #ffffff;
 }
 
-
 /* =========================================================
    16. Section-Specific Polish
    ========================================================= */
 
 #why-work-with-me .premium-card {
-  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.035);
+  box-shadow:
+    0 16px 38px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.035);
   border-color: rgba(255, 255, 255, 0.07);
 }
 
 #services .premium-card {
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  box-shadow:
+    0 14px 34px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
   border-color: rgba(255, 255, 255, 0.065);
 }
 
@@ -1091,7 +1087,9 @@ textarea:focus-visible {
 
 #faq .premium-card {
   height: 100%;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
   border-color: rgba(255, 255, 255, 0.06);
 }
 
@@ -1111,7 +1109,6 @@ textarea:focus-visible {
 #contact {
   scroll-margin-top: 110px;
 }
-
 
 /* =========================================================
    17. Responsive
@@ -1193,7 +1190,9 @@ textarea:focus-visible {
     border-radius: 22px;
     background: rgba(7, 10, 16, 0.94);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.34), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    box-shadow:
+      0 18px 40px rgba(0, 0, 0, 0.34),
+      inset 0 1px 0 rgba(255, 255, 255, 0.04);
   }
 
   .site-nav.is-open {
@@ -1265,7 +1264,9 @@ textarea:focus-visible {
   .menu-toggle {
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.14);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    box-shadow:
+      0 10px 24px rgba(0, 0, 0, 0.22),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
   }
 
   .menu-toggle span {
@@ -1275,7 +1276,9 @@ textarea:focus-visible {
   .site-nav {
     background: rgba(7, 10, 16, 0.96);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.34), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    box-shadow:
+      0 18px 40px rgba(0, 0, 0, 0.34),
+      inset 0 1px 0 rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
   }
